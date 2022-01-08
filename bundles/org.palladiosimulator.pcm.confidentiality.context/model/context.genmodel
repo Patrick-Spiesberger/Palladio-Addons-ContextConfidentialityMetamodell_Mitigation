@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/org.palladiosimulator.pcm.confidentiality.context/src-gen"
+    creationIcons="false" editDirectory="/org.palladiosimulator.pcm.confidentiality.context.edit/src-gen"
+    editorDirectory="/org.palladiosimulator.pcm.confidentiality.context.editor/src-gen"
+    modelPluginID="org.palladiosimulator.pcm.confidentiality.context" modelName="Context"
+    rootExtendsInterface="org.eclipse.emf.cdo.CDOObject" rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl"
+    suppressEMFTypes="true" reflectiveDelegation="true" codeFormatting="true" importerID="org.eclipse.emf.importer.ecore"
+    featureDelegation="Reflective" complianceLevel="5.0" copyrightFields="false" usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier ../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm ../../de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction ../../de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex ../../de.uka.ipd.sdq.units/model/Units.genmodel#//units"
+    importOrganizing="true">
+  <foreignModel>context.ecore</foreignModel>
+  <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Context" basePackage="org.palladiosimulator.pcm.confidentiality"
+      disposableProviderFactory="true" extensibleProviderFactory="true" childCreationExtenders="true"
+      ecorePackage="context.ecore#/">
+    <genClasses ecoreClass="context.ecore#//ConfidentialAccessSpecification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference context.ecore#//ConfidentialAccessSpecification/pcmspecificationcontainer"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference context.ecore#//ConfidentialAccessSpecification/policyset"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference context.ecore#//ConfidentialAccessSpecification/attributes"/>
+    </genClasses>
+    <nestedGenPackages prefix="System" basePackage="org.palladiosimulator.pcm.confidentiality.context"
+        disposableProviderFactory="true" ecorePackage="context.ecore#//system">
+      <genClasses ecoreClass="context.ecore#//system/SystemSpecificationContainer">
+        <genFeatures children="true" createChild="true" propertySortChoices="true"
+            ecoreFeature="ecore:EReference context.ecore#//system/SystemSpecificationContainer/attributeprovider"/>
+        <genFeatures children="true" createChild="true" propertySortChoices="true"
+            ecoreFeature="ecore:EReference context.ecore#//system/SystemSpecificationContainer/usagespecification"/>
+      </genClasses>
+      <genClasses ecoreClass="context.ecore#//system/AttributeProvider">
+        <genFeatures children="true" createChild="true" propertySortChoices="true"
+            ecoreFeature="ecore:EReference context.ecore#//system/AttributeProvider/attribute"/>
+      </genClasses>
+      <genClasses ecoreClass="context.ecore#//system/UsageSpecification" labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference context.ecore#//system/UsageSpecification/attributevalue"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference context.ecore#//system/UsageSpecification/attribute"/>
+      </genClasses>
+      <nestedGenPackages prefix="Pcm" basePackage="org.palladiosimulator.pcm.confidentiality.context.system"
+          disposableProviderFactory="true" ecorePackage="context.ecore#//system/pcm">
+        <nestedGenPackages prefix="Structure" basePackage="org.palladiosimulator.pcm.confidentiality.context.system.pcm"
+            disposableProviderFactory="true" ecorePackage="context.ecore#//system/pcm/structure">
+          <genClasses ecoreClass="context.ecore#//system/pcm/structure/PCMAttributeProvider">
+            <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                ecoreFeature="ecore:EReference context.ecore#//system/pcm/structure/PCMAttributeProvider/resourcecontainer"/>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                ecoreFeature="ecore:EReference context.ecore#//system/pcm/structure/PCMAttributeProvider/assemblycontext"/>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                ecoreFeature="ecore:EReference context.ecore#//system/pcm/structure/PCMAttributeProvider/linkingresource"/>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                ecoreFeature="ecore:EReference context.ecore#//system/pcm/structure/PCMAttributeProvider/methodspecification"/>
+          </genClasses>
+          <genClasses image="false" ecoreClass="context.ecore#//system/pcm/structure/MethodSpecification">
+            <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                ecoreFeature="ecore:EReference context.ecore#//system/pcm/structure/MethodSpecification/signature"/>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                ecoreFeature="ecore:EReference context.ecore#//system/pcm/structure/MethodSpecification/hierachy"/>
+          </genClasses>
+          <genClasses ecoreClass="context.ecore#//system/pcm/structure/ConnectionRestriction">
+            <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                ecoreFeature="ecore:EReference context.ecore#//system/pcm/structure/ConnectionRestriction/connector"/>
+          </genClasses>
+          <genClasses ecoreClass="context.ecore#//system/pcm/structure/ServiceRestriction">
+            <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                ecoreFeature="ecore:EReference context.ecore#//system/pcm/structure/ServiceRestriction/assemblycontext"/>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                ecoreFeature="ecore:EReference context.ecore#//system/pcm/structure/ServiceRestriction/service"/>
+          </genClasses>
+          <genClasses ecoreClass="context.ecore#//system/pcm/structure/EntityMatch"
+              labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
+            <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                ecoreFeature="ecore:EReference context.ecore#//system/pcm/structure/EntityMatch/entity"/>
+            <genFeatures createChild="false" ecoreFeature="ecore:EAttribute context.ecore#//system/pcm/structure/EntityMatch/category"/>
+          </genClasses>
+          <genClasses ecoreClass="context.ecore#//system/pcm/structure/GenericMatch"
+              labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
+            <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                ecoreFeature="ecore:EReference context.ecore#//system/pcm/structure/GenericMatch/attributevalue"/>
+            <genFeatures createChild="false" ecoreFeature="ecore:EAttribute context.ecore#//system/pcm/structure/GenericMatch/operation"/>
+            <genFeatures createChild="false" ecoreFeature="ecore:EAttribute context.ecore#//system/pcm/structure/GenericMatch/category"/>
+            <genFeatures createChild="false" ecoreFeature="ecore:EAttribute context.ecore#//system/pcm/structure/GenericMatch/mustBePresent"/>
+          </genClasses>
+          <genClasses ecoreClass="context.ecore#//system/pcm/structure/MethodMatch"
+              labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
+            <genFeatures children="true" createChild="true" propertySortChoices="true"
+                ecoreFeature="ecore:EReference context.ecore#//system/pcm/structure/MethodMatch/methodspecification"/>
+          </genClasses>
+          <genClasses ecoreClass="context.ecore#//system/pcm/structure/HierarchicalContext">
+            <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                ecoreFeature="ecore:EReference context.ecore#//system/pcm/structure/HierarchicalContext/hierachy"/>
+          </genClasses>
+          <genClasses ecoreClass="context.ecore#//system/pcm/structure/XMLMatch">
+            <genFeatures createChild="false" ecoreFeature="ecore:EAttribute context.ecore#//system/pcm/structure/XMLMatch/xmlString"/>
+          </genClasses>
+        </nestedGenPackages>
+        <nestedGenPackages prefix="Usage" basePackage="org.palladiosimulator.pcm.confidentiality.context.system.pcm"
+            disposableProviderFactory="true" ecorePackage="context.ecore#//system/pcm/usage">
+          <genClasses ecoreClass="context.ecore#//system/pcm/usage/PCMUsageSpecification"
+              labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
+            <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                ecoreFeature="ecore:EReference context.ecore#//system/pcm/usage/PCMUsageSpecification/entrylevelsystemcall"/>
+            <genFeatures notify="false" createChild="false" propertySortChoices="true"
+                ecoreFeature="ecore:EReference context.ecore#//system/pcm/usage/PCMUsageSpecification/usagescenario"/>
+            <genFeatures createChild="false" ecoreFeature="ecore:EAttribute context.ecore#//system/pcm/usage/PCMUsageSpecification/missageUse"/>
+          </genClasses>
+        </nestedGenPackages>
+      </nestedGenPackages>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Policy" basePackage="org.palladiosimulator.pcm.confidentiality.context"
+        disposableProviderFactory="true" ecorePackage="context.ecore#//policy">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="context.ecore#//policy/PermitType">
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/PermitType/DENY"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/PermitType/PERMIT"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="context.ecore#//policy/PolicyCombiningAlgorithm">
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/PolicyCombiningAlgorithm/DENY_OVERRIDES"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/PolicyCombiningAlgorithm/PERMIT_OVERRIDES"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/PolicyCombiningAlgorithm/FIRST_APPLICABLE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/PolicyCombiningAlgorithm/ONLY_ONE_APPLICABLE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/PolicyCombiningAlgorithm/ORDERED_DENY_OVERRIDES"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/PolicyCombiningAlgorithm/ORDERED_PERMIT_OVERRIDES"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/PolicyCombiningAlgorithm/DENY_UNLESS_PERMIT"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/PolicyCombiningAlgorithm/PERMIT_UNLESS_DENY"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="context.ecore#//policy/RuleCombiningAlgorihtm">
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/RuleCombiningAlgorihtm/DENY_OVERRIDES"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/RuleCombiningAlgorihtm/PERMIT_OVERRIDES"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/RuleCombiningAlgorihtm/FIRST_APPLICABLE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/RuleCombiningAlgorihtm/ONLY_ONE_APPLICABLE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/RuleCombiningAlgorihtm/ORDERED_DENY_OVERRIDES"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/RuleCombiningAlgorihtm/ORDERED_PERMIT_OVERRIDES"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/RuleCombiningAlgorihtm/DENY_UNLESS_PERMIT"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/RuleCombiningAlgorihtm/PERMIT_UNLESS_DENY"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="context.ecore#//policy/Operations">
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_EQUAL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/BOOLEAN_EQUAL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/INTEGER_EQUAL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DOUBLE_EQUAL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATE_EQUAL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/TIME_EQUAL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATETIME_EQUAL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DAYTIMEDURATION_EQUAL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/YEARMONTHDURATION_EQUAL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_EQUAL_IGNORE_CASE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/ANYURI_EQUAL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/X500NAME_EQUAL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/RFC822NAME_EQUAL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/HEXBINARY_EQUAL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/BASE64BINARY_EQUAL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/INTEGER_ADD"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DOUBLE_ADD"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/INTEGER_SUBTRACT"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DOUBLE_SUBTRACT"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/INTEGER_MULTIPLY"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DOUBLE_MULTIPLY"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/INTEGER_DIVIDE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DOUBLE_DIVIDE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/INTEGER_MOD"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/INTEGER_ABS"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DOUBLE_ABS"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/ROUND"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/FLOOR"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_NORMALIZE_SPACE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_NORMALIZE_TO_LOWER_CASE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DOUBLE_TO_INTEGER"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/INTEGER_TO_DOUBLE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/OR"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/AND"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/N_OF"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/NOT"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/PRESENT"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/INTEGER_GREATER_THAN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/INTEGER_GREATER_THAN_OR_EQUAL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/INTEGER_LESS_THAN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/INTEGER_LESS_THAN_OR_EQUAL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DOUBLE_GREATER_THAN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DOUBLE_GREATER_THAN_OR_EQUAL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DOUBLE_LESS_THAN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DOUBLE_LESS_THAN_OR_EQUAL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATETIME_ADD_DAYTIMEDURATION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATETIME_ADD_YEARMONTHDURATION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATETIME_SUBTRACT_DAYTIMEDURATION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATETIME_SUBTRACT_YEARMONTHDURATION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATE_ADD_YEARMONTHDURATION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATE_SUBTRACT_YEARMONTHDURATION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_GREATER_THAN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_GREATER_THAN_OR_EQUAL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_LESS_THAN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_LESS_THAN_OR_EQUAL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/TIME_GREATER_THAN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/TIME_GREATER_THAN_OR_EQUAL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/TIME_LESS_THAN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/TIME_LESS_THAN_OR_EQUAL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/TIME_IN_RANGE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATETIME_GREATER_THAN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATETIME_GREATER_THAN_OR_EQUAL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATETIME_LESS_THAN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATETIME_LESS_THAN_OR_EQUAL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATE_GREATER_THAN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATE_GREATER_THAN_OR_EQUAL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATE_LESS_THAN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATE_LESS_THAN_OR_EQUAL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_ONE_AND_ONLY"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_BAG_SIZE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_IS_IN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_BAG"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/BOOLEAN_ONE_AND_ONLY"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/BOOLEAN_BAG_SIZE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/BOOLEAN_IS_IN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/BOOLEAN_BAG"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/INTEGER_ONE_AND_ONLY"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/INTEGER_BAG_SIZE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/INTEGER_IS_IN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/INTEGER_BAG"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DOUBLE_ONE_AND_ONLY"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DOUBLE_BAG_SIZE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DOUBLE_IS_IN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DOUBLE_BAG"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/TIME_ONE_AND_ONLY"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/TIME_BAG_SIZE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/TIME_IS_IN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/TIME_BAG"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATE_ONE_AND_ONLY"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATE_BAG_SIZE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATE_IS_IN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATE_BAG"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATETIME_ONE_AND_ONLY"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATETIME_BAG_SIZE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATETIME_IS_IN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATETIME_BAG"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/ANYURI_ONE_AND_ONLY"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/ANYURI_BAG_SIZE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/ANYURI_IS_IN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/ANYURI_BAG"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/HEXBINARY_ONE_AND_ONLY"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/HEXBINARY_BAG_SIZE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/HEXBINARY_IS_IN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/HEXBINARY_BAG"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/BASE64BINARY_ONE_AND_ONLY"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/BASE64BINARY_BAG_SIZE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/BASE64BINARY_IS_IN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/BASE64BINARY_BAG"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DAYTIMEDURATION_ONE_AND_ONLY"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DAYTIMEDURATION_BAG_SIZE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DAYTIMEDURATION_IS_IN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DAYTIMEDURATION_BAG"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/YEARMONTHDURATION_ONE_AND_ONLY"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/YEARMONTHDURATION_BAG_SIZE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/YEARMONTHDURATION_IS_IN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/YEARMONTHDURATION_BAG"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/X500NAME_ONE_AND_ONLY"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/X500NAME_BAG_SIZE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/X500NAME_IS_IN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/X500NAME_BAG"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/RFC822NAME_ONE_AND_ONLY"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/RFC822NAME_BAG_SIZE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/RFC822NAME_IS_IN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/RFC822NAME_BAG"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/IPADDRESS_ONE_AND_ONLY"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/IPADDRESS_BAG_SIZE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/IPADDRESS_IS_IN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/IPADDRESS_BAG"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DNSNAME_ONE_AND_ONLY"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DNSNAME_BAG_SIZE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DNSNAME_IS_IN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DNSNAME_BAG"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_CONCATENATE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/BOOLEAN_FROM_STRING"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_FROM_BOOLEAN"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/INTEGER_FROM_STRING"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_FROM_INTEGER"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DOUBLE_FROM_STRING"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_FROM_DOUBLE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/TIME_FROM_STRING"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_FROM_TIME"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATE_FROM_STRING"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_FROM_DATE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATETIME_FROM_STRING"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_FROM_DATETIME"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/ANYURI_FROM_STRING"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_FROM_ANYURI"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DAYTIMEDURATION_FROM_STRING"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_FROM_DAYTIMEDURATION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/YEARMONTHDURATION_FROM_STRING"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_FROM_YEARMONTHDURATION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/X500NAME_FROM_STRING"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_FROM_X500NAME"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/RFC822NAME_FROM_STRING"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_FROM_RFC822NAME"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/IPADDRESS_FROM_STRING"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_FROM_IPADDRESS"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DNSNAME_FROM_STRING"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_FROM_DNSNAME"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_STARTS_WITH"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/ANYURI_STARTS_WITH"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_ENDS_WITH"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/ANYURI_ENDS_WITH"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_CONTAINS"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/ANYURI_CONTAINS"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_SUBSTRING"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/ANYURI_SUBSTRING"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/ANY_OF"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/ALL_OF"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/ANY_OF_ANY"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/ALL_OF_ANY"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/ANY_OF_ALL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/ALL_OF_ALL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/MAP"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/X500NAME_MATCH"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/RFC822NAME_MATCH"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_REGEXP_MATCH"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/ANYURI_REGEXP_MATCH"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/IPADDRESS_REGEXP_MATCH"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DNSNAME_REGEXP_MATCH"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/RFC822NAME_REGEXP_MATCH"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/X500NAME_REGEXP_MATCH"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/XPATH_NODE_COUNT"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/XPATH_NODE_EQUAL"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/XPATH_NODE_MATCH"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_INTERSECTION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_AT_LEAST_ONE_MEMBER_OF"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_UNION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_SUBSET"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/STRING_SET_EQUALS"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/BOOLEAN_INTERSECTION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/BOOLEAN_AT_LEAST_ONE_MEMBER_OF"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/BOOLEAN_UNION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/BOOLEAN_SUBSET"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/BOOLEAN_SET_EQUALS"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/INTEGER_INTERSECTION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/INTEGER_AT_LEAST_ONE_MEMBER_OF"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/INTEGER_UNION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/INTEGER_SUBSET"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/INTEGER_SET_EQUALS"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DOUBLE_INTERSECTION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DOUBLE_AT_LEAST_ONE_MEMBER_OF"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DOUBLE_UNION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DOUBLE_SUBSET"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DOUBLE_SET_EQUALS"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/TIME_INTERSECTION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/TIME_AT_LEAST_ONE_MEMBER_OF"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/TIME_UNION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/TIME_SUBSET"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/TIME_SET_EQUALS"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATE_INTERSECTION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATE_AT_LEAST_ONE_MEMBER_OF"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATE_UNION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATE_SUBSET"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATE_SET_EQUALS"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATETIME_INTERSECTION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATETIME_AT_LEAST_ONE_MEMBER_OF"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATETIME_UNION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATETIME_SUBSET"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DATETIME_SET_EQUALS"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/ANYURI_INTERSECTION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/ANYURI_AT_LEAST_ONE_MEMBER_OF"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/ANYURI_UNION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/ANYURI_SUBSET"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/ANYURI_SET_EQUALS"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/HEXBINARY_INTERSECTION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/HEXBINARY_AT_LEAST_ONE_MEMBER_OF"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/HEXBINARY_UNION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/HEXBINARY_SUBSET"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/HEXBINARY_SET_EQUALS"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/BASE64BINARY_INTERSECTION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/BASE64BINARY_AT_LEAST_ONE_MEMBER_OF"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/BASE64BINARY_UNION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/BASE64BINARY_SUBSET"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/BASE64BINARY_SET_EQUALS"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DAYTIMEDURATION_INTERSECTION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DAYTIMEDURATION_AT_LEAST_ONE_MEMBER_OF"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DAYTIMEDURATION_UNION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DAYTIMEDURATION_SUBSET"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DAYTIMEDURATION_SET_EQUALS"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/YEARMONTHDURATION_INTERSECTION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/YEARMONTHDURATION_AT_LEAST_ONE_MEMBER_OF"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/YEARMONTHDURATION_UNION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/YEARMONTHDURATION_SUBSET"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/YEARMONTHDURATION_SET_EQUALS"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/X500NAME_INTERSECTION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/X500NAME_AT_LEAST_ONE_MEMBER_OF"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/X500NAME_UNION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/X500NAME_SUBSET"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/X500NAME_SET_EQUALS"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/RFC822NAME_INTERSECTION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/RFC822NAME_AT_LEAST_ONE_MEMBER_OF"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/RFC822NAME_UNION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/RFC822NAME_SUBSET"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/RFC822NAME_SET_EQUALS"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/IPADDRESS_INTERSECTION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/IPADDRESS_AT_LEAST_ONE_MEMBER_OF"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/IPADDRESS_UNION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/IPADDRESS_SUBSET"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/IPADDRESS_SET_EQUALS"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DNSNAME_INTERSECTION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DNSNAME_AT_LEAST_ONE_MEMBER_OF"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DNSNAME_UNION"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DNSNAME_SUBSET"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Operations/DNSNAME_SET_EQUALS"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="context.ecore#//policy/Category">
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Category/SUBJECT"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Category/RESOURCE"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Category/ENVIRONMENT"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//policy/Category/ACTION"/>
+      </genEnums>
+      <genClasses ecoreClass="context.ecore#//policy/PolicySet" labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute context.ecore#//policy/PolicySet/combiningAlgorithm"/>
+        <genFeatures children="true" createChild="true" propertySortChoices="true"
+            ecoreFeature="ecore:EReference context.ecore#//policy/PolicySet/policyset"/>
+        <genFeatures children="true" createChild="true" propertySortChoices="true"
+            ecoreFeature="ecore:EReference context.ecore#//policy/PolicySet/policy"/>
+        <genFeatures children="true" createChild="true" propertySortChoices="true"
+            ecoreFeature="ecore:EReference context.ecore#//policy/PolicySet/target"/>
+      </genClasses>
+      <genClasses ecoreClass="context.ecore#//policy/Policy" labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute context.ecore#//policy/Policy/combiningAlgorithm"/>
+        <genFeatures children="true" createChild="true" propertySortChoices="true"
+            ecoreFeature="ecore:EReference context.ecore#//policy/Policy/rule"/>
+        <genFeatures children="true" createChild="true" propertySortChoices="true"
+            ecoreFeature="ecore:EReference context.ecore#//policy/Policy/variabledefinitions"/>
+        <genFeatures children="true" createChild="true" propertySortChoices="true"
+            ecoreFeature="ecore:EReference context.ecore#//policy/Policy/target"/>
+      </genClasses>
+      <genClasses ecoreClass="context.ecore#//policy/Rule" labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute context.ecore#//policy/Rule/permit"/>
+        <genFeatures children="true" createChild="true" propertySortChoices="true"
+            ecoreFeature="ecore:EReference context.ecore#//policy/Rule/condition"/>
+        <genFeatures children="true" createChild="true" propertySortChoices="true"
+            ecoreFeature="ecore:EReference context.ecore#//policy/Rule/target"/>
+      </genClasses>
+      <genClasses ecoreClass="context.ecore#//policy/AllOf">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference context.ecore#//policy/AllOf/match"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="context.ecore#//policy/Match" labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName"/>
+      <genClasses ecoreClass="context.ecore#//policy/Apply">
+        <genFeatures children="true" createChild="true" propertySortChoices="true"
+            ecoreFeature="ecore:EReference context.ecore#//policy/Apply/parameters"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute context.ecore#//policy/Apply/operation"/>
+      </genClasses>
+      <genClasses ecoreClass="context.ecore#//policy/AttributeSelector"/>
+      <genClasses ecoreClass="context.ecore#//policy/FunctionReference">
+        <genFeatures children="true" createChild="true" propertySortChoices="true"
+            ecoreFeature="ecore:EAttribute context.ecore#//policy/FunctionReference/function"/>
+      </genClasses>
+      <genClasses ecoreClass="context.ecore#//policy/AttributeDesignator">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference context.ecore#//policy/AttributeDesignator/attribute"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute context.ecore#//policy/AttributeDesignator/type"/>
+      </genClasses>
+      <genClasses ecoreClass="context.ecore#//policy/XMLString">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute context.ecore#//policy/XMLString/string"/>
+      </genClasses>
+      <genClasses ecoreClass="context.ecore#//policy/Expression"/>
+      <genClasses ecoreClass="context.ecore#//policy/VariableDefinitions">
+        <genFeatures children="true" createChild="true" propertySortChoices="true"
+            ecoreFeature="ecore:EReference context.ecore#//policy/VariableDefinitions/expression"/>
+      </genClasses>
+      <genClasses ecoreClass="context.ecore#//policy/VariableReference">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference context.ecore#//policy/VariableReference/variabledefinitions"/>
+      </genClasses>
+      <genClasses ecoreClass="context.ecore#//policy/AttributeValueReference">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference context.ecore#//policy/AttributeValueReference/attributevalue"/>
+      </genClasses>
+      <genClasses ecoreClass="context.ecore#//policy/AttributeSelection">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute context.ecore#//policy/AttributeSelection/category"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute context.ecore#//policy/AttributeSelection/mustBePresent"/>
+      </genClasses>
+      <genClasses ecoreClass="context.ecore#//policy/SimpleAttributeCondition" labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference context.ecore#//policy/SimpleAttributeCondition/attribute"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute context.ecore#//policy/SimpleAttributeCondition/only"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Systemcontext" basePackage="org.palladiosimulator.pcm.confidentiality.context"
+        disposableProviderFactory="true" ecorePackage="context.ecore#//systemcontext">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="context.ecore#//systemcontext/DataTypes">
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//systemcontext/DataTypes/String"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//systemcontext/DataTypes/Boolean"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//systemcontext/DataTypes/Integer"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//systemcontext/DataTypes/Double"/>
+        <genEnumLiterals ecoreEnumLiteral="context.ecore#//systemcontext/DataTypes/Date"/>
+      </genEnums>
+      <genClasses ecoreClass="context.ecore#//systemcontext/Attributes">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference context.ecore#//systemcontext/Attributes/attribute"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="context.ecore#//systemcontext/Attribute"
+          labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference context.ecore#//systemcontext/Attribute/attributevalue"/>
+      </genClasses>
+      <genClasses ecoreClass="context.ecore#//systemcontext/AttributeValue">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute context.ecore#//systemcontext/AttributeValue/type"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute context.ecore#//systemcontext/AttributeValue/values"/>
+      </genClasses>
+      <genClasses ecoreClass="context.ecore#//systemcontext/SystemEntityAttribute"
+          labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference context.ecore#//systemcontext/SystemEntityAttribute/modelEntity"/>
+      </genClasses>
+      <genClasses ecoreClass="context.ecore#//systemcontext/ExternalSystemAttribute"
+          labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute context.ecore#//systemcontext/ExternalSystemAttribute/externalName"/>
+      </genClasses>
+      <genClasses ecoreClass="context.ecore#//systemcontext/SimpleAttribute" labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName"/>
+      <genClasses ecoreClass="context.ecore#//systemcontext/XMLAttribute" labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute context.ecore#//systemcontext/XMLAttribute/xmlString"/>
+      </genClasses>
+      <genClasses ecoreClass="context.ecore#//systemcontext/EnvironmentSubject" labelFeature="../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm/core/entity/NamedElement/entityName">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute context.ecore#//systemcontext/EnvironmentSubject/environment"/>
+      </genClasses>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>
