@@ -29,14 +29,14 @@ import org.palladiosimulator.pcm.resourceenvironment.ResourceContainer;
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement#getBasiccomponent <em>Basiccomponent</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement#getAssemblycontext <em>Assemblycontext</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement#getMethodspecification <em>Methodspecification</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement#getEncryptionLevel <em>Encryption Level</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PcmIntegrationPackage#getPCMElement()
  * @model
  * @generated
  */
-public interface PCMElement extends Entity
-{
+public interface PCMElement extends Entity {
 	/**
 	 * Returns the value of the '<em><b>Resourcecontainer</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -168,5 +168,31 @@ public interface PCMElement extends Entity
 	 * @generated
 	 */
 	void setMethodspecification(MethodSpecification value);
+
+	/**
+	 * Returns the value of the '<em><b>Encryption Level</b></em>' attribute.
+	 * The default value is <code>"None"</code>.
+	 * The literals are from the enumeration {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.EncryptionLevel}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Encryption Level</em>' attribute.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.EncryptionLevel
+	 * @see #setEncryptionLevel(EncryptionLevel)
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PcmIntegrationPackage#getPCMElement_EncryptionLevel()
+	 * @model default="None" required="true"
+	 * @generated
+	 */
+	EncryptionLevel getEncryptionLevel();
+
+	/**
+	 * Sets the value of the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement#getEncryptionLevel <em>Encryption Level</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Encryption Level</em>' attribute.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.EncryptionLevel
+	 * @see #getEncryptionLevel()
+	 * @generated
+	 */
+	void setEncryptionLevel(EncryptionLevel value);
 
 } // PCMElement

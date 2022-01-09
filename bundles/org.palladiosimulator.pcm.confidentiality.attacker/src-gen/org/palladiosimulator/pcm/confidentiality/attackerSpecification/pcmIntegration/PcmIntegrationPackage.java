@@ -2,7 +2,9 @@
  */
 package org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -23,8 +25,7 @@ import org.palladiosimulator.pcm.core.entity.EntityPackage;
  * @model kind="package"
  * @generated
  */
-public interface PcmIntegrationPackage extends EPackage
-{
+public interface PcmIntegrationPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -55,7 +56,8 @@ public interface PcmIntegrationPackage extends EPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	PcmIntegrationPackage eINSTANCE = org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.PcmIntegrationPackageImpl.init();
+	PcmIntegrationPackage eINSTANCE = org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.PcmIntegrationPackageImpl
+			.init();
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.VulnerabilitySystemIntegrationImpl <em>Vulnerability System Integration</em>}' class.
@@ -195,13 +197,22 @@ public interface PcmIntegrationPackage extends EPackage
 	int PCM_ELEMENT__METHODSPECIFICATION = EntityPackage.ENTITY_FEATURE_COUNT + 5;
 
 	/**
+	 * The feature id for the '<em><b>Encryption Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PCM_ELEMENT__ENCRYPTION_LEVEL = EntityPackage.ENTITY_FEATURE_COUNT + 6;
+
+	/**
 	 * The number of structural features of the '<em>PCM Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PCM_ELEMENT_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 6;
+	int PCM_ELEMENT_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 7;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.SystemIntegrationImpl <em>System Integration</em>}' class.
@@ -350,6 +361,15 @@ public interface PcmIntegrationPackage extends EPackage
 	 */
 	int NON_GLOBAL_COMMUNICATION_FEATURE_COUNT = SYSTEM_INTEGRATION_FEATURE_COUNT + 0;
 
+	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.EncryptionLevel <em>Encryption Level</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.EncryptionLevel
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.PcmIntegrationPackageImpl#getEncryptionLevel()
+	 * @generated
+	 */
+	int ENCRYPTION_LEVEL = 5;
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.VulnerabilitySystemIntegration <em>Vulnerability System Integration</em>}'.
@@ -449,6 +469,17 @@ public interface PcmIntegrationPackage extends EPackage
 	EReference getPCMElement_Methodspecification();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement#getEncryptionLevel <em>Encryption Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Encryption Level</em>'.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement#getEncryptionLevel()
+	 * @see #getPCMElement()
+	 * @generated
+	 */
+	EAttribute getPCMElement_EncryptionLevel();
+
+	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.RoleSystemIntegration <em>Role System Integration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -501,6 +532,16 @@ public interface PcmIntegrationPackage extends EPackage
 	EClass getNonGlobalCommunication();
 
 	/**
+	 * Returns the meta object for enum '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.EncryptionLevel <em>Encryption Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Encryption Level</em>'.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.EncryptionLevel
+	 * @generated
+	 */
+	EEnum getEncryptionLevel();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -521,8 +562,7 @@ public interface PcmIntegrationPackage extends EPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	interface Literals
-	{
+	interface Literals {
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.VulnerabilitySystemIntegrationImpl <em>Vulnerability System Integration</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -539,7 +579,8 @@ public interface PcmIntegrationPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VULNERABILITY_SYSTEM_INTEGRATION__VULNERABILITY = eINSTANCE.getVulnerabilitySystemIntegration_Vulnerability();
+		EReference VULNERABILITY_SYSTEM_INTEGRATION__VULNERABILITY = eINSTANCE
+				.getVulnerabilitySystemIntegration_Vulnerability();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.PCMElementImpl <em>PCM Element</em>}' class.
@@ -600,6 +641,14 @@ public interface PcmIntegrationPackage extends EPackage
 		EReference PCM_ELEMENT__METHODSPECIFICATION = eINSTANCE.getPCMElement_Methodspecification();
 
 		/**
+		 * The meta object literal for the '<em><b>Encryption Level</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PCM_ELEMENT__ENCRYPTION_LEVEL = eINSTANCE.getPCMElement_EncryptionLevel();
+
+		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.RoleSystemIntegrationImpl <em>Role System Integration</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -644,6 +693,16 @@ public interface PcmIntegrationPackage extends EPackage
 		 * @generated
 		 */
 		EClass NON_GLOBAL_COMMUNICATION = eINSTANCE.getNonGlobalCommunication();
+
+		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.EncryptionLevel <em>Encryption Level</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.EncryptionLevel
+		 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.PcmIntegrationPackageImpl#getEncryptionLevel()
+		 * @generated
+		 */
+		EEnum ENCRYPTION_LEVEL = eINSTANCE.getEncryptionLevel();
 
 	}
 

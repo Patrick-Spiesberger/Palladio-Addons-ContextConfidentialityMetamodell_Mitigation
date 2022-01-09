@@ -3,7 +3,7 @@
 package org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.EncryptionLevel;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PcmIntegrationPackage;
 
@@ -33,19 +33,18 @@ import org.palladiosimulator.pcm.resourceenvironment.ResourceContainer;
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.PCMElementImpl#getBasiccomponent <em>Basiccomponent</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.PCMElementImpl#getAssemblycontext <em>Assemblycontext</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.PCMElementImpl#getMethodspecification <em>Methodspecification</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.PCMElementImpl#getEncryptionLevel <em>Encryption Level</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class PCMElementImpl extends EntityImpl implements PCMElement
-{
+public class PCMElementImpl extends EntityImpl implements PCMElement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PCMElementImpl()
-	{
+	protected PCMElementImpl() {
 		super();
 	}
 
@@ -55,8 +54,7 @@ public class PCMElementImpl extends EntityImpl implements PCMElement
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass()
-	{
+	protected EClass eStaticClass() {
 		return PcmIntegrationPackage.Literals.PCM_ELEMENT;
 	}
 
@@ -65,9 +63,8 @@ public class PCMElementImpl extends EntityImpl implements PCMElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ResourceContainer getResourcecontainer()
-	{
-		return (ResourceContainer)eGet(PcmIntegrationPackage.Literals.PCM_ELEMENT__RESOURCECONTAINER, true);
+	public ResourceContainer getResourcecontainer() {
+		return (ResourceContainer) eGet(PcmIntegrationPackage.Literals.PCM_ELEMENT__RESOURCECONTAINER, true);
 	}
 
 	/**
@@ -75,8 +72,7 @@ public class PCMElementImpl extends EntityImpl implements PCMElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setResourcecontainer(ResourceContainer newResourcecontainer)
-	{
+	public void setResourcecontainer(ResourceContainer newResourcecontainer) {
 		eSet(PcmIntegrationPackage.Literals.PCM_ELEMENT__RESOURCECONTAINER, newResourcecontainer);
 	}
 
@@ -85,9 +81,8 @@ public class PCMElementImpl extends EntityImpl implements PCMElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LinkingResource getLinkingresource()
-	{
-		return (LinkingResource)eGet(PcmIntegrationPackage.Literals.PCM_ELEMENT__LINKINGRESOURCE, true);
+	public LinkingResource getLinkingresource() {
+		return (LinkingResource) eGet(PcmIntegrationPackage.Literals.PCM_ELEMENT__LINKINGRESOURCE, true);
 	}
 
 	/**
@@ -95,8 +90,7 @@ public class PCMElementImpl extends EntityImpl implements PCMElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLinkingresource(LinkingResource newLinkingresource)
-	{
+	public void setLinkingresource(LinkingResource newLinkingresource) {
 		eSet(PcmIntegrationPackage.Literals.PCM_ELEMENT__LINKINGRESOURCE, newLinkingresource);
 	}
 
@@ -105,9 +99,8 @@ public class PCMElementImpl extends EntityImpl implements PCMElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CompositeComponent getCompositecomponent()
-	{
-		return (CompositeComponent)eGet(PcmIntegrationPackage.Literals.PCM_ELEMENT__COMPOSITECOMPONENT, true);
+	public CompositeComponent getCompositecomponent() {
+		return (CompositeComponent) eGet(PcmIntegrationPackage.Literals.PCM_ELEMENT__COMPOSITECOMPONENT, true);
 	}
 
 	/**
@@ -115,8 +108,7 @@ public class PCMElementImpl extends EntityImpl implements PCMElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCompositecomponent(CompositeComponent newCompositecomponent)
-	{
+	public void setCompositecomponent(CompositeComponent newCompositecomponent) {
 		eSet(PcmIntegrationPackage.Literals.PCM_ELEMENT__COMPOSITECOMPONENT, newCompositecomponent);
 	}
 
@@ -125,9 +117,8 @@ public class PCMElementImpl extends EntityImpl implements PCMElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RepositoryComponent getBasiccomponent()
-	{
-		return (RepositoryComponent)eGet(PcmIntegrationPackage.Literals.PCM_ELEMENT__BASICCOMPONENT, true);
+	public RepositoryComponent getBasiccomponent() {
+		return (RepositoryComponent) eGet(PcmIntegrationPackage.Literals.PCM_ELEMENT__BASICCOMPONENT, true);
 	}
 
 	/**
@@ -135,8 +126,7 @@ public class PCMElementImpl extends EntityImpl implements PCMElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBasiccomponent(RepositoryComponent newBasiccomponent)
-	{
+	public void setBasiccomponent(RepositoryComponent newBasiccomponent) {
 		eSet(PcmIntegrationPackage.Literals.PCM_ELEMENT__BASICCOMPONENT, newBasiccomponent);
 	}
 
@@ -145,9 +135,8 @@ public class PCMElementImpl extends EntityImpl implements PCMElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AssemblyContext getAssemblycontext()
-	{
-		return (AssemblyContext)eGet(PcmIntegrationPackage.Literals.PCM_ELEMENT__ASSEMBLYCONTEXT, true);
+	public AssemblyContext getAssemblycontext() {
+		return (AssemblyContext) eGet(PcmIntegrationPackage.Literals.PCM_ELEMENT__ASSEMBLYCONTEXT, true);
 	}
 
 	/**
@@ -155,8 +144,7 @@ public class PCMElementImpl extends EntityImpl implements PCMElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAssemblycontext(AssemblyContext newAssemblycontext)
-	{
+	public void setAssemblycontext(AssemblyContext newAssemblycontext) {
 		eSet(PcmIntegrationPackage.Literals.PCM_ELEMENT__ASSEMBLYCONTEXT, newAssemblycontext);
 	}
 
@@ -165,9 +153,8 @@ public class PCMElementImpl extends EntityImpl implements PCMElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MethodSpecification getMethodspecification()
-	{
-		return (MethodSpecification)eGet(PcmIntegrationPackage.Literals.PCM_ELEMENT__METHODSPECIFICATION, true);
+	public MethodSpecification getMethodspecification() {
+		return (MethodSpecification) eGet(PcmIntegrationPackage.Literals.PCM_ELEMENT__METHODSPECIFICATION, true);
 	}
 
 	/**
@@ -175,9 +162,26 @@ public class PCMElementImpl extends EntityImpl implements PCMElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMethodspecification(MethodSpecification newMethodspecification)
-	{
+	public void setMethodspecification(MethodSpecification newMethodspecification) {
 		eSet(PcmIntegrationPackage.Literals.PCM_ELEMENT__METHODSPECIFICATION, newMethodspecification);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EncryptionLevel getEncryptionLevel() {
+		return (EncryptionLevel) eGet(PcmIntegrationPackage.Literals.PCM_ELEMENT__ENCRYPTION_LEVEL, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEncryptionLevel(EncryptionLevel newEncryptionLevel) {
+		eSet(PcmIntegrationPackage.Literals.PCM_ELEMENT__ENCRYPTION_LEVEL, newEncryptionLevel);
 	}
 
 } //PCMElementImpl

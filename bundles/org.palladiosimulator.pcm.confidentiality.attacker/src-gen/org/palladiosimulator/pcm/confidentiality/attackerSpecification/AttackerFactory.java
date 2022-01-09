@@ -12,15 +12,15 @@ import org.eclipse.emf.ecore.EFactory;
  * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage
  * @generated
  */
-public interface AttackerFactory extends EFactory
-{
+public interface AttackerFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	AttackerFactory eINSTANCE = org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerFactoryImpl.init();
+	AttackerFactory eINSTANCE = org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerFactoryImpl
+			.init();
 
 	/**
 	 * Returns a new object of class '<em>Container</em>'.

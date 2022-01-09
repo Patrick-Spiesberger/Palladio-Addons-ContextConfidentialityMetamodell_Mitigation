@@ -49,6 +49,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference attacker.ecore#//DatamodelAttacker/dataType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute attacker.ecore#//DatamodelAttacker/referenceName"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference attacker.ecore#//DatamodelAttacker/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference attacker.ecore#//DatamodelAttacker/method"/>
     </genClasses>
     <nestedGenPackages prefix="AttackSpecification" basePackage="org.palladiosimulator.pcm.confidentiality.attackerSpecification"
         disposableProviderFactory="true" ecorePackage="attacker.ecore#//attackSpecification">
@@ -140,6 +141,11 @@
     </nestedGenPackages>
     <nestedGenPackages prefix="PcmIntegration" basePackage="org.palladiosimulator.pcm.confidentiality.attackerSpecification"
         disposableProviderFactory="true" ecorePackage="attacker.ecore#//pcmIntegration">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="attacker.ecore#//pcmIntegration/EncryptionLevel">
+        <genEnumLiterals ecoreEnumLiteral="attacker.ecore#//pcmIntegration/EncryptionLevel/None"/>
+        <genEnumLiterals ecoreEnumLiteral="attacker.ecore#//pcmIntegration/EncryptionLevel/Low"/>
+        <genEnumLiterals ecoreEnumLiteral="attacker.ecore#//pcmIntegration/EncryptionLevel/High"/>
+      </genEnums>
       <genClasses ecoreClass="attacker.ecore#//pcmIntegration/VulnerabilitySystemIntegration">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference attacker.ecore#//pcmIntegration/VulnerabilitySystemIntegration/vulnerability"/>
@@ -156,6 +162,7 @@
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference attacker.ecore#//pcmIntegration/PCMElement/assemblycontext"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference attacker.ecore#//pcmIntegration/PCMElement/methodspecification"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute attacker.ecore#//pcmIntegration/PCMElement/encryptionLevel"/>
       </genClasses>
       <genClasses ecoreClass="attacker.ecore#//pcmIntegration/RoleSystemIntegration">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"

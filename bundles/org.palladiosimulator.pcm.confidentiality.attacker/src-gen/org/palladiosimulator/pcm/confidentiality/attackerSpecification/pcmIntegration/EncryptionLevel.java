@@ -1,6 +1,6 @@
 /**
  */
-package org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpecification;
+package org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -10,14 +10,14 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Privileges</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Encryption Level</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpecification.AttackSpecificationPackage#getPrivileges()
+ * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PcmIntegrationPackage#getEncryptionLevel()
  * @model
  * @generated
  */
-public enum Privileges implements Enumerator {
+public enum EncryptionLevel implements Enumerator {
 	/**
 	 * The '<em><b>None</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -39,14 +39,14 @@ public enum Privileges implements Enumerator {
 	LOW(1, "Low", "Low"),
 
 	/**
-	 * The '<em><b>Special</b></em>' literal object.
+	 * The '<em><b>High</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #SPECIAL_VALUE
+	 * @see #HIGH_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	SPECIAL(2, "Special", "Special");
+	HIGH(2, "High", "High");
 
 	/**
 	 * The '<em><b>None</b></em>' literal value.
@@ -71,43 +71,43 @@ public enum Privileges implements Enumerator {
 	public static final int LOW_VALUE = 1;
 
 	/**
-	 * The '<em><b>Special</b></em>' literal value.
+	 * The '<em><b>High</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #SPECIAL
-	 * @model name="Special"
+	 * @see #HIGH
+	 * @model name="High"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int SPECIAL_VALUE = 2;
+	public static final int HIGH_VALUE = 2;
 
 	/**
-	 * An array of all the '<em><b>Privileges</b></em>' enumerators.
+	 * An array of all the '<em><b>Encryption Level</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final Privileges[] VALUES_ARRAY = new Privileges[] { NONE, LOW, SPECIAL, };
+	private static final EncryptionLevel[] VALUES_ARRAY = new EncryptionLevel[] { NONE, LOW, HIGH, };
 
 	/**
-	 * A public read-only list of all the '<em><b>Privileges</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Encryption Level</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<Privileges> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<EncryptionLevel> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Privileges</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Encryption Level</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static Privileges get(String literal) {
+	public static EncryptionLevel get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			Privileges result = VALUES_ARRAY[i];
+			EncryptionLevel result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -116,16 +116,16 @@ public enum Privileges implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Privileges</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Encryption Level</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static Privileges getByName(String name) {
+	public static EncryptionLevel getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			Privileges result = VALUES_ARRAY[i];
+			EncryptionLevel result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -134,21 +134,21 @@ public enum Privileges implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Privileges</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Encryption Level</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static Privileges get(int value) {
+	public static EncryptionLevel get(int value) {
 		switch (value) {
 		case NONE_VALUE:
 			return NONE;
 		case LOW_VALUE:
 			return LOW;
-		case SPECIAL_VALUE:
-			return SPECIAL;
+		case HIGH_VALUE:
+			return HIGH;
 		}
 		return null;
 	}
@@ -180,7 +180,7 @@ public enum Privileges implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private Privileges(int value, String name, String literal) {
+	private EncryptionLevel(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -224,4 +224,4 @@ public enum Privileges implements Enumerator {
 		return literal;
 	}
 
-} //Privileges
+} //EncryptionLevel

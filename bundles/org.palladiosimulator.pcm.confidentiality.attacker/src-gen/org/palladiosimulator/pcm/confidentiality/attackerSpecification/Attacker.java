@@ -36,8 +36,7 @@ import org.palladiosimulator.pcm.resourceenvironment.ResourceContainer;
  * @model
  * @generated
  */
-public interface Attacker extends Entity
-{
+public interface Attacker extends Entity {
 	/**
 	 * Returns the value of the '<em><b>Attacks</b></em>' reference list.
 	 * The list contents are of type {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpecification.Attack}.
