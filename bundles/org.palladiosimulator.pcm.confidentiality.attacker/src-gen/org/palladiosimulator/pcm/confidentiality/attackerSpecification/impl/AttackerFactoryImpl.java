@@ -72,6 +72,8 @@ public class AttackerFactoryImpl extends EFactoryImpl implements AttackerFactory
 			return (EObject) createAttackerSystemSpecificationContainer();
 		case AttackerPackage.DATAMODEL_ATTACKER:
 			return createDatamodelAttacker();
+		case AttackerPackage.ASSEMBLY_CONTEXT_DETAIL:
+			return createAssemblyContextDetail();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -155,6 +157,16 @@ public class AttackerFactoryImpl extends EFactoryImpl implements AttackerFactory
 	public DatamodelAttacker createDatamodelAttacker() {
 		DatamodelAttackerImpl datamodelAttacker = new DatamodelAttackerImpl();
 		return datamodelAttacker;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AssemblyContextDetail createAssemblyContextDetail() {
+		AssemblyContextDetailImpl assemblyContextDetail = new AssemblyContextDetailImpl();
+		return assemblyContextDetail;
 	}
 
 	/**

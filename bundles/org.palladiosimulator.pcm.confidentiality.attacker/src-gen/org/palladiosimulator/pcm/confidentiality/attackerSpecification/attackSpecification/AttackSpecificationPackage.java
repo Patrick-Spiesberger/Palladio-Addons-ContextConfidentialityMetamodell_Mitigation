@@ -88,13 +88,22 @@ public interface AttackSpecificationPackage extends EPackage {
 	int ATTACK__ENTITY_NAME = EntityPackage.ENTITY__ENTITY_NAME;
 
 	/**
+	 * The feature id for the '<em><b>Crackable Encrypted Components</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTACK__CRACKABLE_ENCRYPTED_COMPONENTS = EntityPackage.ENTITY_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Attack</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTACK_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 0;
+	int ATTACK_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpecification.impl.VulnerabilityImpl <em>Vulnerability</em>}' class.
@@ -241,6 +250,15 @@ public interface AttackSpecificationPackage extends EPackage {
 	 * @ordered
 	 */
 	int CATEGORY_ATTACK__ENTITY_NAME = ATTACK__ENTITY_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Crackable Encrypted Components</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CATEGORY_ATTACK__CRACKABLE_ENCRYPTED_COMPONENTS = ATTACK__CRACKABLE_ENCRYPTED_COMPONENTS;
 
 	/**
 	 * The feature id for the '<em><b>Category</b></em>' reference.
@@ -536,6 +554,15 @@ public interface AttackSpecificationPackage extends EPackage {
 	int CWE_ATTACK__ENTITY_NAME = CATEGORY_ATTACK__ENTITY_NAME;
 
 	/**
+	 * The feature id for the '<em><b>Crackable Encrypted Components</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CWE_ATTACK__CRACKABLE_ENCRYPTED_COMPONENTS = CATEGORY_ATTACK__CRACKABLE_ENCRYPTED_COMPONENTS;
+
+	/**
 	 * The feature id for the '<em><b>Category</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -580,6 +607,15 @@ public interface AttackSpecificationPackage extends EPackage {
 	 * @ordered
 	 */
 	int CVE_ATTACK__ENTITY_NAME = CATEGORY_ATTACK__ENTITY_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Crackable Encrypted Components</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CVE_ATTACK__CRACKABLE_ENCRYPTED_COMPONENTS = CATEGORY_ATTACK__CRACKABLE_ENCRYPTED_COMPONENTS;
 
 	/**
 	 * The feature id for the '<em><b>Category</b></em>' reference.
@@ -859,6 +895,17 @@ public interface AttackSpecificationPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getAttack();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpecification.Attack#getCrackableEncryptedComponents <em>Crackable Encrypted Components</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Crackable Encrypted Components</em>'.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpecification.Attack#getCrackableEncryptedComponents()
+	 * @see #getAttack()
+	 * @generated
+	 */
+	EReference getAttack_CrackableEncryptedComponents();
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpecification.Vulnerability <em>Vulnerability</em>}'.
@@ -1227,6 +1274,14 @@ public interface AttackSpecificationPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ATTACK = eINSTANCE.getAttack();
+
+		/**
+		 * The meta object literal for the '<em><b>Crackable Encrypted Components</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ATTACK__CRACKABLE_ENCRYPTED_COMPONENTS = eINSTANCE.getAttack_CrackableEncryptedComponents();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpecification.impl.VulnerabilityImpl <em>Vulnerability</em>}' class.

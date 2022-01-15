@@ -1,6 +1,6 @@
 /**
  */
-package org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpecification.provider;
+package org.palladiosimulator.pcm.confidentiality.attackerSpecification.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -8,32 +8,28 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
-import org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpecification.Attack;
-
-import org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpecification.AttackSpecificationPackage;
-import org.palladiosimulator.pcm.confidentiality.attackerSpecification.provider.AttackerEditPlugin;
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AssemblyContextDetail;
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage;
 
 import org.palladiosimulator.pcm.core.entity.provider.EntityItemProvider;
 
 /**
- * This is the item provider adapter for a {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpecification.Attack} object.
+ * This is the item provider adapter for a {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.AssemblyContextDetail} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class AttackItemProvider extends EntityItemProvider {
+public class AssemblyContextDetailItemProvider extends EntityItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AttackItemProvider(AdapterFactory adapterFactory) {
+	public AssemblyContextDetailItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -48,25 +44,36 @@ public class AttackItemProvider extends EntityItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addCrackableEncryptedComponentsPropertyDescriptor(object);
+			addCompromisedComponentsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Crackable Encrypted Components feature.
+	 * This adds a property descriptor for the Compromised Components feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCrackableEncryptedComponentsPropertyDescriptor(Object object) {
+	protected void addCompromisedComponentsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_Attack_crackableEncryptedComponents_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_Attack_crackableEncryptedComponents_feature",
-						"_UI_Attack_type"),
-				AttackSpecificationPackage.Literals.ATTACK__CRACKABLE_ENCRYPTED_COMPONENTS, true, false, true, null,
-				null, null));
+				getString("_UI_AssemblyContextDetail_compromisedComponents_feature"),
+				getString("_UI_PropertyDescriptor_description",
+						"_UI_AssemblyContextDetail_compromisedComponents_feature", "_UI_AssemblyContextDetail_type"),
+				AttackerPackage.Literals.ASSEMBLY_CONTEXT_DETAIL__COMPROMISED_COMPONENTS, true, false, true, null, null,
+				null));
+	}
+
+	/**
+	 * This returns AssemblyContextDetail.gif.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object getImage(Object object) {
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/AssemblyContextDetail"));
 	}
 
 	/**
@@ -87,9 +94,9 @@ public class AttackItemProvider extends EntityItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Attack) object).getEntityName();
-		return label == null || label.length() == 0 ? getString("_UI_Attack_type")
-				: getString("_UI_Attack_type") + " " + label;
+		String label = ((AssemblyContextDetail) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_AssemblyContextDetail_type")
+				: getString("_UI_AssemblyContextDetail_type") + " " + label;
 	}
 
 	/**
@@ -115,17 +122,6 @@ public class AttackItemProvider extends EntityItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return AttackerEditPlugin.INSTANCE;
 	}
 
 }

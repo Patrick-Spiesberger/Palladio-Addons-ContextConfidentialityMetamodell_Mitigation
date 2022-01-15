@@ -7,9 +7,6 @@ import org.eclipse.emf.common.util.EList;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpecification.Attack;
 
 import org.palladiosimulator.pcm.confidentiality.context.system.UsageSpecification;
-
-import org.palladiosimulator.pcm.core.composition.AssemblyContext;
-
 import org.palladiosimulator.pcm.core.entity.Entity;
 
 import org.palladiosimulator.pcm.resourceenvironment.LinkingResource;
@@ -25,7 +22,7 @@ import org.palladiosimulator.pcm.resourceenvironment.ResourceContainer;
  * </p>
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getAttacks <em>Attacks</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getCompromisedComponents <em>Compromised Components</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getCompromisedComponentsDetails <em>Compromised Components Details</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getCompromisedResources <em>Compromised Resources</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getCompromisedLinkingResources <em>Compromised Linking Resources</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getCredentials <em>Credentials</em>}</li>
@@ -50,16 +47,16 @@ public interface Attacker extends Entity {
 	EList<Attack> getAttacks();
 
 	/**
-	 * Returns the value of the '<em><b>Compromised Components</b></em>' reference list.
-	 * The list contents are of type {@link org.palladiosimulator.pcm.core.composition.AssemblyContext}.
+	 * Returns the value of the '<em><b>Compromised Components Details</b></em>' reference list.
+	 * The list contents are of type {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.AssemblyContextDetail}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Compromised Components</em>' reference list.
-	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage#getAttacker_CompromisedComponents()
+	 * @return the value of the '<em>Compromised Components Details</em>' reference list.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage#getAttacker_CompromisedComponentsDetails()
 	 * @model
 	 * @generated
 	 */
-	EList<AssemblyContext> getCompromisedComponents();
+	EList<AssemblyContextDetail> getCompromisedComponentsDetails();
 
 	/**
 	 * Returns the value of the '<em><b>Compromised Resources</b></em>' reference list.

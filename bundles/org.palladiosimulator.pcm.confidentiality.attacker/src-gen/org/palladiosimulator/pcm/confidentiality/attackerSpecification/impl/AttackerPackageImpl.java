@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.palladiosimulator.pcm.PcmPackage;
 
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AssemblyContextDetail;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackContainer;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerContainer;
@@ -113,6 +114,13 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * @generated
 	 */
 	private EClass datamodelAttackerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass assemblyContextDetailEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -242,7 +250,7 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAttacker_CompromisedComponents() {
+	public EReference getAttacker_CompromisedComponentsDetails() {
 		return (EReference) attackerEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -458,6 +466,24 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getAssemblyContextDetail() {
+		return assemblyContextDetailEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAssemblyContextDetail_CompromisedComponents() {
+		return (EReference) assemblyContextDetailEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public AttackerFactory getAttackerFactory() {
 		return (AttackerFactory) getEFactoryInstance();
 	}
@@ -487,7 +513,7 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 
 		attackerEClass = createEClass(ATTACKER);
 		createEReference(attackerEClass, ATTACKER__ATTACKS);
-		createEReference(attackerEClass, ATTACKER__COMPROMISED_COMPONENTS);
+		createEReference(attackerEClass, ATTACKER__COMPROMISED_COMPONENTS_DETAILS);
 		createEReference(attackerEClass, ATTACKER__COMPROMISED_RESOURCES);
 		createEReference(attackerEClass, ATTACKER__COMPROMISED_LINKING_RESOURCES);
 		createEReference(attackerEClass, ATTACKER__CREDENTIALS);
@@ -518,6 +544,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		createEAttribute(datamodelAttackerEClass, DATAMODEL_ATTACKER__REFERENCE_NAME);
 		createEReference(datamodelAttackerEClass, DATAMODEL_ATTACKER__SOURCE);
 		createEReference(datamodelAttackerEClass, DATAMODEL_ATTACKER__METHOD);
+
+		assemblyContextDetailEClass = createEClass(ASSEMBLY_CONTEXT_DETAIL);
+		createEReference(assemblyContextDetailEClass, ASSEMBLY_CONTEXT_DETAIL__COMPROMISED_COMPONENTS);
 	}
 
 	/**
@@ -550,14 +579,14 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		PcmIntegrationPackage thePcmIntegrationPackage = (PcmIntegrationPackage) EPackage.Registry.INSTANCE
 				.getEPackage(PcmIntegrationPackage.eNS_URI);
 		EntityPackage theEntityPackage = (EntityPackage) EPackage.Registry.INSTANCE.getEPackage(EntityPackage.eNS_URI);
-		CompositionPackage theCompositionPackage = (CompositionPackage) EPackage.Registry.INSTANCE
-				.getEPackage(CompositionPackage.eNS_URI);
 		ResourceenvironmentPackage theResourceenvironmentPackage = (ResourceenvironmentPackage) EPackage.Registry.INSTANCE
 				.getEPackage(ResourceenvironmentPackage.eNS_URI);
 		SystemPackage theSystemPackage = (SystemPackage) EPackage.Registry.INSTANCE.getEPackage(SystemPackage.eNS_URI);
 		RepositoryPackage theRepositoryPackage = (RepositoryPackage) EPackage.Registry.INSTANCE
 				.getEPackage(RepositoryPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage) EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
+		CompositionPackage theCompositionPackage = (CompositionPackage) EPackage.Registry.INSTANCE
+				.getEPackage(CompositionPackage.eNS_URI);
 
 		// Add subpackages
 		getESubpackages().add(theAttackSpecificationPackage);
@@ -570,6 +599,7 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		// Add supertypes to classes
 		attackerEClass.getESuperTypes().add(theEntityPackage.getEntity());
 		datamodelAttackerEClass.getESuperTypes().add(theEntityPackage.getEntity());
+		assemblyContextDetailEClass.getESuperTypes().add(theEntityPackage.getEntity());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(attackerContainerEClass, AttackerContainer.class, "AttackerContainer", !IS_ABSTRACT, !IS_INTERFACE,
@@ -583,8 +613,8 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		initEReference(getAttacker_Attacks(), theAttackSpecificationPackage.getAttack(), null, "attacks", null, 0, -1,
 				Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAttacker_CompromisedComponents(), theCompositionPackage.getAssemblyContext(), null,
-				"compromisedComponents", null, 0, -1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+		initEReference(getAttacker_CompromisedComponentsDetails(), this.getAssemblyContextDetail(), null,
+				"compromisedComponentsDetails", null, 0, -1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAttacker_CompromisedResources(), theResourceenvironmentPackage.getResourceContainer(), null,
 				"compromisedResources", null, 0, -1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
@@ -656,6 +686,12 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		initEReference(getDatamodelAttacker_Method(), theRepositoryPackage.getOperationSignature(), null, "method",
 				null, 0, 1, DatamodelAttacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(assemblyContextDetailEClass, AssemblyContextDetail.class, "AssemblyContextDetail", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAssemblyContextDetail_CompromisedComponents(), theCompositionPackage.getAssemblyContext(),
+				null, "compromisedComponents", null, 0, -1, AssemblyContextDetail.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -6,15 +6,13 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AssemblyContextDetail;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage;
 
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpecification.Attack;
 
 import org.palladiosimulator.pcm.confidentiality.context.system.UsageSpecification;
-
-import org.palladiosimulator.pcm.core.composition.AssemblyContext;
-
 import org.palladiosimulator.pcm.core.entity.impl.EntityImpl;
 
 import org.palladiosimulator.pcm.resourceenvironment.LinkingResource;
@@ -29,7 +27,7 @@ import org.palladiosimulator.pcm.resourceenvironment.ResourceContainer;
  * </p>
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerImpl#getAttacks <em>Attacks</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerImpl#getCompromisedComponents <em>Compromised Components</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerImpl#getCompromisedComponentsDetails <em>Compromised Components Details</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerImpl#getCompromisedResources <em>Compromised Resources</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerImpl#getCompromisedLinkingResources <em>Compromised Linking Resources</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerImpl#getCredentials <em>Credentials</em>}</li>
@@ -74,8 +72,9 @@ public class AttackerImpl extends EntityImpl implements Attacker {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<AssemblyContext> getCompromisedComponents() {
-		return (EList<AssemblyContext>) eGet(AttackerPackage.Literals.ATTACKER__COMPROMISED_COMPONENTS, true);
+	public EList<AssemblyContextDetail> getCompromisedComponentsDetails() {
+		return (EList<AssemblyContextDetail>) eGet(AttackerPackage.Literals.ATTACKER__COMPROMISED_COMPONENTS_DETAILS,
+				true);
 	}
 
 	/**

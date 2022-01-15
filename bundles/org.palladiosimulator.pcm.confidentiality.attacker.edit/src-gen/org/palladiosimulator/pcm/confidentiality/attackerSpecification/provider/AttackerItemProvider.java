@@ -47,7 +47,7 @@ public class AttackerItemProvider extends EntityItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addAttacksPropertyDescriptor(object);
-			addCompromisedComponentsPropertyDescriptor(object);
+			addCompromisedComponentsDetailsPropertyDescriptor(object);
 			addCompromisedResourcesPropertyDescriptor(object);
 			addCompromisedLinkingResourcesPropertyDescriptor(object);
 			addCredentialsPropertyDescriptor(object);
@@ -72,19 +72,19 @@ public class AttackerItemProvider extends EntityItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Compromised Components feature.
+	 * This adds a property descriptor for the Compromised Components Details feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCompromisedComponentsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Attacker_compromisedComponents_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Attacker_compromisedComponents_feature",
-								"_UI_Attacker_type"),
-						AttackerPackage.Literals.ATTACKER__COMPROMISED_COMPONENTS, true, false, true, null, null,
-						null));
+	protected void addCompromisedComponentsDetailsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_Attacker_compromisedComponentsDetails_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_Attacker_compromisedComponentsDetails_feature",
+						"_UI_Attacker_type"),
+				AttackerPackage.Literals.ATTACKER__COMPROMISED_COMPONENTS_DETAILS, true, false, true, null, null,
+				null));
 	}
 
 	/**

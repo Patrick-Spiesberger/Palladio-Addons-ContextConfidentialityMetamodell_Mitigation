@@ -289,6 +289,15 @@ public class AttackSpecificationPackageImpl extends EPackageImpl implements Atta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getAttack_CrackableEncryptedComponents() {
+		return (EReference) attackEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVulnerability() {
 		return vulnerabilityEClass;
 	}
@@ -602,6 +611,7 @@ public class AttackSpecificationPackageImpl extends EPackageImpl implements Atta
 
 		// Create classes and their features
 		attackEClass = createEClass(ATTACK);
+		createEReference(attackEClass, ATTACK__CRACKABLE_ENCRYPTED_COMPONENTS);
 
 		vulnerabilityEClass = createEClass(VULNERABILITY);
 		createEAttribute(vulnerabilityEClass, VULNERABILITY__ATTACK_VECTOR);
@@ -675,6 +685,8 @@ public class AttackSpecificationPackageImpl extends EPackageImpl implements Atta
 
 		// Obtain other dependent packages
 		EntityPackage theEntityPackage = (EntityPackage) EPackage.Registry.INSTANCE.getEPackage(EntityPackage.eNS_URI);
+		PcmIntegrationPackage thePcmIntegrationPackage = (PcmIntegrationPackage) EPackage.Registry.INSTANCE
+				.getEPackage(PcmIntegrationPackage.eNS_URI);
 		XMLTypePackage theXMLTypePackage = (XMLTypePackage) EPackage.Registry.INSTANCE
 				.getEPackage(XMLTypePackage.eNS_URI);
 		PolicyPackage thePolicyPackage = (PolicyPackage) EPackage.Registry.INSTANCE.getEPackage(PolicyPackage.eNS_URI);
@@ -711,6 +723,9 @@ public class AttackSpecificationPackageImpl extends EPackageImpl implements Atta
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(attackEClass, Attack.class, "Attack", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAttack_CrackableEncryptedComponents(), thePcmIntegrationPackage.getPCMElement(), null,
+				"crackableEncryptedComponents", null, 0, -1, Attack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = addEOperation(attackEClass, ecorePackage.getEBoolean(), "canExploit", 0, 1, IS_UNIQUE,
 				IS_ORDERED);
