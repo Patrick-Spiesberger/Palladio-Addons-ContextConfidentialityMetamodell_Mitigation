@@ -56,7 +56,8 @@ import org.palladiosimulator.pcm.resourceenvironment.ResourceenvironmentPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegrationPackage {
+public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegrationPackage
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -114,7 +115,8 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * @see #init()
 	 * @generated
 	 */
-	private PcmIntegrationPackageImpl() {
+	private PcmIntegrationPackageImpl()
+	{
 		super(eNS_URI, PcmIntegrationFactory.eINSTANCE);
 	}
 
@@ -137,15 +139,13 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static PcmIntegrationPackage init() {
-		if (isInited)
-			return (PcmIntegrationPackage) EPackage.Registry.INSTANCE.getEPackage(PcmIntegrationPackage.eNS_URI);
+	public static PcmIntegrationPackage init()
+	{
+		if (isInited) return (PcmIntegrationPackage)EPackage.Registry.INSTANCE.getEPackage(PcmIntegrationPackage.eNS_URI);
 
 		// Obtain or create and register package
 		Object registeredPcmIntegrationPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
-		PcmIntegrationPackageImpl thePcmIntegrationPackage = registeredPcmIntegrationPackage instanceof PcmIntegrationPackageImpl
-				? (PcmIntegrationPackageImpl) registeredPcmIntegrationPackage
-				: new PcmIntegrationPackageImpl();
+		PcmIntegrationPackageImpl thePcmIntegrationPackage = registeredPcmIntegrationPackage instanceof PcmIntegrationPackageImpl ? (PcmIntegrationPackageImpl)registeredPcmIntegrationPackage : new PcmIntegrationPackageImpl();
 
 		isInited = true;
 
@@ -160,13 +160,9 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 
 		// Obtain or create and register interdependencies
 		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(AttackerPackage.eNS_URI);
-		AttackerPackageImpl theAttackerPackage = (AttackerPackageImpl) (registeredPackage instanceof AttackerPackageImpl
-				? registeredPackage
-				: AttackerPackage.eINSTANCE);
+		AttackerPackageImpl theAttackerPackage = (AttackerPackageImpl)(registeredPackage instanceof AttackerPackageImpl ? registeredPackage : AttackerPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(AttackSpecificationPackage.eNS_URI);
-		AttackSpecificationPackageImpl theAttackSpecificationPackage = (AttackSpecificationPackageImpl) (registeredPackage instanceof AttackSpecificationPackageImpl
-				? registeredPackage
-				: AttackSpecificationPackage.eINSTANCE);
+		AttackSpecificationPackageImpl theAttackSpecificationPackage = (AttackSpecificationPackageImpl)(registeredPackage instanceof AttackSpecificationPackageImpl ? registeredPackage : AttackSpecificationPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		thePcmIntegrationPackage.createPackageContents();
@@ -191,7 +187,8 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getVulnerabilitySystemIntegration() {
+	public EClass getVulnerabilitySystemIntegration()
+	{
 		return vulnerabilitySystemIntegrationEClass;
 	}
 
@@ -200,8 +197,9 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVulnerabilitySystemIntegration_Vulnerability() {
-		return (EReference) vulnerabilitySystemIntegrationEClass.getEStructuralFeatures().get(0);
+	public EReference getVulnerabilitySystemIntegration_Vulnerability()
+	{
+		return (EReference)vulnerabilitySystemIntegrationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -209,7 +207,8 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPCMElement() {
+	public EClass getPCMElement()
+	{
 		return pcmElementEClass;
 	}
 
@@ -218,8 +217,9 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPCMElement_Resourcecontainer() {
-		return (EReference) pcmElementEClass.getEStructuralFeatures().get(0);
+	public EReference getPCMElement_Resourcecontainer()
+	{
+		return (EReference)pcmElementEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -227,8 +227,9 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPCMElement_Linkingresource() {
-		return (EReference) pcmElementEClass.getEStructuralFeatures().get(1);
+	public EReference getPCMElement_Linkingresource()
+	{
+		return (EReference)pcmElementEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -236,8 +237,9 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPCMElement_Compositecomponent() {
-		return (EReference) pcmElementEClass.getEStructuralFeatures().get(2);
+	public EReference getPCMElement_Compositecomponent()
+	{
+		return (EReference)pcmElementEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -245,8 +247,9 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPCMElement_Basiccomponent() {
-		return (EReference) pcmElementEClass.getEStructuralFeatures().get(3);
+	public EReference getPCMElement_Basiccomponent()
+	{
+		return (EReference)pcmElementEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -254,8 +257,9 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPCMElement_Assemblycontext() {
-		return (EReference) pcmElementEClass.getEStructuralFeatures().get(4);
+	public EReference getPCMElement_Assemblycontext()
+	{
+		return (EReference)pcmElementEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -263,8 +267,9 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPCMElement_Methodspecification() {
-		return (EReference) pcmElementEClass.getEStructuralFeatures().get(5);
+	public EReference getPCMElement_Methodspecification()
+	{
+		return (EReference)pcmElementEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -272,8 +277,9 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPCMElement_EncryptionLevel() {
-		return (EAttribute) pcmElementEClass.getEStructuralFeatures().get(6);
+	public EAttribute getPCMElement_EncryptionLevel()
+	{
+		return (EAttribute)pcmElementEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -281,7 +287,8 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRoleSystemIntegration() {
+	public EClass getRoleSystemIntegration()
+	{
 		return roleSystemIntegrationEClass;
 	}
 
@@ -290,8 +297,9 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRoleSystemIntegration_Role() {
-		return (EReference) roleSystemIntegrationEClass.getEStructuralFeatures().get(0);
+	public EReference getRoleSystemIntegration_Role()
+	{
+		return (EReference)roleSystemIntegrationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -299,7 +307,8 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSystemIntegration() {
+	public EClass getSystemIntegration()
+	{
 		return systemIntegrationEClass;
 	}
 
@@ -308,8 +317,9 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSystemIntegration_Pcmelement() {
-		return (EReference) systemIntegrationEClass.getEStructuralFeatures().get(0);
+	public EReference getSystemIntegration_Pcmelement()
+	{
+		return (EReference)systemIntegrationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -317,7 +327,8 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getNonGlobalCommunication() {
+	public EClass getNonGlobalCommunication()
+	{
 		return nonGlobalCommunicationEClass;
 	}
 
@@ -326,7 +337,8 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getEncryptionLevel() {
+	public EEnum getEncryptionLevel()
+	{
 		return encryptionLevelEEnum;
 	}
 
@@ -335,8 +347,9 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PcmIntegrationFactory getPcmIntegrationFactory() {
-		return (PcmIntegrationFactory) getEFactoryInstance();
+	public PcmIntegrationFactory getPcmIntegrationFactory()
+	{
+		return (PcmIntegrationFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -353,9 +366,9 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void createPackageContents() {
-		if (isCreated)
-			return;
+	public void createPackageContents()
+	{
+		if (isCreated) return;
 		isCreated = true;
 
 		// Create classes and their features
@@ -397,9 +410,9 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void initializePackageContents() {
-		if (isInitialized)
-			return;
+	public void initializePackageContents()
+	{
+		if (isInitialized) return;
 		isInitialized = true;
 
 		// Initialize package
@@ -408,17 +421,12 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		EntityPackage theEntityPackage = (EntityPackage) EPackage.Registry.INSTANCE.getEPackage(EntityPackage.eNS_URI);
-		AttackSpecificationPackage theAttackSpecificationPackage = (AttackSpecificationPackage) EPackage.Registry.INSTANCE
-				.getEPackage(AttackSpecificationPackage.eNS_URI);
-		ResourceenvironmentPackage theResourceenvironmentPackage = (ResourceenvironmentPackage) EPackage.Registry.INSTANCE
-				.getEPackage(ResourceenvironmentPackage.eNS_URI);
-		RepositoryPackage theRepositoryPackage = (RepositoryPackage) EPackage.Registry.INSTANCE
-				.getEPackage(RepositoryPackage.eNS_URI);
-		CompositionPackage theCompositionPackage = (CompositionPackage) EPackage.Registry.INSTANCE
-				.getEPackage(CompositionPackage.eNS_URI);
-		StructurePackage theStructurePackage = (StructurePackage) EPackage.Registry.INSTANCE
-				.getEPackage(StructurePackage.eNS_URI);
+		EntityPackage theEntityPackage = (EntityPackage)EPackage.Registry.INSTANCE.getEPackage(EntityPackage.eNS_URI);
+		AttackSpecificationPackage theAttackSpecificationPackage = (AttackSpecificationPackage)EPackage.Registry.INSTANCE.getEPackage(AttackSpecificationPackage.eNS_URI);
+		ResourceenvironmentPackage theResourceenvironmentPackage = (ResourceenvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(ResourceenvironmentPackage.eNS_URI);
+		RepositoryPackage theRepositoryPackage = (RepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(RepositoryPackage.eNS_URI);
+		CompositionPackage theCompositionPackage = (CompositionPackage)EPackage.Registry.INSTANCE.getEPackage(CompositionPackage.eNS_URI);
+		StructurePackage theStructurePackage = (StructurePackage)EPackage.Registry.INSTANCE.getEPackage(StructurePackage.eNS_URI);
 
 		// Create type parameters
 
@@ -433,51 +441,25 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 		nonGlobalCommunicationEClass.getESuperTypes().add(this.getSystemIntegration());
 
 		// Initialize classes and features; add operations and parameters
-		initEClass(vulnerabilitySystemIntegrationEClass, VulnerabilitySystemIntegration.class,
-				"VulnerabilitySystemIntegration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVulnerabilitySystemIntegration_Vulnerability(),
-				theAttackSpecificationPackage.getVulnerability(), null, "vulnerability", null, 1, 1,
-				VulnerabilitySystemIntegration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(vulnerabilitySystemIntegrationEClass, VulnerabilitySystemIntegration.class, "VulnerabilitySystemIntegration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVulnerabilitySystemIntegration_Vulnerability(), theAttackSpecificationPackage.getVulnerability(), null, "vulnerability", null, 1, 1, VulnerabilitySystemIntegration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(pcmElementEClass, PCMElement.class, "PCMElement", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPCMElement_Resourcecontainer(), theResourceenvironmentPackage.getResourceContainer(), null,
-				"resourcecontainer", null, 0, 1, PCMElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPCMElement_Linkingresource(), theResourceenvironmentPackage.getLinkingResource(), null,
-				"linkingresource", null, 0, 1, PCMElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPCMElement_Compositecomponent(), theRepositoryPackage.getCompositeComponent(), null,
-				"compositecomponent", null, 0, 1, PCMElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPCMElement_Basiccomponent(), theRepositoryPackage.getRepositoryComponent(), null,
-				"basiccomponent", null, 0, 1, PCMElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPCMElement_Assemblycontext(), theCompositionPackage.getAssemblyContext(), null,
-				"assemblycontext", null, 0, 1, PCMElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPCMElement_Methodspecification(), theStructurePackage.getMethodSpecification(), null,
-				"methodspecification", null, 0, 1, PCMElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPCMElement_EncryptionLevel(), this.getEncryptionLevel(), "encryptionLevel", "None", 1, 1,
-				PCMElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
+		initEClass(pcmElementEClass, PCMElement.class, "PCMElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPCMElement_Resourcecontainer(), theResourceenvironmentPackage.getResourceContainer(), null, "resourcecontainer", null, 0, 1, PCMElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPCMElement_Linkingresource(), theResourceenvironmentPackage.getLinkingResource(), null, "linkingresource", null, 0, 1, PCMElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPCMElement_Compositecomponent(), theRepositoryPackage.getCompositeComponent(), null, "compositecomponent", null, 0, 1, PCMElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPCMElement_Basiccomponent(), theRepositoryPackage.getRepositoryComponent(), null, "basiccomponent", null, 0, 1, PCMElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPCMElement_Assemblycontext(), theCompositionPackage.getAssemblyContext(), null, "assemblycontext", null, 0, 1, PCMElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPCMElement_Methodspecification(), theStructurePackage.getMethodSpecification(), null, "methodspecification", null, 0, 1, PCMElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPCMElement_EncryptionLevel(), this.getEncryptionLevel(), "encryptionLevel", "None", 1, 1, PCMElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(roleSystemIntegrationEClass, RoleSystemIntegration.class, "RoleSystemIntegration", !IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRoleSystemIntegration_Role(), theAttackSpecificationPackage.getRole(), null, "role", null, 1,
-				1, RoleSystemIntegration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(roleSystemIntegrationEClass, RoleSystemIntegration.class, "RoleSystemIntegration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRoleSystemIntegration_Role(), theAttackSpecificationPackage.getRole(), null, "role", null, 1, 1, RoleSystemIntegration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(systemIntegrationEClass, SystemIntegration.class, "SystemIntegration", IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSystemIntegration_Pcmelement(), this.getPCMElement(), null, "pcmelement", null, 1, 1,
-				SystemIntegration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(systemIntegrationEClass, SystemIntegration.class, "SystemIntegration", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSystemIntegration_Pcmelement(), this.getPCMElement(), null, "pcmelement", null, 1, 1, SystemIntegration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(nonGlobalCommunicationEClass, NonGlobalCommunication.class, "NonGlobalCommunication", !IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(nonGlobalCommunicationEClass, NonGlobalCommunication.class, "NonGlobalCommunication", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(encryptionLevelEEnum, EncryptionLevel.class, "EncryptionLevel");

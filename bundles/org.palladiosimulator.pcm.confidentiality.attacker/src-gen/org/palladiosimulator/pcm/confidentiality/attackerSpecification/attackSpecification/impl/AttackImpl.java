@@ -3,6 +3,7 @@
 package org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpecification.impl;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpecification.Attack;
@@ -11,6 +12,7 @@ import org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpe
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpecification.Vulnerability;
 
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement;
+
 import org.palladiosimulator.pcm.core.entity.impl.EntityImpl;
 
 /**
@@ -26,13 +28,15 @@ import org.palladiosimulator.pcm.core.entity.impl.EntityImpl;
  *
  * @generated
  */
-public abstract class AttackImpl extends EntityImpl implements Attack {
+public abstract class AttackImpl extends EntityImpl implements Attack
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AttackImpl() {
+	protected AttackImpl()
+	{
 		super();
 	}
 
@@ -42,7 +46,8 @@ public abstract class AttackImpl extends EntityImpl implements Attack {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return AttackSpecificationPackage.Literals.ATTACK;
 	}
 
@@ -52,9 +57,9 @@ public abstract class AttackImpl extends EntityImpl implements Attack {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<PCMElement> getCrackableEncryptedComponents() {
-		return (EList<PCMElement>) eGet(AttackSpecificationPackage.Literals.ATTACK__CRACKABLE_ENCRYPTED_COMPONENTS,
-				true);
+	public EList<PCMElement> getCrackableEncryptedComponents()
+	{
+		return (EList<PCMElement>)eGet(AttackSpecificationPackage.Literals.ATTACK__CRACKABLE_ENCRYPTED_COMPONENTS, true);
 	}
 
 	/**
@@ -62,7 +67,8 @@ public abstract class AttackImpl extends EntityImpl implements Attack {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean canExploit(Vulnerability vulnerability, boolean authentificated, AttackVector attackVector) {
+	public boolean canExploit(Vulnerability vulnerability, boolean authentificated, AttackVector attackVector)
+	{
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();

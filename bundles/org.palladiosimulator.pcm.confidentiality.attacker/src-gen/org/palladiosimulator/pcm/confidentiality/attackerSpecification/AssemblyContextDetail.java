@@ -24,7 +24,8 @@ import org.palladiosimulator.pcm.core.entity.Entity;
  * @model
  * @generated
  */
-public interface AssemblyContextDetail extends Entity {
+public interface AssemblyContextDetail extends Entity
+{
 	/**
 	 * Returns the value of the '<em><b>Compromised Components</b></em>' reference list.
 	 * The list contents are of type {@link org.palladiosimulator.pcm.core.composition.AssemblyContext}.

@@ -26,13 +26,15 @@ import org.palladiosimulator.pcm.core.entity.impl.EntityImpl;
  *
  * @generated
  */
-public class AssemblyContextDetailImpl extends EntityImpl implements AssemblyContextDetail {
+public class AssemblyContextDetailImpl extends EntityImpl implements AssemblyContextDetail
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AssemblyContextDetailImpl() {
+	protected AssemblyContextDetailImpl()
+	{
 		super();
 	}
 
@@ -42,7 +44,8 @@ public class AssemblyContextDetailImpl extends EntityImpl implements AssemblyCon
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return AttackerPackage.Literals.ASSEMBLY_CONTEXT_DETAIL;
 	}
 
@@ -52,9 +55,9 @@ public class AssemblyContextDetailImpl extends EntityImpl implements AssemblyCon
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<AssemblyContext> getCompromisedComponents() {
-		return (EList<AssemblyContext>) eGet(AttackerPackage.Literals.ASSEMBLY_CONTEXT_DETAIL__COMPROMISED_COMPONENTS,
-				true);
+	public EList<AssemblyContext> getCompromisedComponents()
+	{
+		return (EList<AssemblyContext>)eGet(AttackerPackage.Literals.ASSEMBLY_CONTEXT_DETAIL__COMPROMISED_COMPONENTS, true);
 	}
 
 } //AssemblyContextDetailImpl

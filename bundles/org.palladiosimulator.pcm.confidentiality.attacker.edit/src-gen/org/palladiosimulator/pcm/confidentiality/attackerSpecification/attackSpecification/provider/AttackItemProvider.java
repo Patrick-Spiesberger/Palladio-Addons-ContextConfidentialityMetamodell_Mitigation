@@ -2,6 +2,7 @@
  */
 package org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpecification.provider;
 
+
 import java.util.Collection;
 import java.util.List;
 
@@ -14,8 +15,8 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpecification.Attack;
-
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpecification.AttackSpecificationPackage;
+
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.provider.AttackerEditPlugin;
 
 import org.palladiosimulator.pcm.core.entity.provider.EntityItemProvider;
@@ -26,14 +27,16 @@ import org.palladiosimulator.pcm.core.entity.provider.EntityItemProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AttackItemProvider extends EntityItemProvider {
+public class AttackItemProvider extends EntityItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AttackItemProvider(AdapterFactory adapterFactory) {
+	public AttackItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -44,8 +47,10 @@ public class AttackItemProvider extends EntityItemProvider {
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addCrackableEncryptedComponentsPropertyDescriptor(object);
@@ -59,14 +64,21 @@ public class AttackItemProvider extends EntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCrackableEncryptedComponentsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_Attack_crackableEncryptedComponents_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_Attack_crackableEncryptedComponents_feature",
-						"_UI_Attack_type"),
-				AttackSpecificationPackage.Literals.ATTACK__CRACKABLE_ENCRYPTED_COMPONENTS, true, false, true, null,
-				null, null));
+	protected void addCrackableEncryptedComponentsPropertyDescriptor(Object object)
+	{
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Attack_crackableEncryptedComponents_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Attack_crackableEncryptedComponents_feature", "_UI_Attack_type"),
+				 AttackSpecificationPackage.Literals.ATTACK__CRACKABLE_ENCRYPTED_COMPONENTS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -75,7 +87,8 @@ public class AttackItemProvider extends EntityItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -86,11 +99,14 @@ public class AttackItemProvider extends EntityItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
-		String label = ((Attack) object).getEntityName();
-		return label == null || label.length() == 0 ? getString("_UI_Attack_type")
-				: getString("_UI_Attack_type") + " " + label;
+	public String getText(Object object)
+	{
+		String label = ((Attack)object).getEntityName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Attack_type") :
+			getString("_UI_Attack_type") + " " + label;
 	}
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -100,7 +116,8 @@ public class AttackItemProvider extends EntityItemProvider {
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 		super.notifyChanged(notification);
 	}
@@ -113,7 +130,8 @@ public class AttackItemProvider extends EntityItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 
@@ -124,7 +142,8 @@ public class AttackItemProvider extends EntityItemProvider {
 	 * @generated
 	 */
 	@Override
-	public ResourceLocator getResourceLocator() {
+	public ResourceLocator getResourceLocator()
+	{
 		return AttackerEditPlugin.INSTANCE;
 	}
 

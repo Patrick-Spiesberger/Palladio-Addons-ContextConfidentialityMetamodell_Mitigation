@@ -24,7 +24,8 @@ import org.palladiosimulator.pcm.core.entity.EntityPackage;
  * @model kind="package"
  * @generated
  */
-public interface AttackerPackage extends EPackage {
+public interface AttackerPackage extends EPackage
+{
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -55,8 +56,7 @@ public interface AttackerPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	AttackerPackage eINSTANCE = org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerPackageImpl
-			.init();
+	AttackerPackage eINSTANCE = org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerPackageImpl.init();
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerContainerImpl <em>Container</em>}' class.
@@ -124,7 +124,7 @@ public interface AttackerPackage extends EPackage {
 	int ATTACKER__ATTACKS = EntityPackage.ENTITY_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Compromised Components Details</b></em>' reference list.
+	 * The feature id for the '<em><b>Compromised Components Details</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -472,6 +472,7 @@ public interface AttackerPackage extends EPackage {
 	 */
 	int ASSEMBLY_CONTEXT_DETAIL_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 1;
 
+
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerContainer <em>Container</em>}'.
 	 * <!-- begin-user-doc -->
@@ -515,10 +516,10 @@ public interface AttackerPackage extends EPackage {
 	EReference getAttacker_Attacks();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getCompromisedComponentsDetails <em>Compromised Components Details</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getCompromisedComponentsDetails <em>Compromised Components Details</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Compromised Components Details</em>'.
+	 * @return the meta object for the containment reference list '<em>Compromised Components Details</em>'.
 	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getCompromisedComponentsDetails()
 	 * @see #getAttacker()
 	 * @generated
@@ -814,7 +815,8 @@ public interface AttackerPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	interface Literals {
+	interface Literals
+	{
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerContainerImpl <em>Container</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -852,7 +854,7 @@ public interface AttackerPackage extends EPackage {
 		EReference ATTACKER__ATTACKS = eINSTANCE.getAttacker_Attacks();
 
 		/**
-		 * The meta object literal for the '<em><b>Compromised Components Details</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Compromised Components Details</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -931,8 +933,7 @@ public interface AttackerPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ATTACKER_SPECIFICATION__CATEGORYSPECIFICATION = eINSTANCE
-				.getAttackerSpecification_Categoryspecification();
+		EReference ATTACKER_SPECIFICATION__CATEGORYSPECIFICATION = eINSTANCE.getAttackerSpecification_Categoryspecification();
 
 		/**
 		 * The meta object literal for the '<em><b>Systemintegration</b></em>' containment reference feature.
@@ -1012,8 +1013,7 @@ public interface AttackerPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ATTACKER_SYSTEM_SPECIFICATION_CONTAINER__VULNERABILITIES = eINSTANCE
-				.getAttackerSystemSpecificationContainer_Vulnerabilities();
+		EReference ATTACKER_SYSTEM_SPECIFICATION_CONTAINER__VULNERABILITIES = eINSTANCE.getAttackerSystemSpecificationContainer_Vulnerabilities();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.DatamodelAttackerImpl <em>Datamodel Attacker</em>}' class.
@@ -1073,8 +1073,7 @@ public interface AttackerPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ASSEMBLY_CONTEXT_DETAIL__COMPROMISED_COMPONENTS = eINSTANCE
-				.getAssemblyContextDetail_CompromisedComponents();
+		EReference ASSEMBLY_CONTEXT_DETAIL__COMPROMISED_COMPONENTS = eINSTANCE.getAssemblyContextDetail_CompromisedComponents();
 
 	}
 

@@ -58,7 +58,8 @@ import org.palladiosimulator.pcm.resourceenvironment.ResourceenvironmentPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage {
+public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -137,7 +138,8 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * @see #init()
 	 * @generated
 	 */
-	private AttackerPackageImpl() {
+	private AttackerPackageImpl()
+	{
 		super(eNS_URI, AttackerFactory.eINSTANCE);
 	}
 
@@ -160,15 +162,13 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static AttackerPackage init() {
-		if (isInited)
-			return (AttackerPackage) EPackage.Registry.INSTANCE.getEPackage(AttackerPackage.eNS_URI);
+	public static AttackerPackage init()
+	{
+		if (isInited) return (AttackerPackage)EPackage.Registry.INSTANCE.getEPackage(AttackerPackage.eNS_URI);
 
 		// Obtain or create and register package
 		Object registeredAttackerPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
-		AttackerPackageImpl theAttackerPackage = registeredAttackerPackage instanceof AttackerPackageImpl
-				? (AttackerPackageImpl) registeredAttackerPackage
-				: new AttackerPackageImpl();
+		AttackerPackageImpl theAttackerPackage = registeredAttackerPackage instanceof AttackerPackageImpl ? (AttackerPackageImpl)registeredAttackerPackage : new AttackerPackageImpl();
 
 		isInited = true;
 
@@ -183,13 +183,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 
 		// Obtain or create and register interdependencies
 		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(AttackSpecificationPackage.eNS_URI);
-		AttackSpecificationPackageImpl theAttackSpecificationPackage = (AttackSpecificationPackageImpl) (registeredPackage instanceof AttackSpecificationPackageImpl
-				? registeredPackage
-				: AttackSpecificationPackage.eINSTANCE);
+		AttackSpecificationPackageImpl theAttackSpecificationPackage = (AttackSpecificationPackageImpl)(registeredPackage instanceof AttackSpecificationPackageImpl ? registeredPackage : AttackSpecificationPackage.eINSTANCE);
 		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PcmIntegrationPackage.eNS_URI);
-		PcmIntegrationPackageImpl thePcmIntegrationPackage = (PcmIntegrationPackageImpl) (registeredPackage instanceof PcmIntegrationPackageImpl
-				? registeredPackage
-				: PcmIntegrationPackage.eINSTANCE);
+		PcmIntegrationPackageImpl thePcmIntegrationPackage = (PcmIntegrationPackageImpl)(registeredPackage instanceof PcmIntegrationPackageImpl ? registeredPackage : PcmIntegrationPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theAttackerPackage.createPackageContents();
@@ -214,7 +210,8 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAttackerContainer() {
+	public EClass getAttackerContainer()
+	{
 		return attackerContainerEClass;
 	}
 
@@ -223,8 +220,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAttackerContainer_Attacker() {
-		return (EReference) attackerContainerEClass.getEStructuralFeatures().get(0);
+	public EReference getAttackerContainer_Attacker()
+	{
+		return (EReference)attackerContainerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -232,7 +230,8 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAttacker() {
+	public EClass getAttacker()
+	{
 		return attackerEClass;
 	}
 
@@ -241,8 +240,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAttacker_Attacks() {
-		return (EReference) attackerEClass.getEStructuralFeatures().get(0);
+	public EReference getAttacker_Attacks()
+	{
+		return (EReference)attackerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -250,8 +250,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAttacker_CompromisedComponentsDetails() {
-		return (EReference) attackerEClass.getEStructuralFeatures().get(1);
+	public EReference getAttacker_CompromisedComponentsDetails()
+	{
+		return (EReference)attackerEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -259,8 +260,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAttacker_CompromisedResources() {
-		return (EReference) attackerEClass.getEStructuralFeatures().get(2);
+	public EReference getAttacker_CompromisedResources()
+	{
+		return (EReference)attackerEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -268,8 +270,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAttacker_CompromisedLinkingResources() {
-		return (EReference) attackerEClass.getEStructuralFeatures().get(3);
+	public EReference getAttacker_CompromisedLinkingResources()
+	{
+		return (EReference)attackerEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -277,8 +280,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAttacker_Credentials() {
-		return (EReference) attackerEClass.getEStructuralFeatures().get(4);
+	public EReference getAttacker_Credentials()
+	{
+		return (EReference)attackerEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -286,8 +290,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAttacker_ExploitContextProviders() {
-		return (EAttribute) attackerEClass.getEStructuralFeatures().get(5);
+	public EAttribute getAttacker_ExploitContextProviders()
+	{
+		return (EAttribute)attackerEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -295,7 +300,8 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAttackerSpecification() {
+	public EClass getAttackerSpecification()
+	{
 		return attackerSpecificationEClass;
 	}
 
@@ -304,8 +310,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAttackerSpecification_Attackers() {
-		return (EReference) attackerSpecificationEClass.getEStructuralFeatures().get(0);
+	public EReference getAttackerSpecification_Attackers()
+	{
+		return (EReference)attackerSpecificationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -313,8 +320,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAttackerSpecification_Attacks() {
-		return (EReference) attackerSpecificationEClass.getEStructuralFeatures().get(1);
+	public EReference getAttackerSpecification_Attacks()
+	{
+		return (EReference)attackerSpecificationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -322,8 +330,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAttackerSpecification_Vulnerabilites() {
-		return (EReference) attackerSpecificationEClass.getEStructuralFeatures().get(2);
+	public EReference getAttackerSpecification_Vulnerabilites()
+	{
+		return (EReference)attackerSpecificationEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -331,8 +340,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAttackerSpecification_Categoryspecification() {
-		return (EReference) attackerSpecificationEClass.getEStructuralFeatures().get(3);
+	public EReference getAttackerSpecification_Categoryspecification()
+	{
+		return (EReference)attackerSpecificationEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -340,8 +350,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAttackerSpecification_Systemintegration() {
-		return (EReference) attackerSpecificationEClass.getEStructuralFeatures().get(4);
+	public EReference getAttackerSpecification_Systemintegration()
+	{
+		return (EReference)attackerSpecificationEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -349,7 +360,8 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAttackContainer() {
+	public EClass getAttackContainer()
+	{
 		return attackContainerEClass;
 	}
 
@@ -358,8 +370,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAttackContainer_Attack() {
-		return (EReference) attackContainerEClass.getEStructuralFeatures().get(0);
+	public EReference getAttackContainer_Attack()
+	{
+		return (EReference)attackContainerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -367,7 +380,8 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getVulnerabilityContainer() {
+	public EClass getVulnerabilityContainer()
+	{
 		return vulnerabilityContainerEClass;
 	}
 
@@ -376,8 +390,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVulnerabilityContainer_Vulnerability() {
-		return (EReference) vulnerabilityContainerEClass.getEStructuralFeatures().get(0);
+	public EReference getVulnerabilityContainer_Vulnerability()
+	{
+		return (EReference)vulnerabilityContainerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -385,7 +400,8 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getCategorySpecification() {
+	public EClass getCategorySpecification()
+	{
 		return categorySpecificationEClass;
 	}
 
@@ -394,8 +410,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCategorySpecification_Categories() {
-		return (EReference) categorySpecificationEClass.getEStructuralFeatures().get(0);
+	public EReference getCategorySpecification_Categories()
+	{
+		return (EReference)categorySpecificationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -403,7 +420,8 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAttackerSystemSpecificationContainer() {
+	public EClass getAttackerSystemSpecificationContainer()
+	{
 		return attackerSystemSpecificationContainerEClass;
 	}
 
@@ -412,8 +430,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAttackerSystemSpecificationContainer_Vulnerabilities() {
-		return (EReference) attackerSystemSpecificationContainerEClass.getEStructuralFeatures().get(0);
+	public EReference getAttackerSystemSpecificationContainer_Vulnerabilities()
+	{
+		return (EReference)attackerSystemSpecificationContainerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -421,7 +440,8 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDatamodelAttacker() {
+	public EClass getDatamodelAttacker()
+	{
 		return datamodelAttackerEClass;
 	}
 
@@ -430,8 +450,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDatamodelAttacker_DataType() {
-		return (EReference) datamodelAttackerEClass.getEStructuralFeatures().get(0);
+	public EReference getDatamodelAttacker_DataType()
+	{
+		return (EReference)datamodelAttackerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -439,8 +460,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDatamodelAttacker_ReferenceName() {
-		return (EAttribute) datamodelAttackerEClass.getEStructuralFeatures().get(1);
+	public EAttribute getDatamodelAttacker_ReferenceName()
+	{
+		return (EAttribute)datamodelAttackerEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -448,8 +470,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDatamodelAttacker_Source() {
-		return (EReference) datamodelAttackerEClass.getEStructuralFeatures().get(2);
+	public EReference getDatamodelAttacker_Source()
+	{
+		return (EReference)datamodelAttackerEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -457,8 +480,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDatamodelAttacker_Method() {
-		return (EReference) datamodelAttackerEClass.getEStructuralFeatures().get(3);
+	public EReference getDatamodelAttacker_Method()
+	{
+		return (EReference)datamodelAttackerEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -466,7 +490,8 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAssemblyContextDetail() {
+	public EClass getAssemblyContextDetail()
+	{
 		return assemblyContextDetailEClass;
 	}
 
@@ -475,8 +500,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAssemblyContextDetail_CompromisedComponents() {
-		return (EReference) assemblyContextDetailEClass.getEStructuralFeatures().get(0);
+	public EReference getAssemblyContextDetail_CompromisedComponents()
+	{
+		return (EReference)assemblyContextDetailEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -484,8 +510,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AttackerFactory getAttackerFactory() {
-		return (AttackerFactory) getEFactoryInstance();
+	public AttackerFactory getAttackerFactory()
+	{
+		return (AttackerFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -502,9 +529,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void createPackageContents() {
-		if (isCreated)
-			return;
+	public void createPackageContents()
+	{
+		if (isCreated) return;
 		isCreated = true;
 
 		// Create classes and their features
@@ -536,8 +563,7 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		createEReference(categorySpecificationEClass, CATEGORY_SPECIFICATION__CATEGORIES);
 
 		attackerSystemSpecificationContainerEClass = createEClass(ATTACKER_SYSTEM_SPECIFICATION_CONTAINER);
-		createEReference(attackerSystemSpecificationContainerEClass,
-				ATTACKER_SYSTEM_SPECIFICATION_CONTAINER__VULNERABILITIES);
+		createEReference(attackerSystemSpecificationContainerEClass, ATTACKER_SYSTEM_SPECIFICATION_CONTAINER__VULNERABILITIES);
 
 		datamodelAttackerEClass = createEClass(DATAMODEL_ATTACKER);
 		createEReference(datamodelAttackerEClass, DATAMODEL_ATTACKER__DATA_TYPE);
@@ -563,9 +589,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void initializePackageContents() {
-		if (isInitialized)
-			return;
+	public void initializePackageContents()
+	{
+		if (isInitialized) return;
 		isInitialized = true;
 
 		// Initialize package
@@ -574,19 +600,14 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		AttackSpecificationPackage theAttackSpecificationPackage = (AttackSpecificationPackage) EPackage.Registry.INSTANCE
-				.getEPackage(AttackSpecificationPackage.eNS_URI);
-		PcmIntegrationPackage thePcmIntegrationPackage = (PcmIntegrationPackage) EPackage.Registry.INSTANCE
-				.getEPackage(PcmIntegrationPackage.eNS_URI);
-		EntityPackage theEntityPackage = (EntityPackage) EPackage.Registry.INSTANCE.getEPackage(EntityPackage.eNS_URI);
-		ResourceenvironmentPackage theResourceenvironmentPackage = (ResourceenvironmentPackage) EPackage.Registry.INSTANCE
-				.getEPackage(ResourceenvironmentPackage.eNS_URI);
-		SystemPackage theSystemPackage = (SystemPackage) EPackage.Registry.INSTANCE.getEPackage(SystemPackage.eNS_URI);
-		RepositoryPackage theRepositoryPackage = (RepositoryPackage) EPackage.Registry.INSTANCE
-				.getEPackage(RepositoryPackage.eNS_URI);
-		EcorePackage theEcorePackage = (EcorePackage) EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		CompositionPackage theCompositionPackage = (CompositionPackage) EPackage.Registry.INSTANCE
-				.getEPackage(CompositionPackage.eNS_URI);
+		AttackSpecificationPackage theAttackSpecificationPackage = (AttackSpecificationPackage)EPackage.Registry.INSTANCE.getEPackage(AttackSpecificationPackage.eNS_URI);
+		PcmIntegrationPackage thePcmIntegrationPackage = (PcmIntegrationPackage)EPackage.Registry.INSTANCE.getEPackage(PcmIntegrationPackage.eNS_URI);
+		EntityPackage theEntityPackage = (EntityPackage)EPackage.Registry.INSTANCE.getEPackage(EntityPackage.eNS_URI);
+		ResourceenvironmentPackage theResourceenvironmentPackage = (ResourceenvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(ResourceenvironmentPackage.eNS_URI);
+		SystemPackage theSystemPackage = (SystemPackage)EPackage.Registry.INSTANCE.getEPackage(SystemPackage.eNS_URI);
+		RepositoryPackage theRepositoryPackage = (RepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(RepositoryPackage.eNS_URI);
+		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
+		CompositionPackage theCompositionPackage = (CompositionPackage)EPackage.Registry.INSTANCE.getEPackage(CompositionPackage.eNS_URI);
 
 		// Add subpackages
 		getESubpackages().add(theAttackSpecificationPackage);
@@ -602,96 +623,44 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		assemblyContextDetailEClass.getESuperTypes().add(theEntityPackage.getEntity());
 
 		// Initialize classes and features; add operations and parameters
-		initEClass(attackerContainerEClass, AttackerContainer.class, "AttackerContainer", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAttackerContainer_Attacker(), this.getAttacker(), null, "attacker", null, 0, -1,
-				AttackerContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(attackerContainerEClass, AttackerContainer.class, "AttackerContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAttackerContainer_Attacker(), this.getAttacker(), null, "attacker", null, 0, -1, AttackerContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(attackerEClass, Attacker.class, "Attacker", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAttacker_Attacks(), theAttackSpecificationPackage.getAttack(), null, "attacks", null, 0, -1,
-				Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAttacker_CompromisedComponentsDetails(), this.getAssemblyContextDetail(), null,
-				"compromisedComponentsDetails", null, 0, -1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAttacker_CompromisedResources(), theResourceenvironmentPackage.getResourceContainer(), null,
-				"compromisedResources", null, 0, -1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAttacker_CompromisedLinkingResources(), theResourceenvironmentPackage.getLinkingResource(),
-				null, "compromisedLinkingResources", null, 0, -1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAttacker_Credentials(), theSystemPackage.getUsageSpecification(), null, "credentials", null,
-				0, -1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAttacker_ExploitContextProviders(), ecorePackage.getEBoolean(), "exploitContextProviders",
-				"true", 0, 1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(attackerEClass, Attacker.class, "Attacker", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAttacker_Attacks(), theAttackSpecificationPackage.getAttack(), null, "attacks", null, 0, -1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAttacker_CompromisedComponentsDetails(), this.getAssemblyContextDetail(), null, "compromisedComponentsDetails", null, 0, -1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAttacker_CompromisedResources(), theResourceenvironmentPackage.getResourceContainer(), null, "compromisedResources", null, 0, -1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAttacker_CompromisedLinkingResources(), theResourceenvironmentPackage.getLinkingResource(), null, "compromisedLinkingResources", null, 0, -1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAttacker_Credentials(), theSystemPackage.getUsageSpecification(), null, "credentials", null, 0, -1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAttacker_ExploitContextProviders(), ecorePackage.getEBoolean(), "exploitContextProviders", "true", 0, 1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(attackerSpecificationEClass, AttackerSpecification.class, "AttackerSpecification", !IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAttackerSpecification_Attackers(), this.getAttackerContainer(), null, "attackers", null, 0, 1,
-				AttackerSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAttackerSpecification_Attacks(), this.getAttackContainer(), null, "attacks", null, 0, 1,
-				AttackerSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAttackerSpecification_Vulnerabilites(), this.getVulnerabilityContainer(), null,
-				"vulnerabilites", null, 0, 1, AttackerSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAttackerSpecification_Categoryspecification(), this.getCategorySpecification(), null,
-				"categoryspecification", null, 0, 1, AttackerSpecification.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAttackerSpecification_Systemintegration(), this.getAttackerSystemSpecificationContainer(),
-				null, "systemintegration", null, 0, 1, AttackerSpecification.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(attackerSpecificationEClass, AttackerSpecification.class, "AttackerSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAttackerSpecification_Attackers(), this.getAttackerContainer(), null, "attackers", null, 0, 1, AttackerSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAttackerSpecification_Attacks(), this.getAttackContainer(), null, "attacks", null, 0, 1, AttackerSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAttackerSpecification_Vulnerabilites(), this.getVulnerabilityContainer(), null, "vulnerabilites", null, 0, 1, AttackerSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAttackerSpecification_Categoryspecification(), this.getCategorySpecification(), null, "categoryspecification", null, 0, 1, AttackerSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAttackerSpecification_Systemintegration(), this.getAttackerSystemSpecificationContainer(), null, "systemintegration", null, 0, 1, AttackerSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(attackContainerEClass, AttackContainer.class, "AttackContainer", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAttackContainer_Attack(), theAttackSpecificationPackage.getAttack(), null, "attack", null, 0,
-				-1, AttackContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(attackContainerEClass, AttackContainer.class, "AttackContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAttackContainer_Attack(), theAttackSpecificationPackage.getAttack(), null, "attack", null, 0, -1, AttackContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(vulnerabilityContainerEClass, VulnerabilityContainer.class, "VulnerabilityContainer", !IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVulnerabilityContainer_Vulnerability(), theAttackSpecificationPackage.getVulnerability(),
-				null, "vulnerability", null, 0, -1, VulnerabilityContainer.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(vulnerabilityContainerEClass, VulnerabilityContainer.class, "VulnerabilityContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVulnerabilityContainer_Vulnerability(), theAttackSpecificationPackage.getVulnerability(), null, "vulnerability", null, 0, -1, VulnerabilityContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(categorySpecificationEClass, CategorySpecification.class, "CategorySpecification", !IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCategorySpecification_Categories(), theAttackSpecificationPackage.getAttackCategory(), null,
-				"categories", null, 0, -1, CategorySpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(categorySpecificationEClass, CategorySpecification.class, "CategorySpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCategorySpecification_Categories(), theAttackSpecificationPackage.getAttackCategory(), null, "categories", null, 0, -1, CategorySpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(attackerSystemSpecificationContainerEClass, AttackerSystemSpecificationContainer.class,
-				"AttackerSystemSpecificationContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAttackerSystemSpecificationContainer_Vulnerabilities(),
-				thePcmIntegrationPackage.getSystemIntegration(), null, "vulnerabilities", null, 0, -1,
-				AttackerSystemSpecificationContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(attackerSystemSpecificationContainerEClass, AttackerSystemSpecificationContainer.class, "AttackerSystemSpecificationContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAttackerSystemSpecificationContainer_Vulnerabilities(), thePcmIntegrationPackage.getSystemIntegration(), null, "vulnerabilities", null, 0, -1, AttackerSystemSpecificationContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(datamodelAttackerEClass, DatamodelAttacker.class, "DatamodelAttacker", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDatamodelAttacker_DataType(), theRepositoryPackage.getDataType(), null, "dataType", null, 0,
-				1, DatamodelAttacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDatamodelAttacker_ReferenceName(), ecorePackage.getEString(), "referenceName", null, 0, 1,
-				DatamodelAttacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEReference(getDatamodelAttacker_Source(), theEcorePackage.getEObject(), null, "source", null, 0, 1,
-				DatamodelAttacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDatamodelAttacker_Method(), theRepositoryPackage.getOperationSignature(), null, "method",
-				null, 0, 1, DatamodelAttacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(datamodelAttackerEClass, DatamodelAttacker.class, "DatamodelAttacker", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDatamodelAttacker_DataType(), theRepositoryPackage.getDataType(), null, "dataType", null, 0, 1, DatamodelAttacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDatamodelAttacker_ReferenceName(), ecorePackage.getEString(), "referenceName", null, 0, 1, DatamodelAttacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDatamodelAttacker_Source(), theEcorePackage.getEObject(), null, "source", null, 0, 1, DatamodelAttacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDatamodelAttacker_Method(), theRepositoryPackage.getOperationSignature(), null, "method", null, 0, 1, DatamodelAttacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(assemblyContextDetailEClass, AssemblyContextDetail.class, "AssemblyContextDetail", !IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAssemblyContextDetail_CompromisedComponents(), theCompositionPackage.getAssemblyContext(),
-				null, "compromisedComponents", null, 0, -1, AssemblyContextDetail.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(assemblyContextDetailEClass, AssemblyContextDetail.class, "AssemblyContextDetail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAssemblyContextDetail_CompromisedComponents(), theCompositionPackage.getAssemblyContext(), null, "compromisedComponents", null, 0, -1, AssemblyContextDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -3,7 +3,9 @@
 package org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpecification;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement;
+
 import org.palladiosimulator.pcm.core.entity.Entity;
 
 /**
@@ -22,7 +24,8 @@ import org.palladiosimulator.pcm.core.entity.Entity;
  * @model abstract="true"
  * @generated
  */
-public interface Attack extends Entity {
+public interface Attack extends Entity
+{
 	/**
 	 * Returns the value of the '<em><b>Crackable Encrypted Components</b></em>' reference list.
 	 * The list contents are of type {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement}.
