@@ -33,7 +33,7 @@ public class AssemblyContextDetailImpl extends EntityImpl implements AssemblyCon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AssemblyContextDetailImpl()
+	public AssemblyContextDetailImpl()
 	{
 		super();
 	}
