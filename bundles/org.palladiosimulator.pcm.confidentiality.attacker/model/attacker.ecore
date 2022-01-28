@@ -19,6 +19,9 @@
         eType="ecore:EClass ../../org.palladiosimulator.pcm.confidentiality.context/model/context.ecore#//system/UsageSpecification"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="exploitContextProviders"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attackerListEffort" eType="#//ListOperationEffort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="calculateMaxTime" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"
+        defaultValueLiteral="3600"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttackerSpecification">
     <eStructuralFeatures xsi:type="ecore:EReference" name="attackers" eType="#//AttackerContainer"
@@ -57,6 +60,11 @@
   <eClassifiers xsi:type="ecore:EClass" name="AssemblyContextDetail" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="compromisedComponents"
         upperBound="-1" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyContext"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ListOperationEffort">
+    <eLiterals name="Standard" literal="Standard"/>
+    <eLiterals name="Part" value="1" literal="Part"/>
+    <eLiterals name="All" value="2" literal="All"/>
   </eClassifiers>
   <eSubpackages name="attackSpecification" nsURI="http://www.palladiosimulator.org/pcm/confidentiality/attacker/0.1/"
       nsPrefix="attack">

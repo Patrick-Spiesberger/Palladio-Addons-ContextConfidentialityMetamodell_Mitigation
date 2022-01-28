@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AssemblyContextDetail;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage;
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.ListOperationEffort;
 
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpecification.Attack;
 
@@ -33,6 +34,8 @@ import org.palladiosimulator.pcm.resourceenvironment.ResourceContainer;
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerImpl#getCompromisedLinkingResources <em>Compromised Linking Resources</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerImpl#getCredentials <em>Credentials</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerImpl#isExploitContextProviders <em>Exploit Context Providers</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerImpl#getAttackerListEffort <em>Attacker List Effort</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerImpl#getCalculateMaxTime <em>Calculate Max Time</em>}</li>
  * </ul>
  *
  * @generated
@@ -133,6 +136,46 @@ public class AttackerImpl extends EntityImpl implements Attacker
 	public void setExploitContextProviders(boolean newExploitContextProviders)
 	{
 		eSet(AttackerPackage.Literals.ATTACKER__EXPLOIT_CONTEXT_PROVIDERS, newExploitContextProviders);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ListOperationEffort getAttackerListEffort()
+	{
+		return (ListOperationEffort)eGet(AttackerPackage.Literals.ATTACKER__ATTACKER_LIST_EFFORT, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAttackerListEffort(ListOperationEffort newAttackerListEffort)
+	{
+		eSet(AttackerPackage.Literals.ATTACKER__ATTACKER_LIST_EFFORT, newAttackerListEffort);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getCalculateMaxTime()
+	{
+		return (Integer)eGet(AttackerPackage.Literals.ATTACKER__CALCULATE_MAX_TIME, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCalculateMaxTime(int newCalculateMaxTime)
+	{
+		eSet(AttackerPackage.Literals.ATTACKER__CALCULATE_MAX_TIME, newCalculateMaxTime);
 	}
 
 } //AttackerImpl

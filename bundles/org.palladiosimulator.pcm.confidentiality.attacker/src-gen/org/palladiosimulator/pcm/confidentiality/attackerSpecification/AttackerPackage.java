@@ -4,6 +4,7 @@ package org.palladiosimulator.pcm.confidentiality.attackerSpecification;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -169,13 +170,31 @@ public interface AttackerPackage extends EPackage
 	int ATTACKER__EXPLOIT_CONTEXT_PROVIDERS = EntityPackage.ENTITY_FEATURE_COUNT + 5;
 
 	/**
+	 * The feature id for the '<em><b>Attacker List Effort</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTACKER__ATTACKER_LIST_EFFORT = EntityPackage.ENTITY_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Calculate Max Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTACKER__CALCULATE_MAX_TIME = EntityPackage.ENTITY_FEATURE_COUNT + 7;
+
+	/**
 	 * The number of structural features of the '<em>Attacker</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTACKER_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 6;
+	int ATTACKER_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 8;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerSpecificationImpl <em>Specification</em>}' class.
@@ -472,6 +491,16 @@ public interface AttackerPackage extends EPackage
 	 */
 	int ASSEMBLY_CONTEXT_DETAIL_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 1;
 
+	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.ListOperationEffort <em>List Operation Effort</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.ListOperationEffort
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerPackageImpl#getListOperationEffort()
+	 * @generated
+	 */
+	int LIST_OPERATION_EFFORT = 9;
+
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerContainer <em>Container</em>}'.
@@ -569,6 +598,28 @@ public interface AttackerPackage extends EPackage
 	 * @generated
 	 */
 	EAttribute getAttacker_ExploitContextProviders();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getAttackerListEffort <em>Attacker List Effort</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Attacker List Effort</em>'.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getAttackerListEffort()
+	 * @see #getAttacker()
+	 * @generated
+	 */
+	EAttribute getAttacker_AttackerListEffort();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getCalculateMaxTime <em>Calculate Max Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Calculate Max Time</em>'.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getCalculateMaxTime()
+	 * @see #getAttacker()
+	 * @generated
+	 */
+	EAttribute getAttacker_CalculateMaxTime();
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerSpecification <em>Specification</em>}'.
@@ -795,6 +846,16 @@ public interface AttackerPackage extends EPackage
 	EReference getAssemblyContextDetail_CompromisedComponents();
 
 	/**
+	 * Returns the meta object for enum '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.ListOperationEffort <em>List Operation Effort</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>List Operation Effort</em>'.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.ListOperationEffort
+	 * @generated
+	 */
+	EEnum getListOperationEffort();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -892,6 +953,22 @@ public interface AttackerPackage extends EPackage
 		 * @generated
 		 */
 		EAttribute ATTACKER__EXPLOIT_CONTEXT_PROVIDERS = eINSTANCE.getAttacker_ExploitContextProviders();
+
+		/**
+		 * The meta object literal for the '<em><b>Attacker List Effort</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATTACKER__ATTACKER_LIST_EFFORT = eINSTANCE.getAttacker_AttackerListEffort();
+
+		/**
+		 * The meta object literal for the '<em><b>Calculate Max Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATTACKER__CALCULATE_MAX_TIME = eINSTANCE.getAttacker_CalculateMaxTime();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerSpecificationImpl <em>Specification</em>}' class.
@@ -1074,6 +1151,16 @@ public interface AttackerPackage extends EPackage
 		 * @generated
 		 */
 		EReference ASSEMBLY_CONTEXT_DETAIL__COMPROMISED_COMPONENTS = eINSTANCE.getAssemblyContextDetail_CompromisedComponents();
+
+		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.ListOperationEffort <em>List Operation Effort</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.ListOperationEffort
+		 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerPackageImpl#getListOperationEffort()
+		 * @generated
+		 */
+		EEnum LIST_OPERATION_EFFORT = eINSTANCE.getListOperationEffort();
 
 	}
 

@@ -15,6 +15,11 @@
   <genPackages prefix="Attacker" basePackage="org.palladiosimulator.pcm.confidentiality"
       disposableProviderFactory="true" extensibleProviderFactory="true" childCreationExtenders="true"
       ecorePackage="attacker.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="attacker.ecore#//ListOperationEffort">
+      <genEnumLiterals ecoreEnumLiteral="attacker.ecore#//ListOperationEffort/Standard"/>
+      <genEnumLiterals ecoreEnumLiteral="attacker.ecore#//ListOperationEffort/Part"/>
+      <genEnumLiterals ecoreEnumLiteral="attacker.ecore#//ListOperationEffort/All"/>
+    </genEnums>
     <genClasses ecoreClass="attacker.ecore#//AttackerContainer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference attacker.ecore#//AttackerContainer/attacker"/>
     </genClasses>
@@ -25,6 +30,8 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference attacker.ecore#//Attacker/compromisedLinkingResources"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference attacker.ecore#//Attacker/credentials"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute attacker.ecore#//Attacker/exploitContextProviders"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute attacker.ecore#//Attacker/attackerListEffort"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute attacker.ecore#//Attacker/calculateMaxTime"/>
     </genClasses>
     <genClasses ecoreClass="attacker.ecore#//AttackerSpecification">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference attacker.ecore#//AttackerSpecification/attackers"/>

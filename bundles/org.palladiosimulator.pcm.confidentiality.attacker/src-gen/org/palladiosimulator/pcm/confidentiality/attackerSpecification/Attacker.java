@@ -28,6 +28,8 @@ import org.palladiosimulator.pcm.resourceenvironment.ResourceContainer;
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getCompromisedLinkingResources <em>Compromised Linking Resources</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getCredentials <em>Credentials</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#isExploitContextProviders <em>Exploit Context Providers</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getAttackerListEffort <em>Attacker List Effort</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getCalculateMaxTime <em>Calculate Max Time</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage#getAttacker()
@@ -118,5 +120,53 @@ public interface Attacker extends Entity
 	 * @generated
 	 */
 	void setExploitContextProviders(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Attacker List Effort</b></em>' attribute.
+	 * The literals are from the enumeration {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.ListOperationEffort}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Attacker List Effort</em>' attribute.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.ListOperationEffort
+	 * @see #setAttackerListEffort(ListOperationEffort)
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage#getAttacker_AttackerListEffort()
+	 * @model
+	 * @generated
+	 */
+	ListOperationEffort getAttackerListEffort();
+
+	/**
+	 * Sets the value of the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getAttackerListEffort <em>Attacker List Effort</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Attacker List Effort</em>' attribute.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.ListOperationEffort
+	 * @see #getAttackerListEffort()
+	 * @generated
+	 */
+	void setAttackerListEffort(ListOperationEffort value);
+
+	/**
+	 * Returns the value of the '<em><b>Calculate Max Time</b></em>' attribute.
+	 * The default value is <code>"3600"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Calculate Max Time</em>' attribute.
+	 * @see #setCalculateMaxTime(int)
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage#getAttacker_CalculateMaxTime()
+	 * @model default="3600" dataType="org.eclipse.emf.ecore.xml.type.Int"
+	 * @generated
+	 */
+	int getCalculateMaxTime();
+
+	/**
+	 * Sets the value of the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getCalculateMaxTime <em>Calculate Max Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Calculate Max Time</em>' attribute.
+	 * @see #getCalculateMaxTime()
+	 * @generated
+	 */
+	void setCalculateMaxTime(int value);
 
 } // Attacker

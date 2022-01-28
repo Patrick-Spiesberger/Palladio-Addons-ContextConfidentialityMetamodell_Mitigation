@@ -12,11 +12,14 @@ import de.uka.ipd.sdq.units.UnitsPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 
 import org.palladiosimulator.pcm.PcmPackage;
 
@@ -30,6 +33,7 @@ import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerS
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerSystemSpecificationContainer;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.CategorySpecification;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker;
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.ListOperationEffort;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.VulnerabilityContainer;
 
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpecification.AttackSpecificationPackage;
@@ -124,6 +128,13 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	private EClass assemblyContextDetailEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum listOperationEffortEEnum = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -180,6 +191,7 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		ProbfunctionPackage.eINSTANCE.eClass();
 		StoexPackage.eINSTANCE.eClass();
 		UnitsPackage.eINSTANCE.eClass();
+		XMLTypePackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
 		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(AttackSpecificationPackage.eNS_URI);
@@ -293,6 +305,26 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	public EAttribute getAttacker_ExploitContextProviders()
 	{
 		return (EAttribute)attackerEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAttacker_AttackerListEffort()
+	{
+		return (EAttribute)attackerEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAttacker_CalculateMaxTime()
+	{
+		return (EAttribute)attackerEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -510,6 +542,16 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getListOperationEffort()
+	{
+		return listOperationEffortEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public AttackerFactory getAttackerFactory()
 	{
 		return (AttackerFactory)getEFactoryInstance();
@@ -545,6 +587,8 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		createEReference(attackerEClass, ATTACKER__COMPROMISED_LINKING_RESOURCES);
 		createEReference(attackerEClass, ATTACKER__CREDENTIALS);
 		createEAttribute(attackerEClass, ATTACKER__EXPLOIT_CONTEXT_PROVIDERS);
+		createEAttribute(attackerEClass, ATTACKER__ATTACKER_LIST_EFFORT);
+		createEAttribute(attackerEClass, ATTACKER__CALCULATE_MAX_TIME);
 
 		attackerSpecificationEClass = createEClass(ATTACKER_SPECIFICATION);
 		createEReference(attackerSpecificationEClass, ATTACKER_SPECIFICATION__ATTACKERS);
@@ -573,6 +617,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 
 		assemblyContextDetailEClass = createEClass(ASSEMBLY_CONTEXT_DETAIL);
 		createEReference(assemblyContextDetailEClass, ASSEMBLY_CONTEXT_DETAIL__COMPROMISED_COMPONENTS);
+
+		// Create enums
+		listOperationEffortEEnum = createEEnum(LIST_OPERATION_EFFORT);
 	}
 
 	/**
@@ -605,6 +652,7 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		EntityPackage theEntityPackage = (EntityPackage)EPackage.Registry.INSTANCE.getEPackage(EntityPackage.eNS_URI);
 		ResourceenvironmentPackage theResourceenvironmentPackage = (ResourceenvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(ResourceenvironmentPackage.eNS_URI);
 		SystemPackage theSystemPackage = (SystemPackage)EPackage.Registry.INSTANCE.getEPackage(SystemPackage.eNS_URI);
+		XMLTypePackage theXMLTypePackage = (XMLTypePackage)EPackage.Registry.INSTANCE.getEPackage(XMLTypePackage.eNS_URI);
 		RepositoryPackage theRepositoryPackage = (RepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(RepositoryPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		CompositionPackage theCompositionPackage = (CompositionPackage)EPackage.Registry.INSTANCE.getEPackage(CompositionPackage.eNS_URI);
@@ -633,6 +681,8 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		initEReference(getAttacker_CompromisedLinkingResources(), theResourceenvironmentPackage.getLinkingResource(), null, "compromisedLinkingResources", null, 0, -1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAttacker_Credentials(), theSystemPackage.getUsageSpecification(), null, "credentials", null, 0, -1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAttacker_ExploitContextProviders(), ecorePackage.getEBoolean(), "exploitContextProviders", "true", 0, 1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAttacker_AttackerListEffort(), this.getListOperationEffort(), "attackerListEffort", null, 0, 1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAttacker_CalculateMaxTime(), theXMLTypePackage.getInt(), "calculateMaxTime", "3600", 0, 1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attackerSpecificationEClass, AttackerSpecification.class, "AttackerSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAttackerSpecification_Attackers(), this.getAttackerContainer(), null, "attackers", null, 0, 1, AttackerSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -661,6 +711,12 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 
 		initEClass(assemblyContextDetailEClass, AssemblyContextDetail.class, "AssemblyContextDetail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAssemblyContextDetail_CompromisedComponents(), theCompositionPackage.getAssemblyContext(), null, "compromisedComponents", null, 0, -1, AssemblyContextDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(listOperationEffortEEnum, ListOperationEffort.class, "ListOperationEffort");
+		addEEnumLiteral(listOperationEffortEEnum, ListOperationEffort.STANDARD);
+		addEEnumLiteral(listOperationEffortEEnum, ListOperationEffort.PART);
+		addEEnumLiteral(listOperationEffortEEnum, ListOperationEffort.ALL);
 
 		// Create resource
 		createResource(eNS_URI);

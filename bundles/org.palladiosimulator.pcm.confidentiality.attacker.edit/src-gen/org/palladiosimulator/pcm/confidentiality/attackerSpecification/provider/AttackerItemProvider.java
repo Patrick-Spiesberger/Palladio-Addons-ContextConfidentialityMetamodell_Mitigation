@@ -60,6 +60,8 @@ public class AttackerItemProvider extends EntityItemProvider
 			addCompromisedLinkingResourcesPropertyDescriptor(object);
 			addCredentialsPropertyDescriptor(object);
 			addExploitContextProvidersPropertyDescriptor(object);
+			addAttackerListEffortPropertyDescriptor(object);
+			addCalculateMaxTimePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -203,6 +205,52 @@ public class AttackerItemProvider extends EntityItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Attacker List Effort feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAttackerListEffortPropertyDescriptor(Object object)
+	{
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Attacker_attackerListEffort_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Attacker_attackerListEffort_feature", "_UI_Attacker_type"),
+				 AttackerPackage.Literals.ATTACKER__ATTACKER_LIST_EFFORT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Calculate Max Time feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCalculateMaxTimePropertyDescriptor(Object object)
+	{
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Attacker_calculateMaxTime_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Attacker_calculateMaxTime_feature", "_UI_Attacker_type"),
+				 AttackerPackage.Literals.ATTACKER__CALCULATE_MAX_TIME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -289,6 +337,8 @@ public class AttackerItemProvider extends EntityItemProvider
 		switch (notification.getFeatureID(Attacker.class))
 		{
 			case AttackerPackage.ATTACKER__EXPLOIT_CONTEXT_PROVIDERS:
+			case AttackerPackage.ATTACKER__ATTACKER_LIST_EFFORT:
+			case AttackerPackage.ATTACKER__CALCULATE_MAX_TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case AttackerPackage.ATTACKER__COMPROMISED_COMPONENTS_DETAILS:
