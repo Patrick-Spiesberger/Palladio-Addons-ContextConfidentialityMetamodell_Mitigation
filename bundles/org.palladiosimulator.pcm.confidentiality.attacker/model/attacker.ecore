@@ -65,6 +65,7 @@
     <eLiterals name="Standard" literal="Standard"/>
     <eLiterals name="Part" value="1" literal="Part"/>
     <eLiterals name="All" value="2" literal="All"/>
+    <eLiterals name="None" value="3" literal="None"/>
   </eClassifiers>
   <eSubpackages name="attackSpecification" nsURI="http://www.palladiosimulator.org/pcm/confidentiality/attacker/0.1/"
       nsPrefix="attack">

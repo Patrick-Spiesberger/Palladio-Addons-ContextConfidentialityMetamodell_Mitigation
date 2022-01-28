@@ -717,6 +717,7 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		addEEnumLiteral(listOperationEffortEEnum, ListOperationEffort.STANDARD);
 		addEEnumLiteral(listOperationEffortEEnum, ListOperationEffort.PART);
 		addEEnumLiteral(listOperationEffortEEnum, ListOperationEffort.ALL);
+		addEEnumLiteral(listOperationEffortEEnum, ListOperationEffort.NONE);
 
 		// Create resource
 		createResource(eNS_URI);

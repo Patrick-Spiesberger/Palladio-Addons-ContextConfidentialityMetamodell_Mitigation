@@ -47,7 +47,17 @@ public enum ListOperationEffort implements Enumerator
 	 * @generated
 	 * @ordered
 	 */
-	ALL(2, "All", "All");
+	ALL(2, "All", "All"),
+
+	/**
+	 * The '<em><b>None</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #NONE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	NONE(3, "None", "None");
 
 	/**
 	 * The '<em><b>Standard</b></em>' literal value.
@@ -83,6 +93,17 @@ public enum ListOperationEffort implements Enumerator
 	public static final int ALL_VALUE = 2;
 
 	/**
+	 * The '<em><b>None</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #NONE
+	 * @model name="None"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int NONE_VALUE = 3;
+
+	/**
 	 * An array of all the '<em><b>List Operation Effort</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -94,6 +115,7 @@ public enum ListOperationEffort implements Enumerator
 			STANDARD,
 			PART,
 			ALL,
+			NONE,
 		};
 
 	/**
@@ -161,6 +183,7 @@ public enum ListOperationEffort implements Enumerator
 			case STANDARD_VALUE: return STANDARD;
 			case PART_VALUE: return PART;
 			case ALL_VALUE: return ALL;
+			case NONE_VALUE: return NONE;
 		}
 		return null;
 	}

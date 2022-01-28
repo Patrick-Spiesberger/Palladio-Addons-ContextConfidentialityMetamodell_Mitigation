@@ -27,7 +27,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="model/attacker.ecore#//pcmIntegration"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_ym3L4HFIEeyIvc2unOtdYA" name="attackerSpecification class diagram" repPath="#_ym1WsHFIEeyIvc2unOtdYA" changeId="a4319489-03d1-420e-94d1-fe60e2ee5755">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_ym3L4HFIEeyIvc2unOtdYA" name="attackerSpecification class diagram" repPath="#_ym1WsHFIEeyIvc2unOtdYA" changeId="21e28f52-642f-48ee-997f-01db76d779c7">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="model/attacker.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -1745,6 +1745,10 @@
               <styles xmi:type="notation:FontStyle" xmi:id="_HVO78YA9EeyyPoAuoe2xLw" fontName="Open Sans" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_HVO78oA9EeyyPoAuoe2xLw"/>
             </children>
+            <children xmi:type="notation:Node" xmi:id="_JaujoIBPEeyFF-rZq73ijw" type="3010" element="_JZ8ggYBPEeyFF-rZq73ijw">
+              <styles xmi:type="notation:FontStyle" xmi:id="_JaujoYBPEeyFF-rZq73ijw" fontName="Open Sans" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_JaujooBPEeyFF-rZq73ijw"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_HVMfsYA9EeyyPoAuoe2xLw"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_HVMfsoA9EeyyPoAuoe2xLw"/>
           </children>
@@ -2208,6 +2212,14 @@
         <target xmi:type="ecore:EEnumLiteral" href="model/attacker.ecore#//ListOperationEffort/All"/>
         <semanticElements xmi:type="ecore:EEnumLiteral" href="model/attacker.ecore#//ListOperationEffort/All"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_HU49sYA9EeyyPoAuoe2xLw" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_JZ8ggYBPEeyFF-rZq73ijw" name="None" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="model/attacker.ecore#//ListOperationEffort/None"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="model/attacker.ecore#//ListOperationEffort/None"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_JZ9uoIBPEeyFF-rZq73ijw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>

@@ -19,6 +19,7 @@
       <genEnumLiterals ecoreEnumLiteral="attacker.ecore#//ListOperationEffort/Standard"/>
       <genEnumLiterals ecoreEnumLiteral="attacker.ecore#//ListOperationEffort/Part"/>
       <genEnumLiterals ecoreEnumLiteral="attacker.ecore#//ListOperationEffort/All"/>
+      <genEnumLiterals ecoreEnumLiteral="attacker.ecore#//ListOperationEffort/None"/>
     </genEnums>
     <genClasses ecoreClass="attacker.ecore#//AttackerContainer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference attacker.ecore#//AttackerContainer/attacker"/>
