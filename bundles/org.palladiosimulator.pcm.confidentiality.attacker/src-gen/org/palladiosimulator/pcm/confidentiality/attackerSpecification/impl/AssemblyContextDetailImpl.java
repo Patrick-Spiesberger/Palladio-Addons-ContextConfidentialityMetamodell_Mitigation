@@ -22,6 +22,7 @@ import org.palladiosimulator.pcm.core.entity.impl.EntityImpl;
  * </p>
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AssemblyContextDetailImpl#getCompromisedComponents <em>Compromised Components</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AssemblyContextDetailImpl#isChangeAttackVector <em>Change Attack Vector</em>}</li>
  * </ul>
  *
  * @generated
@@ -58,6 +59,26 @@ public class AssemblyContextDetailImpl extends EntityImpl implements AssemblyCon
 	public EList<AssemblyContext> getCompromisedComponents()
 	{
 		return (EList<AssemblyContext>)eGet(AttackerPackage.Literals.ASSEMBLY_CONTEXT_DETAIL__COMPROMISED_COMPONENTS, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isChangeAttackVector()
+	{
+		return (Boolean)eGet(AttackerPackage.Literals.ASSEMBLY_CONTEXT_DETAIL__CHANGE_ATTACK_VECTOR, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setChangeAttackVector(boolean newChangeAttackVector)
+	{
+		eSet(AttackerPackage.Literals.ASSEMBLY_CONTEXT_DETAIL__CHANGE_ATTACK_VECTOR, newChangeAttackVector);
 	}
 
 } //AssemblyContextDetailImpl

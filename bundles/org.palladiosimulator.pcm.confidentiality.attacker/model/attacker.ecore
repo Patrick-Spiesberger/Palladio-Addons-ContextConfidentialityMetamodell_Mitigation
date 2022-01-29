@@ -60,6 +60,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="AssemblyContextDetail" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="compromisedComponents"
         upperBound="-1" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyContext"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeAttackVector" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ListOperationEffort">
     <eLiterals name="Standard" literal="Standard"/>

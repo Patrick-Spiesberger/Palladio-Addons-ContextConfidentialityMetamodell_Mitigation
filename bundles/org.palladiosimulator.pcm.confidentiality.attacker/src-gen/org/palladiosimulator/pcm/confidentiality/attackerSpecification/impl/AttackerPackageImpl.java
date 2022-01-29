@@ -542,6 +542,16 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getAssemblyContextDetail_ChangeAttackVector()
+	{
+		return (EAttribute)assemblyContextDetailEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getListOperationEffort()
 	{
 		return listOperationEffortEEnum;
@@ -617,6 +627,7 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 
 		assemblyContextDetailEClass = createEClass(ASSEMBLY_CONTEXT_DETAIL);
 		createEReference(assemblyContextDetailEClass, ASSEMBLY_CONTEXT_DETAIL__COMPROMISED_COMPONENTS);
+		createEAttribute(assemblyContextDetailEClass, ASSEMBLY_CONTEXT_DETAIL__CHANGE_ATTACK_VECTOR);
 
 		// Create enums
 		listOperationEffortEEnum = createEEnum(LIST_OPERATION_EFFORT);
@@ -711,6 +722,7 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 
 		initEClass(assemblyContextDetailEClass, AssemblyContextDetail.class, "AssemblyContextDetail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAssemblyContextDetail_CompromisedComponents(), theCompositionPackage.getAssemblyContext(), null, "compromisedComponents", null, 0, -1, AssemblyContextDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAssemblyContextDetail_ChangeAttackVector(), theXMLTypePackage.getBoolean(), "changeAttackVector", "false", 0, 1, AssemblyContextDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(listOperationEffortEEnum, ListOperationEffort.class, "ListOperationEffort");

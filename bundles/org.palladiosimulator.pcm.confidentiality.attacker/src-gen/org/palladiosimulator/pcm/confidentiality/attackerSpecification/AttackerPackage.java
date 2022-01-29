@@ -483,13 +483,22 @@ public interface AttackerPackage extends EPackage
 	int ASSEMBLY_CONTEXT_DETAIL__COMPROMISED_COMPONENTS = EntityPackage.ENTITY_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Change Attack Vector</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSEMBLY_CONTEXT_DETAIL__CHANGE_ATTACK_VECTOR = EntityPackage.ENTITY_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Assembly Context Detail</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSEMBLY_CONTEXT_DETAIL_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 1;
+	int ASSEMBLY_CONTEXT_DETAIL_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.ListOperationEffort <em>List Operation Effort</em>}' enum.
@@ -846,6 +855,17 @@ public interface AttackerPackage extends EPackage
 	EReference getAssemblyContextDetail_CompromisedComponents();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.AssemblyContextDetail#isChangeAttackVector <em>Change Attack Vector</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Change Attack Vector</em>'.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AssemblyContextDetail#isChangeAttackVector()
+	 * @see #getAssemblyContextDetail()
+	 * @generated
+	 */
+	EAttribute getAssemblyContextDetail_ChangeAttackVector();
+
+	/**
 	 * Returns the meta object for enum '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.ListOperationEffort <em>List Operation Effort</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1151,6 +1171,14 @@ public interface AttackerPackage extends EPackage
 		 * @generated
 		 */
 		EReference ASSEMBLY_CONTEXT_DETAIL__COMPROMISED_COMPONENTS = eINSTANCE.getAssemblyContextDetail_CompromisedComponents();
+
+		/**
+		 * The meta object literal for the '<em><b>Change Attack Vector</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ASSEMBLY_CONTEXT_DETAIL__CHANGE_ATTACK_VECTOR = eINSTANCE.getAssemblyContextDetail_ChangeAttackVector();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.ListOperationEffort <em>List Operation Effort</em>}' enum.
