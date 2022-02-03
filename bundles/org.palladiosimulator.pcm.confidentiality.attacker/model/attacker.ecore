@@ -19,9 +19,12 @@
         eType="ecore:EClass ../../org.palladiosimulator.pcm.confidentiality.context/model/context.ecore#//system/UsageSpecification"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="exploitContextProviders"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attackerListEffort" eType="#//ListOperationEffort"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="calculateMaxTime" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"
-        defaultValueLiteral="3600"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contextSelectionListEffort"
+        eType="#//ListOperationEffort"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contextSelectionMaxTime"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int" defaultValueLiteral="3600"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataDecyptionKeyBag" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttackerSpecification">
     <eStructuralFeatures xsi:type="ecore:EReference" name="attackers" eType="#//AttackerContainer"
@@ -56,11 +59,16 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="referenceName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EObject"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="method" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/OperationSignature"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="encryptionLevel" lowerBound="1"
+        eType="#//EncryptionLevel" defaultValueLiteral="None"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requiredDecryptionKey"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AssemblyContextDetail" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="compromisedComponents"
         upperBound="-1" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyContext"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeAttackVector" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeAttackVectorToLocal"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
         defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ListOperationEffort">
@@ -68,6 +76,11 @@
     <eLiterals name="Part" value="1" literal="Part"/>
     <eLiterals name="All" value="2" literal="All"/>
     <eLiterals name="None" value="3" literal="None"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EncryptionLevel">
+    <eLiterals name="None" literal="None"/>
+    <eLiterals name="Low" value="1"/>
+    <eLiterals name="High" value="2" literal="High"/>
   </eClassifiers>
   <eSubpackages name="attackSpecification" nsURI="http://www.palladiosimulator.org/pcm/confidentiality/attacker/0.1/"
       nsPrefix="attack">
@@ -184,8 +197,8 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="methodspecification"
           eType="ecore:EClass ../../org.palladiosimulator.pcm.confidentiality.context/model/context.ecore#//system/pcm/structure/MethodSpecification"
           containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="encryptionLevel" lowerBound="1"
-          eType="#//pcmIntegration/EncryptionLevel" defaultValueLiteral="None"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="elementCanPreventAttackPath"
+          lowerBound="1" eType="#//pcmIntegration/PreventLevel" defaultValueLiteral="Never"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="RoleSystemIntegration" eSuperTypes="#//pcmIntegration/SystemIntegration">
       <eStructuralFeatures xsi:type="ecore:EReference" name="role" lowerBound="1"
@@ -197,10 +210,10 @@
           eType="#//pcmIntegration/PCMElement" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="NonGlobalCommunication" eSuperTypes="#//pcmIntegration/SystemIntegration"/>
-    <eClassifiers xsi:type="ecore:EEnum" name="EncryptionLevel">
-      <eLiterals name="None" literal="None"/>
-      <eLiterals name="Low" value="1"/>
-      <eLiterals name="High" value="2" literal="High"/>
+    <eClassifiers xsi:type="ecore:EEnum" name="PreventLevel">
+      <eLiterals name="Never" literal="None"/>
+      <eLiterals name="Sometimes" value="1"/>
+      <eLiterals name="Always" value="2" literal="High"/>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

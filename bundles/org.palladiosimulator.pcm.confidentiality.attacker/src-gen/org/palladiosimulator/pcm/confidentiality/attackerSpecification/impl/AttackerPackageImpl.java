@@ -33,6 +33,7 @@ import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerS
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerSystemSpecificationContainer;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.CategorySpecification;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker;
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.EncryptionLevel;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.ListOperationEffort;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.VulnerabilityContainer;
 
@@ -133,6 +134,13 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * @generated
 	 */
 	private EEnum listOperationEffortEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum encryptionLevelEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -312,7 +320,7 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAttacker_AttackerListEffort()
+	public EAttribute getAttacker_ContextSelectionListEffort()
 	{
 		return (EAttribute)attackerEClass.getEStructuralFeatures().get(6);
 	}
@@ -322,9 +330,19 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAttacker_CalculateMaxTime()
+	public EAttribute getAttacker_ContextSelectionMaxTime()
 	{
 		return (EAttribute)attackerEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAttacker_DataDecyptionKeyBag()
+	{
+		return (EAttribute)attackerEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -522,6 +540,26 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getDatamodelAttacker_EncryptionLevel()
+	{
+		return (EAttribute)datamodelAttackerEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDatamodelAttacker_RequiredDecryptionKey()
+	{
+		return (EAttribute)datamodelAttackerEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAssemblyContextDetail()
 	{
 		return assemblyContextDetailEClass;
@@ -542,7 +580,7 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAssemblyContextDetail_ChangeAttackVector()
+	public EAttribute getAssemblyContextDetail_ChangeAttackVectorToLocal()
 	{
 		return (EAttribute)assemblyContextDetailEClass.getEStructuralFeatures().get(1);
 	}
@@ -555,6 +593,16 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	public EEnum getListOperationEffort()
 	{
 		return listOperationEffortEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getEncryptionLevel()
+	{
+		return encryptionLevelEEnum;
 	}
 
 	/**
@@ -597,8 +645,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		createEReference(attackerEClass, ATTACKER__COMPROMISED_LINKING_RESOURCES);
 		createEReference(attackerEClass, ATTACKER__CREDENTIALS);
 		createEAttribute(attackerEClass, ATTACKER__EXPLOIT_CONTEXT_PROVIDERS);
-		createEAttribute(attackerEClass, ATTACKER__ATTACKER_LIST_EFFORT);
-		createEAttribute(attackerEClass, ATTACKER__CALCULATE_MAX_TIME);
+		createEAttribute(attackerEClass, ATTACKER__CONTEXT_SELECTION_LIST_EFFORT);
+		createEAttribute(attackerEClass, ATTACKER__CONTEXT_SELECTION_MAX_TIME);
+		createEAttribute(attackerEClass, ATTACKER__DATA_DECYPTION_KEY_BAG);
 
 		attackerSpecificationEClass = createEClass(ATTACKER_SPECIFICATION);
 		createEReference(attackerSpecificationEClass, ATTACKER_SPECIFICATION__ATTACKERS);
@@ -624,13 +673,16 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		createEAttribute(datamodelAttackerEClass, DATAMODEL_ATTACKER__REFERENCE_NAME);
 		createEReference(datamodelAttackerEClass, DATAMODEL_ATTACKER__SOURCE);
 		createEReference(datamodelAttackerEClass, DATAMODEL_ATTACKER__METHOD);
+		createEAttribute(datamodelAttackerEClass, DATAMODEL_ATTACKER__ENCRYPTION_LEVEL);
+		createEAttribute(datamodelAttackerEClass, DATAMODEL_ATTACKER__REQUIRED_DECRYPTION_KEY);
 
 		assemblyContextDetailEClass = createEClass(ASSEMBLY_CONTEXT_DETAIL);
 		createEReference(assemblyContextDetailEClass, ASSEMBLY_CONTEXT_DETAIL__COMPROMISED_COMPONENTS);
-		createEAttribute(assemblyContextDetailEClass, ASSEMBLY_CONTEXT_DETAIL__CHANGE_ATTACK_VECTOR);
+		createEAttribute(assemblyContextDetailEClass, ASSEMBLY_CONTEXT_DETAIL__CHANGE_ATTACK_VECTOR_TO_LOCAL);
 
 		// Create enums
 		listOperationEffortEEnum = createEEnum(LIST_OPERATION_EFFORT);
+		encryptionLevelEEnum = createEEnum(ENCRYPTION_LEVEL);
 	}
 
 	/**
@@ -692,8 +744,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		initEReference(getAttacker_CompromisedLinkingResources(), theResourceenvironmentPackage.getLinkingResource(), null, "compromisedLinkingResources", null, 0, -1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAttacker_Credentials(), theSystemPackage.getUsageSpecification(), null, "credentials", null, 0, -1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAttacker_ExploitContextProviders(), ecorePackage.getEBoolean(), "exploitContextProviders", "true", 0, 1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAttacker_AttackerListEffort(), this.getListOperationEffort(), "attackerListEffort", null, 0, 1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAttacker_CalculateMaxTime(), theXMLTypePackage.getInt(), "calculateMaxTime", "3600", 0, 1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAttacker_ContextSelectionListEffort(), this.getListOperationEffort(), "contextSelectionListEffort", null, 0, 1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAttacker_ContextSelectionMaxTime(), theXMLTypePackage.getInt(), "contextSelectionMaxTime", "3600", 0, 1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAttacker_DataDecyptionKeyBag(), theXMLTypePackage.getString(), "dataDecyptionKeyBag", null, 0, -1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attackerSpecificationEClass, AttackerSpecification.class, "AttackerSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAttackerSpecification_Attackers(), this.getAttackerContainer(), null, "attackers", null, 0, 1, AttackerSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -719,10 +772,12 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		initEAttribute(getDatamodelAttacker_ReferenceName(), ecorePackage.getEString(), "referenceName", null, 0, 1, DatamodelAttacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDatamodelAttacker_Source(), theEcorePackage.getEObject(), null, "source", null, 0, 1, DatamodelAttacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDatamodelAttacker_Method(), theRepositoryPackage.getOperationSignature(), null, "method", null, 0, 1, DatamodelAttacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDatamodelAttacker_EncryptionLevel(), this.getEncryptionLevel(), "encryptionLevel", "None", 1, 1, DatamodelAttacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDatamodelAttacker_RequiredDecryptionKey(), theXMLTypePackage.getString(), "requiredDecryptionKey", null, 0, 1, DatamodelAttacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(assemblyContextDetailEClass, AssemblyContextDetail.class, "AssemblyContextDetail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAssemblyContextDetail_CompromisedComponents(), theCompositionPackage.getAssemblyContext(), null, "compromisedComponents", null, 0, -1, AssemblyContextDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAssemblyContextDetail_ChangeAttackVector(), theXMLTypePackage.getBoolean(), "changeAttackVector", "false", 0, 1, AssemblyContextDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAssemblyContextDetail_ChangeAttackVectorToLocal(), theXMLTypePackage.getBoolean(), "changeAttackVectorToLocal", "false", 0, 1, AssemblyContextDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(listOperationEffortEEnum, ListOperationEffort.class, "ListOperationEffort");
@@ -730,6 +785,11 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		addEEnumLiteral(listOperationEffortEEnum, ListOperationEffort.PART);
 		addEEnumLiteral(listOperationEffortEEnum, ListOperationEffort.ALL);
 		addEEnumLiteral(listOperationEffortEEnum, ListOperationEffort.NONE);
+
+		initEEnum(encryptionLevelEEnum, EncryptionLevel.class, "EncryptionLevel");
+		addEEnumLiteral(encryptionLevelEEnum, EncryptionLevel.NONE);
+		addEEnumLiteral(encryptionLevelEEnum, EncryptionLevel.LOW);
+		addEEnumLiteral(encryptionLevelEEnum, EncryptionLevel.HIGH);
 
 		// Create resource
 		createResource(eNS_URI);

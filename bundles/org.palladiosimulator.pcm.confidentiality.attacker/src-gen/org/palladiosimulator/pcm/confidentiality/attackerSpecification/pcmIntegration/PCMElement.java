@@ -29,7 +29,7 @@ import org.palladiosimulator.pcm.resourceenvironment.ResourceContainer;
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement#getBasiccomponent <em>Basiccomponent</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement#getAssemblycontext <em>Assemblycontext</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement#getMethodspecification <em>Methodspecification</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement#getEncryptionLevel <em>Encryption Level</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement#getElementCanPreventAttackPath <em>Element Can Prevent Attack Path</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PcmIntegrationPackage#getPCMElement()
@@ -171,29 +171,29 @@ public interface PCMElement extends Entity
 	void setMethodspecification(MethodSpecification value);
 
 	/**
-	 * Returns the value of the '<em><b>Encryption Level</b></em>' attribute.
-	 * The default value is <code>"None"</code>.
-	 * The literals are from the enumeration {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.EncryptionLevel}.
+	 * Returns the value of the '<em><b>Element Can Prevent Attack Path</b></em>' attribute.
+	 * The default value is <code>"Never"</code>.
+	 * The literals are from the enumeration {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PreventLevel}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Encryption Level</em>' attribute.
-	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.EncryptionLevel
-	 * @see #setEncryptionLevel(EncryptionLevel)
-	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PcmIntegrationPackage#getPCMElement_EncryptionLevel()
-	 * @model default="None" required="true"
+	 * @return the value of the '<em>Element Can Prevent Attack Path</em>' attribute.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PreventLevel
+	 * @see #setElementCanPreventAttackPath(PreventLevel)
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PcmIntegrationPackage#getPCMElement_ElementCanPreventAttackPath()
+	 * @model default="Never" required="true"
 	 * @generated
 	 */
-	EncryptionLevel getEncryptionLevel();
+	PreventLevel getElementCanPreventAttackPath();
 
 	/**
-	 * Sets the value of the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement#getEncryptionLevel <em>Encryption Level</em>}' attribute.
+	 * Sets the value of the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement#getElementCanPreventAttackPath <em>Element Can Prevent Attack Path</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Encryption Level</em>' attribute.
-	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.EncryptionLevel
-	 * @see #getEncryptionLevel()
+	 * @param value the new value of the '<em>Element Can Prevent Attack Path</em>' attribute.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PreventLevel
+	 * @see #getElementCanPreventAttackPath()
 	 * @generated
 	 */
-	void setEncryptionLevel(EncryptionLevel value);
+	void setElementCanPreventAttackPath(PreventLevel value);
 
 } // PCMElement

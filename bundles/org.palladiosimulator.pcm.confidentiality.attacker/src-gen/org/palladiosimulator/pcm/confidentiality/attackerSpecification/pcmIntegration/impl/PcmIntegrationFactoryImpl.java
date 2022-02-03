@@ -84,8 +84,8 @@ public class PcmIntegrationFactoryImpl extends EFactoryImpl implements PcmIntegr
 	{
 		switch (eDataType.getClassifierID())
 		{
-			case PcmIntegrationPackage.ENCRYPTION_LEVEL:
-				return createEncryptionLevelFromString(eDataType, initialValue);
+			case PcmIntegrationPackage.PREVENT_LEVEL:
+				return createPreventLevelFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -101,8 +101,8 @@ public class PcmIntegrationFactoryImpl extends EFactoryImpl implements PcmIntegr
 	{
 		switch (eDataType.getClassifierID())
 		{
-			case PcmIntegrationPackage.ENCRYPTION_LEVEL:
-				return convertEncryptionLevelToString(eDataType, instanceValue);
+			case PcmIntegrationPackage.PREVENT_LEVEL:
+				return convertPreventLevelToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -157,9 +157,9 @@ public class PcmIntegrationFactoryImpl extends EFactoryImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EncryptionLevel createEncryptionLevelFromString(EDataType eDataType, String initialValue)
+	public PreventLevel createPreventLevelFromString(EDataType eDataType, String initialValue)
 	{
-		EncryptionLevel result = EncryptionLevel.get(initialValue);
+		PreventLevel result = PreventLevel.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -169,7 +169,7 @@ public class PcmIntegrationFactoryImpl extends EFactoryImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertEncryptionLevelToString(EDataType eDataType, Object instanceValue)
+	public String convertPreventLevelToString(EDataType eDataType, Object instanceValue)
 	{
 		return instanceValue == null ? null : instanceValue.toString();
 	}

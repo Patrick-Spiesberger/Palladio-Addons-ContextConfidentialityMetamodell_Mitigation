@@ -170,22 +170,31 @@ public interface AttackerPackage extends EPackage
 	int ATTACKER__EXPLOIT_CONTEXT_PROVIDERS = EntityPackage.ENTITY_FEATURE_COUNT + 5;
 
 	/**
-	 * The feature id for the '<em><b>Attacker List Effort</b></em>' attribute.
+	 * The feature id for the '<em><b>Context Selection List Effort</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTACKER__ATTACKER_LIST_EFFORT = EntityPackage.ENTITY_FEATURE_COUNT + 6;
+	int ATTACKER__CONTEXT_SELECTION_LIST_EFFORT = EntityPackage.ENTITY_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>Calculate Max Time</b></em>' attribute.
+	 * The feature id for the '<em><b>Context Selection Max Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTACKER__CALCULATE_MAX_TIME = EntityPackage.ENTITY_FEATURE_COUNT + 7;
+	int ATTACKER__CONTEXT_SELECTION_MAX_TIME = EntityPackage.ENTITY_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Data Decyption Key Bag</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTACKER__DATA_DECYPTION_KEY_BAG = EntityPackage.ENTITY_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of structural features of the '<em>Attacker</em>' class.
@@ -194,7 +203,7 @@ public interface AttackerPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ATTACKER_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 8;
+	int ATTACKER_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 9;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerSpecificationImpl <em>Specification</em>}' class.
@@ -437,13 +446,31 @@ public interface AttackerPackage extends EPackage
 	int DATAMODEL_ATTACKER__METHOD = EntityPackage.ENTITY_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Encryption Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATAMODEL_ATTACKER__ENCRYPTION_LEVEL = EntityPackage.ENTITY_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Required Decryption Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATAMODEL_ATTACKER__REQUIRED_DECRYPTION_KEY = EntityPackage.ENTITY_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>Datamodel Attacker</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATAMODEL_ATTACKER_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 4;
+	int DATAMODEL_ATTACKER_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 6;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AssemblyContextDetailImpl <em>Assembly Context Detail</em>}' class.
@@ -483,13 +510,13 @@ public interface AttackerPackage extends EPackage
 	int ASSEMBLY_CONTEXT_DETAIL__COMPROMISED_COMPONENTS = EntityPackage.ENTITY_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Change Attack Vector</b></em>' attribute.
+	 * The feature id for the '<em><b>Change Attack Vector To Local</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSEMBLY_CONTEXT_DETAIL__CHANGE_ATTACK_VECTOR = EntityPackage.ENTITY_FEATURE_COUNT + 1;
+	int ASSEMBLY_CONTEXT_DETAIL__CHANGE_ATTACK_VECTOR_TO_LOCAL = EntityPackage.ENTITY_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Assembly Context Detail</em>' class.
@@ -509,6 +536,16 @@ public interface AttackerPackage extends EPackage
 	 * @generated
 	 */
 	int LIST_OPERATION_EFFORT = 9;
+
+	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.EncryptionLevel <em>Encryption Level</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.EncryptionLevel
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerPackageImpl#getEncryptionLevel()
+	 * @generated
+	 */
+	int ENCRYPTION_LEVEL = 10;
 
 
 	/**
@@ -609,26 +646,37 @@ public interface AttackerPackage extends EPackage
 	EAttribute getAttacker_ExploitContextProviders();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getAttackerListEffort <em>Attacker List Effort</em>}'.
+	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getContextSelectionListEffort <em>Context Selection List Effort</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Attacker List Effort</em>'.
-	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getAttackerListEffort()
+	 * @return the meta object for the attribute '<em>Context Selection List Effort</em>'.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getContextSelectionListEffort()
 	 * @see #getAttacker()
 	 * @generated
 	 */
-	EAttribute getAttacker_AttackerListEffort();
+	EAttribute getAttacker_ContextSelectionListEffort();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getCalculateMaxTime <em>Calculate Max Time</em>}'.
+	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getContextSelectionMaxTime <em>Context Selection Max Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Calculate Max Time</em>'.
-	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getCalculateMaxTime()
+	 * @return the meta object for the attribute '<em>Context Selection Max Time</em>'.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getContextSelectionMaxTime()
 	 * @see #getAttacker()
 	 * @generated
 	 */
-	EAttribute getAttacker_CalculateMaxTime();
+	EAttribute getAttacker_ContextSelectionMaxTime();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getDataDecyptionKeyBag <em>Data Decyption Key Bag</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Data Decyption Key Bag</em>'.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getDataDecyptionKeyBag()
+	 * @see #getAttacker()
+	 * @generated
+	 */
+	EAttribute getAttacker_DataDecyptionKeyBag();
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerSpecification <em>Specification</em>}'.
@@ -834,6 +882,28 @@ public interface AttackerPackage extends EPackage
 	EReference getDatamodelAttacker_Method();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker#getEncryptionLevel <em>Encryption Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Encryption Level</em>'.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker#getEncryptionLevel()
+	 * @see #getDatamodelAttacker()
+	 * @generated
+	 */
+	EAttribute getDatamodelAttacker_EncryptionLevel();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker#getRequiredDecryptionKey <em>Required Decryption Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Required Decryption Key</em>'.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker#getRequiredDecryptionKey()
+	 * @see #getDatamodelAttacker()
+	 * @generated
+	 */
+	EAttribute getDatamodelAttacker_RequiredDecryptionKey();
+
+	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.AssemblyContextDetail <em>Assembly Context Detail</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -855,15 +925,15 @@ public interface AttackerPackage extends EPackage
 	EReference getAssemblyContextDetail_CompromisedComponents();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.AssemblyContextDetail#isChangeAttackVector <em>Change Attack Vector</em>}'.
+	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.AssemblyContextDetail#isChangeAttackVectorToLocal <em>Change Attack Vector To Local</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Change Attack Vector</em>'.
-	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AssemblyContextDetail#isChangeAttackVector()
+	 * @return the meta object for the attribute '<em>Change Attack Vector To Local</em>'.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AssemblyContextDetail#isChangeAttackVectorToLocal()
 	 * @see #getAssemblyContextDetail()
 	 * @generated
 	 */
-	EAttribute getAssemblyContextDetail_ChangeAttackVector();
+	EAttribute getAssemblyContextDetail_ChangeAttackVectorToLocal();
 
 	/**
 	 * Returns the meta object for enum '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.ListOperationEffort <em>List Operation Effort</em>}'.
@@ -874,6 +944,16 @@ public interface AttackerPackage extends EPackage
 	 * @generated
 	 */
 	EEnum getListOperationEffort();
+
+	/**
+	 * Returns the meta object for enum '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.EncryptionLevel <em>Encryption Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Encryption Level</em>'.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.EncryptionLevel
+	 * @generated
+	 */
+	EEnum getEncryptionLevel();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -975,20 +1055,28 @@ public interface AttackerPackage extends EPackage
 		EAttribute ATTACKER__EXPLOIT_CONTEXT_PROVIDERS = eINSTANCE.getAttacker_ExploitContextProviders();
 
 		/**
-		 * The meta object literal for the '<em><b>Attacker List Effort</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Context Selection List Effort</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ATTACKER__ATTACKER_LIST_EFFORT = eINSTANCE.getAttacker_AttackerListEffort();
+		EAttribute ATTACKER__CONTEXT_SELECTION_LIST_EFFORT = eINSTANCE.getAttacker_ContextSelectionListEffort();
 
 		/**
-		 * The meta object literal for the '<em><b>Calculate Max Time</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Context Selection Max Time</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ATTACKER__CALCULATE_MAX_TIME = eINSTANCE.getAttacker_CalculateMaxTime();
+		EAttribute ATTACKER__CONTEXT_SELECTION_MAX_TIME = eINSTANCE.getAttacker_ContextSelectionMaxTime();
+
+		/**
+		 * The meta object literal for the '<em><b>Data Decyption Key Bag</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATTACKER__DATA_DECYPTION_KEY_BAG = eINSTANCE.getAttacker_DataDecyptionKeyBag();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerSpecificationImpl <em>Specification</em>}' class.
@@ -1155,6 +1243,22 @@ public interface AttackerPackage extends EPackage
 		EReference DATAMODEL_ATTACKER__METHOD = eINSTANCE.getDatamodelAttacker_Method();
 
 		/**
+		 * The meta object literal for the '<em><b>Encryption Level</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATAMODEL_ATTACKER__ENCRYPTION_LEVEL = eINSTANCE.getDatamodelAttacker_EncryptionLevel();
+
+		/**
+		 * The meta object literal for the '<em><b>Required Decryption Key</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATAMODEL_ATTACKER__REQUIRED_DECRYPTION_KEY = eINSTANCE.getDatamodelAttacker_RequiredDecryptionKey();
+
+		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AssemblyContextDetailImpl <em>Assembly Context Detail</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1173,12 +1277,12 @@ public interface AttackerPackage extends EPackage
 		EReference ASSEMBLY_CONTEXT_DETAIL__COMPROMISED_COMPONENTS = eINSTANCE.getAssemblyContextDetail_CompromisedComponents();
 
 		/**
-		 * The meta object literal for the '<em><b>Change Attack Vector</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Change Attack Vector To Local</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ASSEMBLY_CONTEXT_DETAIL__CHANGE_ATTACK_VECTOR = eINSTANCE.getAssemblyContextDetail_ChangeAttackVector();
+		EAttribute ASSEMBLY_CONTEXT_DETAIL__CHANGE_ATTACK_VECTOR_TO_LOCAL = eINSTANCE.getAssemblyContextDetail_ChangeAttackVectorToLocal();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.ListOperationEffort <em>List Operation Effort</em>}' enum.
@@ -1189,6 +1293,16 @@ public interface AttackerPackage extends EPackage
 		 * @generated
 		 */
 		EEnum LIST_OPERATION_EFFORT = eINSTANCE.getListOperationEffort();
+
+		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.EncryptionLevel <em>Encryption Level</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.EncryptionLevel
+		 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerPackageImpl#getEncryptionLevel()
+		 * @generated
+		 */
+		EEnum ENCRYPTION_LEVEL = eINSTANCE.getEncryptionLevel();
 
 	}
 

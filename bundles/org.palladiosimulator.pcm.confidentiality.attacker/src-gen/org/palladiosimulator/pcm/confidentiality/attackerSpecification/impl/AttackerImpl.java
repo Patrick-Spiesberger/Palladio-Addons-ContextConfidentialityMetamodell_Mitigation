@@ -34,8 +34,9 @@ import org.palladiosimulator.pcm.resourceenvironment.ResourceContainer;
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerImpl#getCompromisedLinkingResources <em>Compromised Linking Resources</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerImpl#getCredentials <em>Credentials</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerImpl#isExploitContextProviders <em>Exploit Context Providers</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerImpl#getAttackerListEffort <em>Attacker List Effort</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerImpl#getCalculateMaxTime <em>Calculate Max Time</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerImpl#getContextSelectionListEffort <em>Context Selection List Effort</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerImpl#getContextSelectionMaxTime <em>Context Selection Max Time</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerImpl#getDataDecyptionKeyBag <em>Data Decyption Key Bag</em>}</li>
  * </ul>
  *
  * @generated
@@ -143,9 +144,9 @@ public class AttackerImpl extends EntityImpl implements Attacker
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ListOperationEffort getAttackerListEffort()
+	public ListOperationEffort getContextSelectionListEffort()
 	{
-		return (ListOperationEffort)eGet(AttackerPackage.Literals.ATTACKER__ATTACKER_LIST_EFFORT, true);
+		return (ListOperationEffort)eGet(AttackerPackage.Literals.ATTACKER__CONTEXT_SELECTION_LIST_EFFORT, true);
 	}
 
 	/**
@@ -153,9 +154,9 @@ public class AttackerImpl extends EntityImpl implements Attacker
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAttackerListEffort(ListOperationEffort newAttackerListEffort)
+	public void setContextSelectionListEffort(ListOperationEffort newContextSelectionListEffort)
 	{
-		eSet(AttackerPackage.Literals.ATTACKER__ATTACKER_LIST_EFFORT, newAttackerListEffort);
+		eSet(AttackerPackage.Literals.ATTACKER__CONTEXT_SELECTION_LIST_EFFORT, newContextSelectionListEffort);
 	}
 
 	/**
@@ -163,9 +164,9 @@ public class AttackerImpl extends EntityImpl implements Attacker
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getCalculateMaxTime()
+	public int getContextSelectionMaxTime()
 	{
-		return (Integer)eGet(AttackerPackage.Literals.ATTACKER__CALCULATE_MAX_TIME, true);
+		return (Integer)eGet(AttackerPackage.Literals.ATTACKER__CONTEXT_SELECTION_MAX_TIME, true);
 	}
 
 	/**
@@ -173,9 +174,20 @@ public class AttackerImpl extends EntityImpl implements Attacker
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCalculateMaxTime(int newCalculateMaxTime)
+	public void setContextSelectionMaxTime(int newContextSelectionMaxTime)
 	{
-		eSet(AttackerPackage.Literals.ATTACKER__CALCULATE_MAX_TIME, newCalculateMaxTime);
+		eSet(AttackerPackage.Literals.ATTACKER__CONTEXT_SELECTION_MAX_TIME, newContextSelectionMaxTime);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<String> getDataDecyptionKeyBag()
+	{
+		return (EList<String>)eGet(AttackerPackage.Literals.ATTACKER__DATA_DECYPTION_KEY_BAG, true);
 	}
 
 } //AttackerImpl

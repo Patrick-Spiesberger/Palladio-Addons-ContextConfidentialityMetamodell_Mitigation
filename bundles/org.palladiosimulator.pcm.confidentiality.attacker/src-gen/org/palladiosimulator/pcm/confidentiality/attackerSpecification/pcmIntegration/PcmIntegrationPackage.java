@@ -197,13 +197,13 @@ public interface PcmIntegrationPackage extends EPackage
 	int PCM_ELEMENT__METHODSPECIFICATION = EntityPackage.ENTITY_FEATURE_COUNT + 5;
 
 	/**
-	 * The feature id for the '<em><b>Encryption Level</b></em>' attribute.
+	 * The feature id for the '<em><b>Element Can Prevent Attack Path</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PCM_ELEMENT__ENCRYPTION_LEVEL = EntityPackage.ENTITY_FEATURE_COUNT + 6;
+	int PCM_ELEMENT__ELEMENT_CAN_PREVENT_ATTACK_PATH = EntityPackage.ENTITY_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>PCM Element</em>' class.
@@ -362,14 +362,14 @@ public interface PcmIntegrationPackage extends EPackage
 	int NON_GLOBAL_COMMUNICATION_FEATURE_COUNT = SYSTEM_INTEGRATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.EncryptionLevel <em>Encryption Level</em>}' enum.
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PreventLevel <em>Prevent Level</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.EncryptionLevel
-	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.PcmIntegrationPackageImpl#getEncryptionLevel()
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PreventLevel
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.PcmIntegrationPackageImpl#getPreventLevel()
 	 * @generated
 	 */
-	int ENCRYPTION_LEVEL = 5;
+	int PREVENT_LEVEL = 5;
 
 
 	/**
@@ -470,15 +470,15 @@ public interface PcmIntegrationPackage extends EPackage
 	EReference getPCMElement_Methodspecification();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement#getEncryptionLevel <em>Encryption Level</em>}'.
+	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement#getElementCanPreventAttackPath <em>Element Can Prevent Attack Path</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Encryption Level</em>'.
-	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement#getEncryptionLevel()
+	 * @return the meta object for the attribute '<em>Element Can Prevent Attack Path</em>'.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement#getElementCanPreventAttackPath()
 	 * @see #getPCMElement()
 	 * @generated
 	 */
-	EAttribute getPCMElement_EncryptionLevel();
+	EAttribute getPCMElement_ElementCanPreventAttackPath();
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.RoleSystemIntegration <em>Role System Integration</em>}'.
@@ -533,14 +533,14 @@ public interface PcmIntegrationPackage extends EPackage
 	EClass getNonGlobalCommunication();
 
 	/**
-	 * Returns the meta object for enum '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.EncryptionLevel <em>Encryption Level</em>}'.
+	 * Returns the meta object for enum '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PreventLevel <em>Prevent Level</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Encryption Level</em>'.
-	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.EncryptionLevel
+	 * @return the meta object for enum '<em>Prevent Level</em>'.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PreventLevel
 	 * @generated
 	 */
-	EEnum getEncryptionLevel();
+	EEnum getPreventLevel();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -642,12 +642,12 @@ public interface PcmIntegrationPackage extends EPackage
 		EReference PCM_ELEMENT__METHODSPECIFICATION = eINSTANCE.getPCMElement_Methodspecification();
 
 		/**
-		 * The meta object literal for the '<em><b>Encryption Level</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Element Can Prevent Attack Path</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PCM_ELEMENT__ENCRYPTION_LEVEL = eINSTANCE.getPCMElement_EncryptionLevel();
+		EAttribute PCM_ELEMENT__ELEMENT_CAN_PREVENT_ATTACK_PATH = eINSTANCE.getPCMElement_ElementCanPreventAttackPath();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.RoleSystemIntegrationImpl <em>Role System Integration</em>}' class.
@@ -696,14 +696,14 @@ public interface PcmIntegrationPackage extends EPackage
 		EClass NON_GLOBAL_COMMUNICATION = eINSTANCE.getNonGlobalCommunication();
 
 		/**
-		 * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.EncryptionLevel <em>Encryption Level</em>}' enum.
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PreventLevel <em>Prevent Level</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.EncryptionLevel
-		 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.PcmIntegrationPackageImpl#getEncryptionLevel()
+		 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PreventLevel
+		 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.PcmIntegrationPackageImpl#getPreventLevel()
 		 * @generated
 		 */
-		EEnum ENCRYPTION_LEVEL = eINSTANCE.getEncryptionLevel();
+		EEnum PREVENT_LEVEL = eINSTANCE.getPreventLevel();
 
 	}
 

@@ -22,7 +22,7 @@ import org.palladiosimulator.pcm.core.entity.impl.EntityImpl;
  * </p>
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AssemblyContextDetailImpl#getCompromisedComponents <em>Compromised Components</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AssemblyContextDetailImpl#isChangeAttackVector <em>Change Attack Vector</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AssemblyContextDetailImpl#isChangeAttackVectorToLocal <em>Change Attack Vector To Local</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,9 +66,9 @@ public class AssemblyContextDetailImpl extends EntityImpl implements AssemblyCon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isChangeAttackVector()
+	public boolean isChangeAttackVectorToLocal()
 	{
-		return (Boolean)eGet(AttackerPackage.Literals.ASSEMBLY_CONTEXT_DETAIL__CHANGE_ATTACK_VECTOR, true);
+		return (Boolean)eGet(AttackerPackage.Literals.ASSEMBLY_CONTEXT_DETAIL__CHANGE_ATTACK_VECTOR_TO_LOCAL, true);
 	}
 
 	/**
@@ -76,9 +76,9 @@ public class AssemblyContextDetailImpl extends EntityImpl implements AssemblyCon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setChangeAttackVector(boolean newChangeAttackVector)
+	public void setChangeAttackVectorToLocal(boolean newChangeAttackVectorToLocal)
 	{
-		eSet(AttackerPackage.Literals.ASSEMBLY_CONTEXT_DETAIL__CHANGE_ATTACK_VECTOR, newChangeAttackVector);
+		eSet(AttackerPackage.Literals.ASSEMBLY_CONTEXT_DETAIL__CHANGE_ATTACK_VECTOR_TO_LOCAL, newChangeAttackVectorToLocal);
 	}
 
 } //AssemblyContextDetailImpl

@@ -10,113 +10,113 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Encryption Level</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Prevent Level</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PcmIntegrationPackage#getEncryptionLevel()
+ * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PcmIntegrationPackage#getPreventLevel()
  * @model
  * @generated
  */
-public enum EncryptionLevel implements Enumerator
+public enum PreventLevel implements Enumerator
 {
 	/**
-	 * The '<em><b>None</b></em>' literal object.
+	 * The '<em><b>Never</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #NONE_VALUE
+	 * @see #NEVER_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	NONE(0, "None", "None"),
+	NEVER(0, "Never", "None"),
 
 	/**
-	 * The '<em><b>Low</b></em>' literal object.
+	 * The '<em><b>Sometimes</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #LOW_VALUE
+	 * @see #SOMETIMES_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	LOW(1, "Low", "Low"),
+	SOMETIMES(1, "Sometimes", "Sometimes"),
 
 	/**
-	 * The '<em><b>High</b></em>' literal object.
+	 * The '<em><b>Always</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #HIGH_VALUE
+	 * @see #ALWAYS_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	HIGH(2, "High", "High");
+	ALWAYS(2, "Always", "High");
 
 	/**
-	 * The '<em><b>None</b></em>' literal value.
+	 * The '<em><b>Never</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #NONE
-	 * @model name="None"
+	 * @see #NEVER
+	 * @model name="Never" literal="None"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int NONE_VALUE = 0;
+	public static final int NEVER_VALUE = 0;
 
 	/**
-	 * The '<em><b>Low</b></em>' literal value.
+	 * The '<em><b>Sometimes</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #LOW
-	 * @model name="Low"
+	 * @see #SOMETIMES
+	 * @model name="Sometimes"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int LOW_VALUE = 1;
+	public static final int SOMETIMES_VALUE = 1;
 
 	/**
-	 * The '<em><b>High</b></em>' literal value.
+	 * The '<em><b>Always</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #HIGH
-	 * @model name="High"
+	 * @see #ALWAYS
+	 * @model name="Always" literal="High"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int HIGH_VALUE = 2;
+	public static final int ALWAYS_VALUE = 2;
 
 	/**
-	 * An array of all the '<em><b>Encryption Level</b></em>' enumerators.
+	 * An array of all the '<em><b>Prevent Level</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final EncryptionLevel[] VALUES_ARRAY =
-		new EncryptionLevel[]
+	private static final PreventLevel[] VALUES_ARRAY =
+		new PreventLevel[]
 		{
-			NONE,
-			LOW,
-			HIGH,
+			NEVER,
+			SOMETIMES,
+			ALWAYS,
 		};
 
 	/**
-	 * A public read-only list of all the '<em><b>Encryption Level</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Prevent Level</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<EncryptionLevel> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<PreventLevel> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Encryption Level</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Prevent Level</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static EncryptionLevel get(String literal)
+	public static PreventLevel get(String literal)
 	{
 		for (int i = 0; i < VALUES_ARRAY.length; ++i)
 		{
-			EncryptionLevel result = VALUES_ARRAY[i];
+			PreventLevel result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal))
 			{
 				return result;
@@ -126,18 +126,18 @@ public enum EncryptionLevel implements Enumerator
 	}
 
 	/**
-	 * Returns the '<em><b>Encryption Level</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Prevent Level</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static EncryptionLevel getByName(String name)
+	public static PreventLevel getByName(String name)
 	{
 		for (int i = 0; i < VALUES_ARRAY.length; ++i)
 		{
-			EncryptionLevel result = VALUES_ARRAY[i];
+			PreventLevel result = VALUES_ARRAY[i];
 			if (result.getName().equals(name))
 			{
 				return result;
@@ -147,20 +147,20 @@ public enum EncryptionLevel implements Enumerator
 	}
 
 	/**
-	 * Returns the '<em><b>Encryption Level</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Prevent Level</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static EncryptionLevel get(int value)
+	public static PreventLevel get(int value)
 	{
 		switch (value)
 		{
-			case NONE_VALUE: return NONE;
-			case LOW_VALUE: return LOW;
-			case HIGH_VALUE: return HIGH;
+			case NEVER_VALUE: return NEVER;
+			case SOMETIMES_VALUE: return SOMETIMES;
+			case ALWAYS_VALUE: return ALWAYS;
 		}
 		return null;
 	}
@@ -192,7 +192,7 @@ public enum EncryptionLevel implements Enumerator
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EncryptionLevel(int value, String name, String literal)
+	private PreventLevel(int value, String name, String literal)
 	{
 		this.value = value;
 		this.name = name;
@@ -241,4 +241,4 @@ public enum EncryptionLevel implements Enumerator
 		return literal;
 	}
 	
-} //EncryptionLevel
+} //PreventLevel

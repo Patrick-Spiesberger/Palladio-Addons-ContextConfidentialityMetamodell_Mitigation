@@ -4,9 +4,9 @@ package org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmInteg
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.EncryptionLevel;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PcmIntegrationPackage;
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PreventLevel;
 
 import org.palladiosimulator.pcm.confidentiality.context.system.pcm.structure.MethodSpecification;
 
@@ -34,7 +34,7 @@ import org.palladiosimulator.pcm.resourceenvironment.ResourceContainer;
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.PCMElementImpl#getBasiccomponent <em>Basiccomponent</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.PCMElementImpl#getAssemblycontext <em>Assemblycontext</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.PCMElementImpl#getMethodspecification <em>Methodspecification</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.PCMElementImpl#getEncryptionLevel <em>Encryption Level</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.PCMElementImpl#getElementCanPreventAttackPath <em>Element Can Prevent Attack Path</em>}</li>
  * </ul>
  *
  * @generated
@@ -187,9 +187,9 @@ public class PCMElementImpl extends EntityImpl implements PCMElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EncryptionLevel getEncryptionLevel()
+	public PreventLevel getElementCanPreventAttackPath()
 	{
-		return (EncryptionLevel)eGet(PcmIntegrationPackage.Literals.PCM_ELEMENT__ENCRYPTION_LEVEL, true);
+		return (PreventLevel)eGet(PcmIntegrationPackage.Literals.PCM_ELEMENT__ELEMENT_CAN_PREVENT_ATTACK_PATH, true);
 	}
 
 	/**
@@ -197,9 +197,9 @@ public class PCMElementImpl extends EntityImpl implements PCMElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEncryptionLevel(EncryptionLevel newEncryptionLevel)
+	public void setElementCanPreventAttackPath(PreventLevel newElementCanPreventAttackPath)
 	{
-		eSet(PcmIntegrationPackage.Literals.PCM_ELEMENT__ENCRYPTION_LEVEL, newEncryptionLevel);
+		eSet(PcmIntegrationPackage.Literals.PCM_ELEMENT__ELEMENT_CAN_PREVENT_ATTACK_PATH, newElementCanPreventAttackPath);
 	}
 
 } //PCMElementImpl

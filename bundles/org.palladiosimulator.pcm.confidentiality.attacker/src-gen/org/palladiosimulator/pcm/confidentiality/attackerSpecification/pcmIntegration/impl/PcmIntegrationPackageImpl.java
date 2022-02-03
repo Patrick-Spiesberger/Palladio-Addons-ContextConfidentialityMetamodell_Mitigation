@@ -29,11 +29,11 @@ import org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpe
 
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerPackageImpl;
 
-import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.EncryptionLevel;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.NonGlobalCommunication;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PcmIntegrationFactory;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PcmIntegrationPackage;
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PreventLevel;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.RoleSystemIntegration;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.SystemIntegration;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.VulnerabilitySystemIntegration;
@@ -98,7 +98,7 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum encryptionLevelEEnum = null;
+	private EEnum preventLevelEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -277,7 +277,7 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPCMElement_EncryptionLevel()
+	public EAttribute getPCMElement_ElementCanPreventAttackPath()
 	{
 		return (EAttribute)pcmElementEClass.getEStructuralFeatures().get(6);
 	}
@@ -337,9 +337,9 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getEncryptionLevel()
+	public EEnum getPreventLevel()
 	{
-		return encryptionLevelEEnum;
+		return preventLevelEEnum;
 	}
 
 	/**
@@ -382,7 +382,7 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 		createEReference(pcmElementEClass, PCM_ELEMENT__BASICCOMPONENT);
 		createEReference(pcmElementEClass, PCM_ELEMENT__ASSEMBLYCONTEXT);
 		createEReference(pcmElementEClass, PCM_ELEMENT__METHODSPECIFICATION);
-		createEAttribute(pcmElementEClass, PCM_ELEMENT__ENCRYPTION_LEVEL);
+		createEAttribute(pcmElementEClass, PCM_ELEMENT__ELEMENT_CAN_PREVENT_ATTACK_PATH);
 
 		roleSystemIntegrationEClass = createEClass(ROLE_SYSTEM_INTEGRATION);
 		createEReference(roleSystemIntegrationEClass, ROLE_SYSTEM_INTEGRATION__ROLE);
@@ -393,7 +393,7 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 		nonGlobalCommunicationEClass = createEClass(NON_GLOBAL_COMMUNICATION);
 
 		// Create enums
-		encryptionLevelEEnum = createEEnum(ENCRYPTION_LEVEL);
+		preventLevelEEnum = createEEnum(PREVENT_LEVEL);
 	}
 
 	/**
@@ -451,7 +451,7 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 		initEReference(getPCMElement_Basiccomponent(), theRepositoryPackage.getRepositoryComponent(), null, "basiccomponent", null, 0, 1, PCMElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPCMElement_Assemblycontext(), theCompositionPackage.getAssemblyContext(), null, "assemblycontext", null, 0, 1, PCMElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPCMElement_Methodspecification(), theStructurePackage.getMethodSpecification(), null, "methodspecification", null, 0, 1, PCMElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPCMElement_EncryptionLevel(), this.getEncryptionLevel(), "encryptionLevel", "None", 1, 1, PCMElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPCMElement_ElementCanPreventAttackPath(), this.getPreventLevel(), "elementCanPreventAttackPath", "Never", 1, 1, PCMElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(roleSystemIntegrationEClass, RoleSystemIntegration.class, "RoleSystemIntegration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRoleSystemIntegration_Role(), theAttackSpecificationPackage.getRole(), null, "role", null, 1, 1, RoleSystemIntegration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -462,10 +462,10 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 		initEClass(nonGlobalCommunicationEClass, NonGlobalCommunication.class, "NonGlobalCommunication", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
-		initEEnum(encryptionLevelEEnum, EncryptionLevel.class, "EncryptionLevel");
-		addEEnumLiteral(encryptionLevelEEnum, EncryptionLevel.NONE);
-		addEEnumLiteral(encryptionLevelEEnum, EncryptionLevel.LOW);
-		addEEnumLiteral(encryptionLevelEEnum, EncryptionLevel.HIGH);
+		initEEnum(preventLevelEEnum, PreventLevel.class, "PreventLevel");
+		addEEnumLiteral(preventLevelEEnum, PreventLevel.NEVER);
+		addEEnumLiteral(preventLevelEEnum, PreventLevel.SOMETIMES);
+		addEEnumLiteral(preventLevelEEnum, PreventLevel.ALWAYS);
 	}
 
 } //PcmIntegrationPackageImpl

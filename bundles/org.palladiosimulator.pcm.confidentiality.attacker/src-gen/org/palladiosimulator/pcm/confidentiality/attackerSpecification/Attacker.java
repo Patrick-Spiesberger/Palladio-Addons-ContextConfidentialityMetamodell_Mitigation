@@ -28,8 +28,9 @@ import org.palladiosimulator.pcm.resourceenvironment.ResourceContainer;
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getCompromisedLinkingResources <em>Compromised Linking Resources</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getCredentials <em>Credentials</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#isExploitContextProviders <em>Exploit Context Providers</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getAttackerListEffort <em>Attacker List Effort</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getCalculateMaxTime <em>Calculate Max Time</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getContextSelectionListEffort <em>Context Selection List Effort</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getContextSelectionMaxTime <em>Context Selection Max Time</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getDataDecyptionKeyBag <em>Data Decyption Key Bag</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage#getAttacker()
@@ -122,51 +123,63 @@ public interface Attacker extends Entity
 	void setExploitContextProviders(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Attacker List Effort</b></em>' attribute.
+	 * Returns the value of the '<em><b>Context Selection List Effort</b></em>' attribute.
 	 * The literals are from the enumeration {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.ListOperationEffort}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Attacker List Effort</em>' attribute.
+	 * @return the value of the '<em>Context Selection List Effort</em>' attribute.
 	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.ListOperationEffort
-	 * @see #setAttackerListEffort(ListOperationEffort)
-	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage#getAttacker_AttackerListEffort()
+	 * @see #setContextSelectionListEffort(ListOperationEffort)
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage#getAttacker_ContextSelectionListEffort()
 	 * @model
 	 * @generated
 	 */
-	ListOperationEffort getAttackerListEffort();
+	ListOperationEffort getContextSelectionListEffort();
 
 	/**
-	 * Sets the value of the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getAttackerListEffort <em>Attacker List Effort</em>}' attribute.
+	 * Sets the value of the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getContextSelectionListEffort <em>Context Selection List Effort</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Attacker List Effort</em>' attribute.
+	 * @param value the new value of the '<em>Context Selection List Effort</em>' attribute.
 	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.ListOperationEffort
-	 * @see #getAttackerListEffort()
+	 * @see #getContextSelectionListEffort()
 	 * @generated
 	 */
-	void setAttackerListEffort(ListOperationEffort value);
+	void setContextSelectionListEffort(ListOperationEffort value);
 
 	/**
-	 * Returns the value of the '<em><b>Calculate Max Time</b></em>' attribute.
+	 * Returns the value of the '<em><b>Context Selection Max Time</b></em>' attribute.
 	 * The default value is <code>"3600"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Calculate Max Time</em>' attribute.
-	 * @see #setCalculateMaxTime(int)
-	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage#getAttacker_CalculateMaxTime()
+	 * @return the value of the '<em>Context Selection Max Time</em>' attribute.
+	 * @see #setContextSelectionMaxTime(int)
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage#getAttacker_ContextSelectionMaxTime()
 	 * @model default="3600" dataType="org.eclipse.emf.ecore.xml.type.Int"
 	 * @generated
 	 */
-	int getCalculateMaxTime();
+	int getContextSelectionMaxTime();
 
 	/**
-	 * Sets the value of the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getCalculateMaxTime <em>Calculate Max Time</em>}' attribute.
+	 * Sets the value of the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getContextSelectionMaxTime <em>Context Selection Max Time</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Calculate Max Time</em>' attribute.
-	 * @see #getCalculateMaxTime()
+	 * @param value the new value of the '<em>Context Selection Max Time</em>' attribute.
+	 * @see #getContextSelectionMaxTime()
 	 * @generated
 	 */
-	void setCalculateMaxTime(int value);
+	void setContextSelectionMaxTime(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Data Decyption Key Bag</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.String}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Data Decyption Key Bag</em>' attribute list.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage#getAttacker_DataDecyptionKeyBag()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @generated
+	 */
+	EList<String> getDataDecyptionKeyBag();
 
 } // Attacker
