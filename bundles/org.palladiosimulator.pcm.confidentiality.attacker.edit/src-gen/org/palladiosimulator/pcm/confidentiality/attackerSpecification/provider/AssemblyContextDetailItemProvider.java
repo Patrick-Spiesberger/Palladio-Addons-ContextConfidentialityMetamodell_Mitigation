@@ -2,7 +2,6 @@
  */
 package org.palladiosimulator.pcm.confidentiality.attackerSpecification.provider;
 
-
 import java.util.Collection;
 import java.util.List;
 
@@ -25,16 +24,14 @@ import org.palladiosimulator.pcm.core.entity.provider.EntityItemProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AssemblyContextDetailItemProvider extends EntityItemProvider
-{
+public class AssemblyContextDetailItemProvider extends EntityItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AssemblyContextDetailItemProvider(AdapterFactory adapterFactory)
-	{
+	public AssemblyContextDetailItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -45,14 +42,12 @@ public class AssemblyContextDetailItemProvider extends EntityItemProvider
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
-	{
-		if (itemPropertyDescriptors == null)
-		{
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
+		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
 			addCompromisedComponentsPropertyDescriptor(object);
-			addChangeAttackVectorPropertyDescriptor(object);
+			addChangeAttackVectorToLocalPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -63,44 +58,31 @@ public class AssemblyContextDetailItemProvider extends EntityItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCompromisedComponentsPropertyDescriptor(Object object)
-	{
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_AssemblyContextDetail_compromisedComponents_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_AssemblyContextDetail_compromisedComponents_feature", "_UI_AssemblyContextDetail_type"),
-				 AttackerPackage.Literals.ASSEMBLY_CONTEXT_DETAIL__COMPROMISED_COMPONENTS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
+	protected void addCompromisedComponentsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_AssemblyContextDetail_compromisedComponents_feature"),
+				getString("_UI_PropertyDescriptor_description",
+						"_UI_AssemblyContextDetail_compromisedComponents_feature", "_UI_AssemblyContextDetail_type"),
+				AttackerPackage.Literals.ASSEMBLY_CONTEXT_DETAIL__COMPROMISED_COMPONENTS, true, false, true, null, null,
+				null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Change Attack Vector feature.
+	 * This adds a property descriptor for the Change Attack Vector To Local feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addChangeAttackVectorPropertyDescriptor(Object object)
-	{
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_AssemblyContextDetail_changeAttackVector_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_AssemblyContextDetail_changeAttackVector_feature", "_UI_AssemblyContextDetail_type"),
-				 AttackerPackage.Literals.ASSEMBLY_CONTEXT_DETAIL__CHANGE_ATTACK_VECTOR,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 null,
-				 null));
+	protected void addChangeAttackVectorToLocalPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_AssemblyContextDetail_changeAttackVectorToLocal_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_AssemblyContextDetail_changeAttackVectorToLocal_feature",
+								"_UI_AssemblyContextDetail_type"),
+						AttackerPackage.Literals.ASSEMBLY_CONTEXT_DETAIL__CHANGE_ATTACK_VECTOR_TO_LOCAL, true, false,
+						false, ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -110,8 +92,7 @@ public class AssemblyContextDetailItemProvider extends EntityItemProvider
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object)
-	{
+	public Object getImage(Object object) {
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/AssemblyContextDetail"));
 	}
 
@@ -121,8 +102,7 @@ public class AssemblyContextDetailItemProvider extends EntityItemProvider
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage()
-	{
+	protected boolean shouldComposeCreationImage() {
 		return true;
 	}
 
@@ -133,14 +113,11 @@ public class AssemblyContextDetailItemProvider extends EntityItemProvider
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object)
-	{
-		String label = ((AssemblyContextDetail)object).getId();
-		return label == null || label.length() == 0 ?
-			getString("_UI_AssemblyContextDetail_type") :
-			getString("_UI_AssemblyContextDetail_type") + " " + label;
+	public String getText(Object object) {
+		String label = ((AssemblyContextDetail) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_AssemblyContextDetail_type")
+				: getString("_UI_AssemblyContextDetail_type") + " " + label;
 	}
-
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -150,15 +127,13 @@ public class AssemblyContextDetailItemProvider extends EntityItemProvider
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification)
-	{
+	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(AssemblyContextDetail.class))
-		{
-			case AttackerPackage.ASSEMBLY_CONTEXT_DETAIL__CHANGE_ATTACK_VECTOR:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
+		switch (notification.getFeatureID(AssemblyContextDetail.class)) {
+		case AttackerPackage.ASSEMBLY_CONTEXT_DETAIL__CHANGE_ATTACK_VECTOR_TO_LOCAL:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -171,8 +146,7 @@ public class AssemblyContextDetailItemProvider extends EntityItemProvider
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
-	{
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

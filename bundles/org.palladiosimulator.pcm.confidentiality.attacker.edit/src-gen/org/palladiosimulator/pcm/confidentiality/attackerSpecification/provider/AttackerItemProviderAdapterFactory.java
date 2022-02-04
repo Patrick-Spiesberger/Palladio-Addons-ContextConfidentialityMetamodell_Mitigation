@@ -41,8 +41,8 @@ import org.palladiosimulator.pcm.confidentiality.attackerSpecification.util.Atta
  * <!-- end-user-doc -->
  * @generated
  */
-public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender
-{
+public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory
+		implements ComposeableAdapterFactory, IChangeNotifier, IDisposable, IChildCreationExtender {
 	/**
 	 * This keeps track of the root adapter factory that delegates to this adapter factory.
 	 * <!-- begin-user-doc -->
@@ -65,7 +65,8 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(AttackerEditPlugin.INSTANCE, AttackerPackage.eNS_URI);
+	protected ChildCreationExtenderManager childCreationExtenderManager = new ChildCreationExtenderManager(
+			AttackerEditPlugin.INSTANCE, AttackerPackage.eNS_URI);
 
 	/**
 	 * This keeps track of all the supported types checked by {@link #isFactoryForType isFactoryForType}.
@@ -81,8 +82,7 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AttackerItemProviderAdapterFactory()
-	{
+	public AttackerItemProviderAdapterFactory() {
 		supportedTypes.add(IEditingDomainItemProvider.class);
 		supportedTypes.add(IStructuredItemContentProvider.class);
 		supportedTypes.add(ITreeItemContentProvider.class);
@@ -105,10 +105,8 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 	 * @generated
 	 */
 	@Override
-	public Adapter createAttackerContainerAdapter()
-	{
-		if (attackerContainerItemProvider == null)
-		{
+	public Adapter createAttackerContainerAdapter() {
+		if (attackerContainerItemProvider == null) {
 			attackerContainerItemProvider = new AttackerContainerItemProvider(this);
 		}
 
@@ -130,10 +128,8 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 	 * @generated
 	 */
 	@Override
-	public Adapter createAttackerAdapter()
-	{
-		if (attackerItemProvider == null)
-		{
+	public Adapter createAttackerAdapter() {
+		if (attackerItemProvider == null) {
 			attackerItemProvider = new AttackerItemProvider(this);
 		}
 
@@ -155,10 +151,8 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 	 * @generated
 	 */
 	@Override
-	public Adapter createAttackerSpecificationAdapter()
-	{
-		if (attackerSpecificationItemProvider == null)
-		{
+	public Adapter createAttackerSpecificationAdapter() {
+		if (attackerSpecificationItemProvider == null) {
 			attackerSpecificationItemProvider = new AttackerSpecificationItemProvider(this);
 		}
 
@@ -180,10 +174,8 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 	 * @generated
 	 */
 	@Override
-	public Adapter createAttackContainerAdapter()
-	{
-		if (attackContainerItemProvider == null)
-		{
+	public Adapter createAttackContainerAdapter() {
+		if (attackContainerItemProvider == null) {
 			attackContainerItemProvider = new AttackContainerItemProvider(this);
 		}
 
@@ -205,10 +197,8 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 	 * @generated
 	 */
 	@Override
-	public Adapter createVulnerabilityContainerAdapter()
-	{
-		if (vulnerabilityContainerItemProvider == null)
-		{
+	public Adapter createVulnerabilityContainerAdapter() {
+		if (vulnerabilityContainerItemProvider == null) {
 			vulnerabilityContainerItemProvider = new VulnerabilityContainerItemProvider(this);
 		}
 
@@ -230,10 +220,8 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 	 * @generated
 	 */
 	@Override
-	public Adapter createCategorySpecificationAdapter()
-	{
-		if (categorySpecificationItemProvider == null)
-		{
+	public Adapter createCategorySpecificationAdapter() {
+		if (categorySpecificationItemProvider == null) {
 			categorySpecificationItemProvider = new CategorySpecificationItemProvider(this);
 		}
 
@@ -255,11 +243,10 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 	 * @generated
 	 */
 	@Override
-	public Adapter createAttackerSystemSpecificationContainerAdapter()
-	{
-		if (attackerSystemSpecificationContainerItemProvider == null)
-		{
-			attackerSystemSpecificationContainerItemProvider = new AttackerSystemSpecificationContainerItemProvider(this);
+	public Adapter createAttackerSystemSpecificationContainerAdapter() {
+		if (attackerSystemSpecificationContainerItemProvider == null) {
+			attackerSystemSpecificationContainerItemProvider = new AttackerSystemSpecificationContainerItemProvider(
+					this);
 		}
 
 		return attackerSystemSpecificationContainerItemProvider;
@@ -280,10 +267,8 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 	 * @generated
 	 */
 	@Override
-	public Adapter createDatamodelAttackerAdapter()
-	{
-		if (datamodelAttackerItemProvider == null)
-		{
+	public Adapter createDatamodelAttackerAdapter() {
+		if (datamodelAttackerItemProvider == null) {
 			datamodelAttackerItemProvider = new DatamodelAttackerItemProvider(this);
 		}
 
@@ -305,10 +290,8 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 	 * @generated
 	 */
 	@Override
-	public Adapter createAssemblyContextDetailAdapter()
-	{
-		if (assemblyContextDetailItemProvider == null)
-		{
+	public Adapter createAssemblyContextDetailAdapter() {
+		if (assemblyContextDetailItemProvider == null) {
 			assemblyContextDetailItemProvider = new AssemblyContextDetailItemProvider(this);
 		}
 
@@ -321,8 +304,7 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ComposeableAdapterFactory getRootAdapterFactory()
-	{
+	public ComposeableAdapterFactory getRootAdapterFactory() {
 		return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
 	}
 
@@ -332,8 +314,7 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory)
-	{
+	public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
 		this.parentAdapterFactory = parentAdapterFactory;
 	}
 
@@ -343,8 +324,7 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 	 * @generated
 	 */
 	@Override
-	public boolean isFactoryForType(Object type)
-	{
+	public boolean isFactoryForType(Object type) {
 		return supportedTypes.contains(type) || super.isFactoryForType(type);
 	}
 
@@ -355,8 +335,7 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 	 * @generated
 	 */
 	@Override
-	public Adapter adapt(Notifier notifier, Object type)
-	{
+	public Adapter adapt(Notifier notifier, Object type) {
 		return super.adapt(notifier, this);
 	}
 
@@ -366,13 +345,10 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 	 * @generated
 	 */
 	@Override
-	public Object adapt(Object object, Object type)
-	{
-		if (isFactoryForType(type))
-		{
+	public Object adapt(Object object, Object type) {
+		if (isFactoryForType(type)) {
 			Object adapter = super.adapt(object, type);
-			if (!(type instanceof Class<?>) || (((Class<?>)type).isInstance(adapter)))
-			{
+			if (!(type instanceof Class<?>) || (((Class<?>) type).isInstance(adapter))) {
 				return adapter;
 			}
 		}
@@ -385,8 +361,7 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public List<IChildCreationExtender> getChildCreationExtenders()
-	{
+	public List<IChildCreationExtender> getChildCreationExtenders() {
 		return childCreationExtenderManager.getChildCreationExtenders();
 	}
 
@@ -395,8 +370,7 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Collection<?> getNewChildDescriptors(Object object, EditingDomain editingDomain)
-	{
+	public Collection<?> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
 		return childCreationExtenderManager.getNewChildDescriptors(object, editingDomain);
 	}
 
@@ -405,8 +379,7 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ResourceLocator getResourceLocator()
-	{
+	public ResourceLocator getResourceLocator() {
 		return childCreationExtenderManager;
 	}
 
@@ -416,8 +389,7 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addListener(INotifyChangedListener notifyChangedListener)
-	{
+	public void addListener(INotifyChangedListener notifyChangedListener) {
 		changeNotifier.addListener(notifyChangedListener);
 	}
 
@@ -427,8 +399,7 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeListener(INotifyChangedListener notifyChangedListener)
-	{
+	public void removeListener(INotifyChangedListener notifyChangedListener) {
 		changeNotifier.removeListener(notifyChangedListener);
 	}
 
@@ -438,12 +409,10 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void fireNotifyChanged(Notification notification)
-	{
+	public void fireNotifyChanged(Notification notification) {
 		changeNotifier.fireNotifyChanged(notification);
 
-		if (parentAdapterFactory != null)
-		{
+		if (parentAdapterFactory != null) {
 			parentAdapterFactory.fireNotifyChanged(notification);
 		}
 	}
@@ -454,17 +423,25 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void dispose()
-	{
-		if (attackerContainerItemProvider != null) attackerContainerItemProvider.dispose();
-		if (attackerItemProvider != null) attackerItemProvider.dispose();
-		if (attackerSpecificationItemProvider != null) attackerSpecificationItemProvider.dispose();
-		if (attackContainerItemProvider != null) attackContainerItemProvider.dispose();
-		if (vulnerabilityContainerItemProvider != null) vulnerabilityContainerItemProvider.dispose();
-		if (categorySpecificationItemProvider != null) categorySpecificationItemProvider.dispose();
-		if (attackerSystemSpecificationContainerItemProvider != null) attackerSystemSpecificationContainerItemProvider.dispose();
-		if (datamodelAttackerItemProvider != null) datamodelAttackerItemProvider.dispose();
-		if (assemblyContextDetailItemProvider != null) assemblyContextDetailItemProvider.dispose();
+	public void dispose() {
+		if (attackerContainerItemProvider != null)
+			attackerContainerItemProvider.dispose();
+		if (attackerItemProvider != null)
+			attackerItemProvider.dispose();
+		if (attackerSpecificationItemProvider != null)
+			attackerSpecificationItemProvider.dispose();
+		if (attackContainerItemProvider != null)
+			attackContainerItemProvider.dispose();
+		if (vulnerabilityContainerItemProvider != null)
+			vulnerabilityContainerItemProvider.dispose();
+		if (categorySpecificationItemProvider != null)
+			categorySpecificationItemProvider.dispose();
+		if (attackerSystemSpecificationContainerItemProvider != null)
+			attackerSystemSpecificationContainerItemProvider.dispose();
+		if (datamodelAttackerItemProvider != null)
+			datamodelAttackerItemProvider.dispose();
+		if (assemblyContextDetailItemProvider != null)
+			assemblyContextDetailItemProvider.dispose();
 	}
 
 }
