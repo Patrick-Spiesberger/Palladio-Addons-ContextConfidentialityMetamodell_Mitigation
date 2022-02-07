@@ -2,6 +2,7 @@
  */
 package org.palladiosimulator.pcm.confidentiality.attackerSpecification.provider;
 
+
 import java.util.Collection;
 import java.util.List;
 
@@ -24,14 +25,16 @@ import org.palladiosimulator.pcm.core.entity.provider.EntityItemProvider;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DatamodelAttackerItemProvider extends EntityItemProvider {
+public class DatamodelAttackerItemProvider extends EntityItemProvider
+{
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DatamodelAttackerItemProvider(AdapterFactory adapterFactory) {
+	public DatamodelAttackerItemProvider(AdapterFactory adapterFactory)
+	{
 		super(adapterFactory);
 	}
 
@@ -42,8 +45,10 @@ public class DatamodelAttackerItemProvider extends EntityItemProvider {
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
-		if (itemPropertyDescriptors == null) {
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
+	{
+		if (itemPropertyDescriptors == null)
+		{
 			super.getPropertyDescriptors(object);
 
 			addDataTypePropertyDescriptor(object);
@@ -62,13 +67,21 @@ public class DatamodelAttackerItemProvider extends EntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDataTypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_DatamodelAttacker_dataType_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_DatamodelAttacker_dataType_feature",
-								"_UI_DatamodelAttacker_type"),
-						AttackerPackage.Literals.DATAMODEL_ATTACKER__DATA_TYPE, true, false, true, null, null, null));
+	protected void addDataTypePropertyDescriptor(Object object)
+	{
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_DatamodelAttacker_dataType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DatamodelAttacker_dataType_feature", "_UI_DatamodelAttacker_type"),
+				 AttackerPackage.Literals.DATAMODEL_ATTACKER__DATA_TYPE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -77,14 +90,21 @@ public class DatamodelAttackerItemProvider extends EntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addReferenceNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_DatamodelAttacker_referenceName_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_DatamodelAttacker_referenceName_feature",
-						"_UI_DatamodelAttacker_type"),
-				AttackerPackage.Literals.DATAMODEL_ATTACKER__REFERENCE_NAME, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	protected void addReferenceNamePropertyDescriptor(Object object)
+	{
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_DatamodelAttacker_referenceName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DatamodelAttacker_referenceName_feature", "_UI_DatamodelAttacker_type"),
+				 AttackerPackage.Literals.DATAMODEL_ATTACKER__REFERENCE_NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -93,13 +113,21 @@ public class DatamodelAttackerItemProvider extends EntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSourcePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_DatamodelAttacker_source_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_DatamodelAttacker_source_feature",
-								"_UI_DatamodelAttacker_type"),
-						AttackerPackage.Literals.DATAMODEL_ATTACKER__SOURCE, true, false, true, null, null, null));
+	protected void addSourcePropertyDescriptor(Object object)
+	{
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_DatamodelAttacker_source_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DatamodelAttacker_source_feature", "_UI_DatamodelAttacker_type"),
+				 AttackerPackage.Literals.DATAMODEL_ATTACKER__SOURCE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -108,13 +136,21 @@ public class DatamodelAttackerItemProvider extends EntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addMethodPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_DatamodelAttacker_method_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_DatamodelAttacker_method_feature",
-								"_UI_DatamodelAttacker_type"),
-						AttackerPackage.Literals.DATAMODEL_ATTACKER__METHOD, true, false, true, null, null, null));
+	protected void addMethodPropertyDescriptor(Object object)
+	{
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_DatamodelAttacker_method_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DatamodelAttacker_method_feature", "_UI_DatamodelAttacker_type"),
+				 AttackerPackage.Literals.DATAMODEL_ATTACKER__METHOD,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -123,14 +159,21 @@ public class DatamodelAttackerItemProvider extends EntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addEncryptionLevelPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_DatamodelAttacker_encryptionLevel_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_DatamodelAttacker_encryptionLevel_feature",
-						"_UI_DatamodelAttacker_type"),
-				AttackerPackage.Literals.DATAMODEL_ATTACKER__ENCRYPTION_LEVEL, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	protected void addEncryptionLevelPropertyDescriptor(Object object)
+	{
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_DatamodelAttacker_encryptionLevel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DatamodelAttacker_encryptionLevel_feature", "_UI_DatamodelAttacker_type"),
+				 AttackerPackage.Literals.DATAMODEL_ATTACKER__ENCRYPTION_LEVEL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -139,14 +182,21 @@ public class DatamodelAttackerItemProvider extends EntityItemProvider {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addRequiredDecryptionKeyPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_DatamodelAttacker_requiredDecryptionKey_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_DatamodelAttacker_requiredDecryptionKey_feature", "_UI_DatamodelAttacker_type"),
-						AttackerPackage.Literals.DATAMODEL_ATTACKER__REQUIRED_DECRYPTION_KEY, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	protected void addRequiredDecryptionKeyPropertyDescriptor(Object object)
+	{
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_DatamodelAttacker_requiredDecryptionKey_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DatamodelAttacker_requiredDecryptionKey_feature", "_UI_DatamodelAttacker_type"),
+				 AttackerPackage.Literals.DATAMODEL_ATTACKER__REQUIRED_DECRYPTION_KEY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -156,7 +206,8 @@ public class DatamodelAttackerItemProvider extends EntityItemProvider {
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object) {
+	public Object getImage(Object object)
+	{
 		return overlayImage(object, getResourceLocator().getImage("full/obj16/DatamodelAttacker"));
 	}
 
@@ -166,7 +217,8 @@ public class DatamodelAttackerItemProvider extends EntityItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected boolean shouldComposeCreationImage() {
+	protected boolean shouldComposeCreationImage()
+	{
 		return true;
 	}
 
@@ -177,11 +229,14 @@ public class DatamodelAttackerItemProvider extends EntityItemProvider {
 	 * @generated
 	 */
 	@Override
-	public String getText(Object object) {
-		String label = ((DatamodelAttacker) object).getId();
-		return label == null || label.length() == 0 ? getString("_UI_DatamodelAttacker_type")
-				: getString("_UI_DatamodelAttacker_type") + " " + label;
+	public String getText(Object object)
+	{
+		String label = ((DatamodelAttacker)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_DatamodelAttacker_type") :
+			getString("_UI_DatamodelAttacker_type") + " " + label;
 	}
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -191,15 +246,17 @@ public class DatamodelAttackerItemProvider extends EntityItemProvider {
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification) {
+	public void notifyChanged(Notification notification)
+	{
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(DatamodelAttacker.class)) {
-		case AttackerPackage.DATAMODEL_ATTACKER__REFERENCE_NAME:
-		case AttackerPackage.DATAMODEL_ATTACKER__ENCRYPTION_LEVEL:
-		case AttackerPackage.DATAMODEL_ATTACKER__REQUIRED_DECRYPTION_KEY:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
+		switch (notification.getFeatureID(DatamodelAttacker.class))
+		{
+			case AttackerPackage.DATAMODEL_ATTACKER__REFERENCE_NAME:
+			case AttackerPackage.DATAMODEL_ATTACKER__ENCRYPTION_LEVEL:
+			case AttackerPackage.DATAMODEL_ATTACKER__REQUIRED_DECRYPTION_KEY:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -212,7 +269,8 @@ public class DatamodelAttackerItemProvider extends EntityItemProvider {
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
+	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

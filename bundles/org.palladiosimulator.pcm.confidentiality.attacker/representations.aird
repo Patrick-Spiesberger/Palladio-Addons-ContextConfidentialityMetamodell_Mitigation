@@ -23,11 +23,11 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="model/attacker.ecore#//attackSpecification"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_zy9FEOoQEeu2OdClVGutXQ" name="pcmIntegration class diagram" repPath="#_zy4zoOoQEeu2OdClVGutXQ" changeId="ab863281-8ff6-4ee5-9e9d-6d6530f31cf0">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_zy9FEOoQEeu2OdClVGutXQ" name="pcmIntegration class diagram" repPath="#_zy4zoOoQEeu2OdClVGutXQ" changeId="95674f42-b273-4e57-b180-a15c8932c762">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="model/attacker.ecore#//pcmIntegration"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_ym3L4HFIEeyIvc2unOtdYA" name="attackerSpecification class diagram" repPath="#_ym1WsHFIEeyIvc2unOtdYA" changeId="83fb2cf6-70d5-4463-a264-2c4239ea411a">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_ym3L4HFIEeyIvc2unOtdYA" name="attackerSpecification class diagram" repPath="#_ym1WsHFIEeyIvc2unOtdYA" changeId="4f9ff49d-baad-484e-93b6-85d4e9200982">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="model/attacker.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -1787,7 +1787,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_x51E9oULEey56_UUKjVO4g"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_x51E8YULEey56_UUKjVO4g" fontName="Open Sans" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_x51E8oULEey56_UUKjVO4g" x="-103" y="282" width="120" height="100"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_x51E8oULEey56_UUKjVO4g" x="-103" y="282" width="106" height="88"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_ym3y8nFIEeyIvc2unOtdYA"/>
         <edges xmi:type="notation:Edge" xmi:id="_zC_HMHFIEeyIvc2unOtdYA" type="4001" element="_zCq-IHFIEeyIvc2unOtdYA" source="_zCzhAHFIEeyIvc2unOtdYA" target="_zC0vIHFIEeyIvc2unOtdYA">
@@ -1915,7 +1915,7 @@
             <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
           </endLabelStyleDescription>
         </computedStyleDescriptions>
-        <computedStyleDescriptions xmi:type="style:BundledImageDescription" xmi:id="_2-MWuYULEey56_UUKjVO4g" labelExpression="service:render" labelAlignment="LEFT" tooltipExpression="service:renderTooltip" sizeComputationExpression="1">
+        <computedStyleDescriptions xmi:type="style:BundledImageDescription" xmi:id="_HhaTUIgrEeynuYrFEQtpoQ" labelExpression="service:render" labelAlignment="LEFT" tooltipExpression="service:renderTooltip" sizeComputationExpression="1">
           <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <labelFormat>bold</labelFormat>
           <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -2090,7 +2090,7 @@
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_Witzz4UUEey56_UUKjVO4g" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_HhX3HYgrEeynuYrFEQtpoQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
@@ -2105,7 +2105,7 @@
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_1NDwRIULEey56_UUKjVO4g" name="encryptionLevel : EncryptionLevel = None" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="model/attacker.ecore#//DatamodelAttacker/encryptionLevel"/>
         <semanticElements xmi:type="ecore:EAttribute" href="model/attacker.ecore#//DatamodelAttacker/encryptionLevel"/>
-        <ownedStyle xmi:type="diagram:BundledImage" uid="_2-MWu4ULEey56_UUKjVO4g" labelAlignment="LEFT" description="_2-MWuYULEey56_UUKjVO4g">
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_HhaTUogrEeynuYrFEQtpoQ" labelAlignment="LEFT" description="_HhaTUIgrEeynuYrFEQtpoQ">
           <customFeatures>labelFormat</customFeatures>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
