@@ -104,6 +104,24 @@ public interface AttackerFactory extends EFactory
 	AssemblyContextDetail createAssemblyContextDetail();
 
 	/**
+	 * Returns a new object of class '<em>Mitigation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Mitigation</em>'.
+	 * @generated
+	 */
+	Mitigation createMitigation();
+
+	/**
+	 * Returns a new object of class '<em>Mitigation Specification</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Mitigation Specification</em>'.
+	 * @generated
+	 */
+	MitigationSpecification createMitigationSpecification();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

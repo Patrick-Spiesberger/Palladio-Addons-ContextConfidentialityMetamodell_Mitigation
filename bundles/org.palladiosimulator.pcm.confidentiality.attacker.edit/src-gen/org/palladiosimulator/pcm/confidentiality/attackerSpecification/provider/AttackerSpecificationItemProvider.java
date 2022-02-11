@@ -69,6 +69,7 @@ public class AttackerSpecificationItemProvider
 
 			addCategoryspecificationPropertyDescriptor(object);
 			addSystemintegrationPropertyDescriptor(object);
+			addMitigationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -120,6 +121,29 @@ public class AttackerSpecificationItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Mitigation feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addMitigationPropertyDescriptor(Object object)
+	{
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_AttackerSpecification_mitigation_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AttackerSpecification_mitigation_feature", "_UI_AttackerSpecification_type"),
+				 AttackerPackage.Literals.ATTACKER_SPECIFICATION__MITIGATION,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -138,6 +162,7 @@ public class AttackerSpecificationItemProvider
 			childrenFeatures.add(AttackerPackage.Literals.ATTACKER_SPECIFICATION__VULNERABILITES);
 			childrenFeatures.add(AttackerPackage.Literals.ATTACKER_SPECIFICATION__CATEGORYSPECIFICATION);
 			childrenFeatures.add(AttackerPackage.Literals.ATTACKER_SPECIFICATION__SYSTEMINTEGRATION);
+			childrenFeatures.add(AttackerPackage.Literals.ATTACKER_SPECIFICATION__MITIGATION);
 		}
 		return childrenFeatures;
 	}
@@ -211,6 +236,7 @@ public class AttackerSpecificationItemProvider
 			case AttackerPackage.ATTACKER_SPECIFICATION__VULNERABILITES:
 			case AttackerPackage.ATTACKER_SPECIFICATION__CATEGORYSPECIFICATION:
 			case AttackerPackage.ATTACKER_SPECIFICATION__SYSTEMINTEGRATION:
+			case AttackerPackage.ATTACKER_SPECIFICATION__MITIGATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -253,6 +279,11 @@ public class AttackerSpecificationItemProvider
 			(createChildParameter
 				(AttackerPackage.Literals.ATTACKER_SPECIFICATION__SYSTEMINTEGRATION,
 				 AttackerFactory.eINSTANCE.createAttackerSystemSpecificationContainer()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AttackerPackage.Literals.ATTACKER_SPECIFICATION__MITIGATION,
+				 AttackerFactory.eINSTANCE.createMitigation()));
 	}
 
 	/**

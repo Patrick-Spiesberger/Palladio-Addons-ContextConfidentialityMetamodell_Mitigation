@@ -128,6 +128,16 @@ public class AttackerAdapterFactory extends AdapterFactoryImpl
 				return createAssemblyContextDetailAdapter();
 			}
 			@Override
+			public Adapter caseMitigation(Mitigation object)
+			{
+				return createMitigationAdapter();
+			}
+			@Override
+			public Adapter caseMitigationSpecification(MitigationSpecification object)
+			{
+				return createMitigationSpecificationAdapter();
+			}
+			@Override
 			public Adapter caseIdentifier(Identifier object)
 			{
 				return createIdentifierAdapter();
@@ -305,6 +315,36 @@ public class AttackerAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createAssemblyContextDetailAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigation <em>Mitigation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigation
+	 * @generated
+	 */
+	public Adapter createMitigationAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.MitigationSpecification <em>Mitigation Specification</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.MitigationSpecification
+	 * @generated
+	 */
+	public Adapter createMitigationSpecificationAdapter()
 	{
 		return null;
 	}

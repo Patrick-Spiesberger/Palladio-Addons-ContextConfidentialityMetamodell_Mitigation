@@ -37,6 +37,8 @@
         eType="#//CategorySpecification" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="systemintegration" eType="#//AttackerSystemSpecificationContainer"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mitigation" eType="#//Mitigation"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttackContainer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="attack" upperBound="-1"
@@ -81,6 +83,15 @@
     <eLiterals name="None" literal="None"/>
     <eLiterals name="Low" value="1"/>
     <eLiterals name="High" value="2" literal="High"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Mitigation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="necessaryCredentials" upperBound="-1"
+        eType="ecore:EClass ../../org.palladiosimulator.pcm.confidentiality.context/model/context.ecore#//system/UsageSpecification"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mitigationspecification"
+        upperBound="-1" eType="#//MitigationSpecification"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MitigationSpecification">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mitigationName" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
   </eClassifiers>
   <eSubpackages name="attackSpecification" nsURI="http://www.palladiosimulator.org/pcm/confidentiality/attacker/0.1/"
       nsPrefix="attack">

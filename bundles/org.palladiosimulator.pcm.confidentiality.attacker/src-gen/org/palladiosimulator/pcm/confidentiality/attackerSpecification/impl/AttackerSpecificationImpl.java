@@ -12,6 +12,7 @@ import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerP
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerSpecification;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerSystemSpecificationContainer;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.CategorySpecification;
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigation;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.VulnerabilityContainer;
 
 /**
@@ -27,6 +28,7 @@ import org.palladiosimulator.pcm.confidentiality.attackerSpecification.Vulnerabi
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerSpecificationImpl#getVulnerabilites <em>Vulnerabilites</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerSpecificationImpl#getCategoryspecification <em>Categoryspecification</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerSpecificationImpl#getSystemintegration <em>Systemintegration</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerSpecificationImpl#getMitigation <em>Mitigation</em>}</li>
  * </ul>
  *
  * @generated
@@ -163,6 +165,26 @@ public class AttackerSpecificationImpl extends CDOObjectImpl implements Attacker
 	public void setSystemintegration(AttackerSystemSpecificationContainer newSystemintegration)
 	{
 		eSet(AttackerPackage.Literals.ATTACKER_SPECIFICATION__SYSTEMINTEGRATION, newSystemintegration);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Mitigation getMitigation()
+	{
+		return (Mitigation)eGet(AttackerPackage.Literals.ATTACKER_SPECIFICATION__MITIGATION, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMitigation(Mitigation newMitigation)
+	{
+		eSet(AttackerPackage.Literals.ATTACKER_SPECIFICATION__MITIGATION, newMitigation);
 	}
 
 } //AttackerSpecificationImpl

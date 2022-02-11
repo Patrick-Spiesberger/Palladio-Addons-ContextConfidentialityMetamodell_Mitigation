@@ -261,13 +261,22 @@ public interface AttackerPackage extends EPackage
 	int ATTACKER_SPECIFICATION__SYSTEMINTEGRATION = 4;
 
 	/**
+	 * The feature id for the '<em><b>Mitigation</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTACKER_SPECIFICATION__MITIGATION = 5;
+
+	/**
 	 * The number of structural features of the '<em>Specification</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTACKER_SPECIFICATION_FEATURE_COUNT = 5;
+	int ATTACKER_SPECIFICATION_FEATURE_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackContainerImpl <em>Attack Container</em>}' class.
@@ -528,6 +537,71 @@ public interface AttackerPackage extends EPackage
 	int ASSEMBLY_CONTEXT_DETAIL_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 2;
 
 	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.MitigationImpl <em>Mitigation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.MitigationImpl
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerPackageImpl#getMitigation()
+	 * @generated
+	 */
+	int MITIGATION = 9;
+
+	/**
+	 * The feature id for the '<em><b>Necessary Credentials</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MITIGATION__NECESSARY_CREDENTIALS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Mitigationspecification</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MITIGATION__MITIGATIONSPECIFICATION = 1;
+
+	/**
+	 * The number of structural features of the '<em>Mitigation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MITIGATION_FEATURE_COUNT = 2;
+
+	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.MitigationSpecificationImpl <em>Mitigation Specification</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.MitigationSpecificationImpl
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerPackageImpl#getMitigationSpecification()
+	 * @generated
+	 */
+	int MITIGATION_SPECIFICATION = 10;
+
+	/**
+	 * The feature id for the '<em><b>Mitigation Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MITIGATION_SPECIFICATION__MITIGATION_NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Mitigation Specification</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MITIGATION_SPECIFICATION_FEATURE_COUNT = 1;
+
+	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.ListOperationEffort <em>List Operation Effort</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -535,7 +609,7 @@ public interface AttackerPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerPackageImpl#getListOperationEffort()
 	 * @generated
 	 */
-	int LIST_OPERATION_EFFORT = 9;
+	int LIST_OPERATION_EFFORT = 11;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.EncryptionLevel <em>Encryption Level</em>}' enum.
@@ -545,7 +619,7 @@ public interface AttackerPackage extends EPackage
 	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerPackageImpl#getEncryptionLevel()
 	 * @generated
 	 */
-	int ENCRYPTION_LEVEL = 10;
+	int ENCRYPTION_LEVEL = 12;
 
 
 	/**
@@ -744,6 +818,17 @@ public interface AttackerPackage extends EPackage
 	EReference getAttackerSpecification_Systemintegration();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerSpecification#getMitigation <em>Mitigation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Mitigation</em>'.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerSpecification#getMitigation()
+	 * @see #getAttackerSpecification()
+	 * @generated
+	 */
+	EReference getAttackerSpecification_Mitigation();
+
+	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackContainer <em>Attack Container</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -934,6 +1019,59 @@ public interface AttackerPackage extends EPackage
 	 * @generated
 	 */
 	EAttribute getAssemblyContextDetail_ChangeAttackVectorToLocal();
+
+	/**
+	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigation <em>Mitigation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Mitigation</em>'.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigation
+	 * @generated
+	 */
+	EClass getMitigation();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigation#getNecessaryCredentials <em>Necessary Credentials</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Necessary Credentials</em>'.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigation#getNecessaryCredentials()
+	 * @see #getMitigation()
+	 * @generated
+	 */
+	EReference getMitigation_NecessaryCredentials();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigation#getMitigationspecification <em>Mitigationspecification</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Mitigationspecification</em>'.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigation#getMitigationspecification()
+	 * @see #getMitigation()
+	 * @generated
+	 */
+	EReference getMitigation_Mitigationspecification();
+
+	/**
+	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.MitigationSpecification <em>Mitigation Specification</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Mitigation Specification</em>'.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.MitigationSpecification
+	 * @generated
+	 */
+	EClass getMitigationSpecification();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.MitigationSpecification#getMitigationName <em>Mitigation Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Mitigation Name</em>'.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.MitigationSpecification#getMitigationName()
+	 * @see #getMitigationSpecification()
+	 * @generated
+	 */
+	EAttribute getMitigationSpecification_MitigationName();
 
 	/**
 	 * Returns the meta object for enum '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.ListOperationEffort <em>List Operation Effort</em>}'.
@@ -1129,6 +1267,14 @@ public interface AttackerPackage extends EPackage
 		EReference ATTACKER_SPECIFICATION__SYSTEMINTEGRATION = eINSTANCE.getAttackerSpecification_Systemintegration();
 
 		/**
+		 * The meta object literal for the '<em><b>Mitigation</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ATTACKER_SPECIFICATION__MITIGATION = eINSTANCE.getAttackerSpecification_Mitigation();
+
+		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackContainerImpl <em>Attack Container</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1283,6 +1429,50 @@ public interface AttackerPackage extends EPackage
 		 * @generated
 		 */
 		EAttribute ASSEMBLY_CONTEXT_DETAIL__CHANGE_ATTACK_VECTOR_TO_LOCAL = eINSTANCE.getAssemblyContextDetail_ChangeAttackVectorToLocal();
+
+		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.MitigationImpl <em>Mitigation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.MitigationImpl
+		 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerPackageImpl#getMitigation()
+		 * @generated
+		 */
+		EClass MITIGATION = eINSTANCE.getMitigation();
+
+		/**
+		 * The meta object literal for the '<em><b>Necessary Credentials</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MITIGATION__NECESSARY_CREDENTIALS = eINSTANCE.getMitigation_NecessaryCredentials();
+
+		/**
+		 * The meta object literal for the '<em><b>Mitigationspecification</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MITIGATION__MITIGATIONSPECIFICATION = eINSTANCE.getMitigation_Mitigationspecification();
+
+		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.MitigationSpecificationImpl <em>Mitigation Specification</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.MitigationSpecificationImpl
+		 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerPackageImpl#getMitigationSpecification()
+		 * @generated
+		 */
+		EClass MITIGATION_SPECIFICATION = eINSTANCE.getMitigationSpecification();
+
+		/**
+		 * The meta object literal for the '<em><b>Mitigation Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MITIGATION_SPECIFICATION__MITIGATION_NAME = eINSTANCE.getMitigationSpecification_MitigationName();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.ListOperationEffort <em>List Operation Effort</em>}' enum.

@@ -316,6 +316,56 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MitigationItemProvider mitigationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMitigationAdapter()
+	{
+		if (mitigationItemProvider == null)
+		{
+			mitigationItemProvider = new MitigationItemProvider(this);
+		}
+
+		return mitigationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.MitigationSpecification} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MitigationSpecificationItemProvider mitigationSpecificationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.MitigationSpecification}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMitigationSpecificationAdapter()
+	{
+		if (mitigationSpecificationItemProvider == null)
+		{
+			mitigationSpecificationItemProvider = new MitigationSpecificationItemProvider(this);
+		}
+
+		return mitigationSpecificationItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -465,6 +515,8 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 		if (attackerSystemSpecificationContainerItemProvider != null) attackerSystemSpecificationContainerItemProvider.dispose();
 		if (datamodelAttackerItemProvider != null) datamodelAttackerItemProvider.dispose();
 		if (assemblyContextDetailItemProvider != null) assemblyContextDetailItemProvider.dispose();
+		if (mitigationItemProvider != null) mitigationItemProvider.dispose();
+		if (mitigationSpecificationItemProvider != null) mitigationSpecificationItemProvider.dispose();
 	}
 
 }

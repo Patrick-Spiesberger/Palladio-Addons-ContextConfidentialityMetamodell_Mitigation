@@ -158,6 +158,20 @@ public class AttackerSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case AttackerPackage.MITIGATION:
+			{
+				Mitigation mitigation = (Mitigation)theEObject;
+				T result = caseMitigation(mitigation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AttackerPackage.MITIGATION_SPECIFICATION:
+			{
+				MitigationSpecification mitigationSpecification = (MitigationSpecification)theEObject;
+				T result = caseMitigationSpecification(mitigationSpecification);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -302,6 +316,38 @@ public class AttackerSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseAssemblyContextDetail(AssemblyContextDetail object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Mitigation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Mitigation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMitigation(Mitigation object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Mitigation Specification</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Mitigation Specification</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMitigationSpecification(MitigationSpecification object)
 	{
 		return null;
 	}

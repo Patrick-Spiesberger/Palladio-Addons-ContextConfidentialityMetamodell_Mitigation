@@ -18,6 +18,7 @@ import org.eclipse.emf.cdo.CDOObject;
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerSpecification#getVulnerabilites <em>Vulnerabilites</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerSpecification#getCategoryspecification <em>Categoryspecification</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerSpecification#getSystemintegration <em>Systemintegration</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerSpecification#getMitigation <em>Mitigation</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage#getAttackerSpecification()
@@ -136,5 +137,27 @@ public interface AttackerSpecification extends CDOObject
 	 * @generated
 	 */
 	void setSystemintegration(AttackerSystemSpecificationContainer value);
+
+	/**
+	 * Returns the value of the '<em><b>Mitigation</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Mitigation</em>' containment reference.
+	 * @see #setMitigation(Mitigation)
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage#getAttackerSpecification_Mitigation()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Mitigation getMitigation();
+
+	/**
+	 * Sets the value of the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerSpecification#getMitigation <em>Mitigation</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Mitigation</em>' containment reference.
+	 * @see #getMitigation()
+	 * @generated
+	 */
+	void setMitigation(Mitigation value);
 
 } // AttackerSpecification

@@ -35,6 +35,8 @@ import org.palladiosimulator.pcm.confidentiality.attackerSpecification.CategoryS
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.EncryptionLevel;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.ListOperationEffort;
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigation;
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.MitigationSpecification;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.VulnerabilityContainer;
 
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpecification.AttackSpecificationPackage;
@@ -127,6 +129,20 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * @generated
 	 */
 	private EClass assemblyContextDetailEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mitigationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mitigationSpecificationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -410,6 +426,16 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getAttackerSpecification_Mitigation()
+	{
+		return (EReference)attackerSpecificationEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAttackContainer()
 	{
 		return attackContainerEClass;
@@ -590,6 +616,56 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getMitigation()
+	{
+		return mitigationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMitigation_NecessaryCredentials()
+	{
+		return (EReference)mitigationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMitigation_Mitigationspecification()
+	{
+		return (EReference)mitigationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMitigationSpecification()
+	{
+		return mitigationSpecificationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMitigationSpecification_MitigationName()
+	{
+		return (EAttribute)mitigationSpecificationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getListOperationEffort()
 	{
 		return listOperationEffortEEnum;
@@ -655,6 +731,7 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		createEReference(attackerSpecificationEClass, ATTACKER_SPECIFICATION__VULNERABILITES);
 		createEReference(attackerSpecificationEClass, ATTACKER_SPECIFICATION__CATEGORYSPECIFICATION);
 		createEReference(attackerSpecificationEClass, ATTACKER_SPECIFICATION__SYSTEMINTEGRATION);
+		createEReference(attackerSpecificationEClass, ATTACKER_SPECIFICATION__MITIGATION);
 
 		attackContainerEClass = createEClass(ATTACK_CONTAINER);
 		createEReference(attackContainerEClass, ATTACK_CONTAINER__ATTACK);
@@ -679,6 +756,13 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		assemblyContextDetailEClass = createEClass(ASSEMBLY_CONTEXT_DETAIL);
 		createEReference(assemblyContextDetailEClass, ASSEMBLY_CONTEXT_DETAIL__COMPROMISED_COMPONENTS);
 		createEAttribute(assemblyContextDetailEClass, ASSEMBLY_CONTEXT_DETAIL__CHANGE_ATTACK_VECTOR_TO_LOCAL);
+
+		mitigationEClass = createEClass(MITIGATION);
+		createEReference(mitigationEClass, MITIGATION__NECESSARY_CREDENTIALS);
+		createEReference(mitigationEClass, MITIGATION__MITIGATIONSPECIFICATION);
+
+		mitigationSpecificationEClass = createEClass(MITIGATION_SPECIFICATION);
+		createEAttribute(mitigationSpecificationEClass, MITIGATION_SPECIFICATION__MITIGATION_NAME);
 
 		// Create enums
 		listOperationEffortEEnum = createEEnum(LIST_OPERATION_EFFORT);
@@ -754,6 +838,7 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		initEReference(getAttackerSpecification_Vulnerabilites(), this.getVulnerabilityContainer(), null, "vulnerabilites", null, 0, 1, AttackerSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAttackerSpecification_Categoryspecification(), this.getCategorySpecification(), null, "categoryspecification", null, 0, 1, AttackerSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAttackerSpecification_Systemintegration(), this.getAttackerSystemSpecificationContainer(), null, "systemintegration", null, 0, 1, AttackerSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAttackerSpecification_Mitigation(), this.getMitigation(), null, "mitigation", null, 0, 1, AttackerSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attackContainerEClass, AttackContainer.class, "AttackContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAttackContainer_Attack(), theAttackSpecificationPackage.getAttack(), null, "attack", null, 0, -1, AttackContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -778,6 +863,13 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		initEClass(assemblyContextDetailEClass, AssemblyContextDetail.class, "AssemblyContextDetail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAssemblyContextDetail_CompromisedComponents(), theCompositionPackage.getAssemblyContext(), null, "compromisedComponents", null, 0, -1, AssemblyContextDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAssemblyContextDetail_ChangeAttackVectorToLocal(), theXMLTypePackage.getBoolean(), "changeAttackVectorToLocal", "false", 0, 1, AssemblyContextDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mitigationEClass, Mitigation.class, "Mitigation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMitigation_NecessaryCredentials(), theSystemPackage.getUsageSpecification(), null, "necessaryCredentials", null, 0, -1, Mitigation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMitigation_Mitigationspecification(), this.getMitigationSpecification(), null, "mitigationspecification", null, 0, -1, Mitigation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mitigationSpecificationEClass, MitigationSpecification.class, "MitigationSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMitigationSpecification_MitigationName(), theXMLTypePackage.getString(), "mitigationName", null, 0, 1, MitigationSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(listOperationEffortEEnum, ListOperationEffort.class, "ListOperationEffort");

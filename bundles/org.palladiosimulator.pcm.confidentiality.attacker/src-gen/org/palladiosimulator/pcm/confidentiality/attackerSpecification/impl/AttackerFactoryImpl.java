@@ -74,6 +74,8 @@ public class AttackerFactoryImpl extends EFactoryImpl implements AttackerFactory
 			case AttackerPackage.ATTACKER_SYSTEM_SPECIFICATION_CONTAINER: return (EObject)createAttackerSystemSpecificationContainer();
 			case AttackerPackage.DATAMODEL_ATTACKER: return createDatamodelAttacker();
 			case AttackerPackage.ASSEMBLY_CONTEXT_DETAIL: return createAssemblyContextDetail();
+			case AttackerPackage.MITIGATION: return (EObject)createMitigation();
+			case AttackerPackage.MITIGATION_SPECIFICATION: return (EObject)createMitigationSpecification();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -214,6 +216,28 @@ public class AttackerFactoryImpl extends EFactoryImpl implements AttackerFactory
 	{
 		AssemblyContextDetailImpl assemblyContextDetail = new AssemblyContextDetailImpl();
 		return assemblyContextDetail;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Mitigation createMitigation()
+	{
+		MitigationImpl mitigation = new MitigationImpl();
+		return mitigation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MitigationSpecification createMitigationSpecification()
+	{
+		MitigationSpecificationImpl mitigationSpecification = new MitigationSpecificationImpl();
+		return mitigationSpecification;
 	}
 
 	/**
