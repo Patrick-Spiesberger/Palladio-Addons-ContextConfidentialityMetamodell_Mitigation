@@ -11,6 +11,8 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -23,6 +25,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerFactory;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.MitigationSpecification;
 
@@ -66,6 +69,7 @@ public class MitigationSpecificationItemProvider
 			super.getPropertyDescriptors(object);
 
 			addMitigationNamePropertyDescriptor(object);
+			addNecessaryCredentialsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -91,6 +95,62 @@ public class MitigationSpecificationItemProvider
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Necessary Credentials feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNecessaryCredentialsPropertyDescriptor(Object object)
+	{
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_MitigationSpecification_necessaryCredentials_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MitigationSpecification_necessaryCredentials_feature", "_UI_MitigationSpecification_type"),
+				 AttackerPackage.Literals.MITIGATION_SPECIFICATION__NECESSARY_CREDENTIALS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object)
+	{
+		if (childrenFeatures == null)
+		{
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(AttackerPackage.Literals.MITIGATION_SPECIFICATION__VULNERABILITIES);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child)
+	{
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -149,6 +209,9 @@ public class MitigationSpecificationItemProvider
 			case AttackerPackage.MITIGATION_SPECIFICATION__MITIGATION_NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
+			case AttackerPackage.MITIGATION_SPECIFICATION__VULNERABILITIES:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -164,6 +227,11 @@ public class MitigationSpecificationItemProvider
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
 	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AttackerPackage.Literals.MITIGATION_SPECIFICATION__VULNERABILITIES,
+				 AttackerFactory.eINSTANCE.createVulnerabilityContainer()));
 	}
 
 	/**

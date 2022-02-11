@@ -59,6 +59,15 @@ public interface PcmIntegrationFactory extends EFactory
 	NonGlobalCommunication createNonGlobalCommunication();
 
 	/**
+	 * Returns a new object of class '<em>Prevention</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Prevention</em>'.
+	 * @generated
+	 */
+	Prevention createPrevention();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

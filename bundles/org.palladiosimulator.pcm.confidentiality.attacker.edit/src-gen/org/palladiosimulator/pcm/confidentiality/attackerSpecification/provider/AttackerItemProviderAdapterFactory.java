@@ -341,28 +341,28 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.MitigationSpecification} instances.
+	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Encryption} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MitigationSpecificationItemProvider mitigationSpecificationItemProvider;
+	protected EncryptionItemProvider encryptionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.MitigationSpecification}.
+	 * This creates an adapter for a {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Encryption}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createMitigationSpecificationAdapter()
+	public Adapter createEncryptionAdapter()
 	{
-		if (mitigationSpecificationItemProvider == null)
+		if (encryptionItemProvider == null)
 		{
-			mitigationSpecificationItemProvider = new MitigationSpecificationItemProvider(this);
+			encryptionItemProvider = new EncryptionItemProvider(this);
 		}
 
-		return mitigationSpecificationItemProvider;
+		return encryptionItemProvider;
 	}
 
 	/**
@@ -516,7 +516,7 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 		if (datamodelAttackerItemProvider != null) datamodelAttackerItemProvider.dispose();
 		if (assemblyContextDetailItemProvider != null) assemblyContextDetailItemProvider.dispose();
 		if (mitigationItemProvider != null) mitigationItemProvider.dispose();
-		if (mitigationSpecificationItemProvider != null) mitigationSpecificationItemProvider.dispose();
+		if (encryptionItemProvider != null) encryptionItemProvider.dispose();
 	}
 
 }

@@ -69,6 +69,7 @@ public class PcmIntegrationFactoryImpl extends EFactoryImpl implements PcmIntegr
 			case PcmIntegrationPackage.PCM_ELEMENT: return createPCMElement();
 			case PcmIntegrationPackage.ROLE_SYSTEM_INTEGRATION: return createRoleSystemIntegration();
 			case PcmIntegrationPackage.NON_GLOBAL_COMMUNICATION: return createNonGlobalCommunication();
+			case PcmIntegrationPackage.PREVENTION: return (EObject)createPrevention();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -150,6 +151,17 @@ public class PcmIntegrationFactoryImpl extends EFactoryImpl implements PcmIntegr
 	{
 		NonGlobalCommunicationImpl nonGlobalCommunication = new NonGlobalCommunicationImpl();
 		return nonGlobalCommunication;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Prevention createPrevention()
+	{
+		PreventionImpl prevention = new PreventionImpl();
+		return prevention;
 	}
 
 	/**

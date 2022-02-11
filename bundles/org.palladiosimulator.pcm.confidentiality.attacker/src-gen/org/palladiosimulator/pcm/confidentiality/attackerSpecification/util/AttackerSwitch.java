@@ -172,6 +172,14 @@ public class AttackerSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case AttackerPackage.ENCRYPTION:
+			{
+				Encryption encryption = (Encryption)theEObject;
+				T result = caseEncryption(encryption);
+				if (result == null) result = caseMitigationSpecification(encryption);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -348,6 +356,22 @@ public class AttackerSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseMitigationSpecification(MitigationSpecification object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Encryption</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Encryption</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEncryption(Encryption object)
 	{
 		return null;
 	}

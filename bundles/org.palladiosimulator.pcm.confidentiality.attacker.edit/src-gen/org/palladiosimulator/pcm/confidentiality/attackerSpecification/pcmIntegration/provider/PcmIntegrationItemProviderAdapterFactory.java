@@ -174,6 +174,31 @@ public class PcmIntegrationItemProviderAdapterFactory extends PcmIntegrationAdap
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.Prevention} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PreventionItemProvider preventionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.Prevention}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPreventionAdapter()
+	{
+		if (preventionItemProvider == null)
+		{
+			preventionItemProvider = new PreventionItemProvider(this);
+		}
+
+		return preventionItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -288,6 +313,7 @@ public class PcmIntegrationItemProviderAdapterFactory extends PcmIntegrationAdap
 		if (pcmElementItemProvider != null) pcmElementItemProvider.dispose();
 		if (roleSystemIntegrationItemProvider != null) roleSystemIntegrationItemProvider.dispose();
 		if (nonGlobalCommunicationItemProvider != null) nonGlobalCommunicationItemProvider.dispose();
+		if (preventionItemProvider != null) preventionItemProvider.dispose();
 	}
 
 }

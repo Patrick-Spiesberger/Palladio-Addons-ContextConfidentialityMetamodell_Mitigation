@@ -113,13 +113,13 @@ public interface AttackerFactory extends EFactory
 	Mitigation createMitigation();
 
 	/**
-	 * Returns a new object of class '<em>Mitigation Specification</em>'.
+	 * Returns a new object of class '<em>Encryption</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Mitigation Specification</em>'.
+	 * @return a new object of class '<em>Encryption</em>'.
 	 * @generated
 	 */
-	MitigationSpecification createMitigationSpecification();
+	Encryption createEncryption();
 
 	/**
 	 * Returns the package supported by this factory.

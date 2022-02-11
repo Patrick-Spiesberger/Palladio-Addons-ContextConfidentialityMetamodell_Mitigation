@@ -34,6 +34,7 @@ import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegr
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PcmIntegrationFactory;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PcmIntegrationPackage;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PreventLevel;
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.Prevention;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.RoleSystemIntegration;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.SystemIntegration;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.VulnerabilitySystemIntegration;
@@ -92,6 +93,13 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * @generated
 	 */
 	private EClass nonGlobalCommunicationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass preventionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -337,6 +345,26 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getPrevention()
+	{
+		return preventionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPrevention_PreventionLevel()
+	{
+		return (EAttribute)preventionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getPreventLevel()
 	{
 		return preventLevelEEnum;
@@ -392,6 +420,9 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 
 		nonGlobalCommunicationEClass = createEClass(NON_GLOBAL_COMMUNICATION);
 
+		preventionEClass = createEClass(PREVENTION);
+		createEAttribute(preventionEClass, PREVENTION__PREVENTION_LEVEL);
+
 		// Create enums
 		preventLevelEEnum = createEEnum(PREVENT_LEVEL);
 	}
@@ -427,6 +458,7 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 		RepositoryPackage theRepositoryPackage = (RepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(RepositoryPackage.eNS_URI);
 		CompositionPackage theCompositionPackage = (CompositionPackage)EPackage.Registry.INSTANCE.getEPackage(CompositionPackage.eNS_URI);
 		StructurePackage theStructurePackage = (StructurePackage)EPackage.Registry.INSTANCE.getEPackage(StructurePackage.eNS_URI);
+		AttackerPackage theAttackerPackage = (AttackerPackage)EPackage.Registry.INSTANCE.getEPackage(AttackerPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -439,6 +471,7 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 		roleSystemIntegrationEClass.getESuperTypes().add(this.getSystemIntegration());
 		systemIntegrationEClass.getESuperTypes().add(theEntityPackage.getEntity());
 		nonGlobalCommunicationEClass.getESuperTypes().add(this.getSystemIntegration());
+		preventionEClass.getESuperTypes().add(theAttackerPackage.getMitigationSpecification());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(vulnerabilitySystemIntegrationEClass, VulnerabilitySystemIntegration.class, "VulnerabilitySystemIntegration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -460,6 +493,9 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 		initEReference(getSystemIntegration_Pcmelement(), this.getPCMElement(), null, "pcmelement", null, 1, 1, SystemIntegration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nonGlobalCommunicationEClass, NonGlobalCommunication.class, "NonGlobalCommunication", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(preventionEClass, Prevention.class, "Prevention", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPrevention_PreventionLevel(), this.getPreventLevel(), "preventionLevel", null, 0, 1, Prevention.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(preventLevelEEnum, PreventLevel.class, "PreventLevel");

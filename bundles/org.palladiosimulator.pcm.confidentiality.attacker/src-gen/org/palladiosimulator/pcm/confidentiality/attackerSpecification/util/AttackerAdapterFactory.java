@@ -138,6 +138,11 @@ public class AttackerAdapterFactory extends AdapterFactoryImpl
 				return createMitigationSpecificationAdapter();
 			}
 			@Override
+			public Adapter caseEncryption(Encryption object)
+			{
+				return createEncryptionAdapter();
+			}
+			@Override
 			public Adapter caseIdentifier(Identifier object)
 			{
 				return createIdentifierAdapter();
@@ -345,6 +350,21 @@ public class AttackerAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createMitigationSpecificationAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Encryption <em>Encryption</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.Encryption
+	 * @generated
+	 */
+	public Adapter createEncryptionAdapter()
 	{
 		return null;
 	}

@@ -12,6 +12,8 @@ import org.eclipse.emf.ecore.util.Switch;
 import org.palladiosimulator.pcm.PCMBaseClass;
 import org.palladiosimulator.pcm.PCMClass;
 
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.MitigationSpecification;
+
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.*;
 
 import org.palladiosimulator.pcm.core.entity.Entity;
@@ -143,6 +145,14 @@ public class PcmIntegrationSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case PcmIntegrationPackage.PREVENTION:
+			{
+				Prevention prevention = (Prevention)theEObject;
+				T result = casePrevention(prevention);
+				if (result == null) result = caseMitigationSpecification(prevention);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -228,6 +238,22 @@ public class PcmIntegrationSwitch<T> extends Switch<T>
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Prevention</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Prevention</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePrevention(Prevention object)
+	{
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Identifier</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -303,6 +329,22 @@ public class PcmIntegrationSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseEntity(Entity object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Mitigation Specification</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Mitigation Specification</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMitigationSpecification(MitigationSpecification object)
 	{
 		return null;
 	}

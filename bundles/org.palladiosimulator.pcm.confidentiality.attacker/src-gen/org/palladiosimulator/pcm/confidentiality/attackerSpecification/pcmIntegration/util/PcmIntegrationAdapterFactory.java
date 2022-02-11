@@ -14,6 +14,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.palladiosimulator.pcm.PCMBaseClass;
 import org.palladiosimulator.pcm.PCMClass;
 
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.MitigationSpecification;
+
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.*;
 
 import org.palladiosimulator.pcm.core.entity.Entity;
@@ -108,6 +110,11 @@ public class PcmIntegrationAdapterFactory extends AdapterFactoryImpl
 				return createNonGlobalCommunicationAdapter();
 			}
 			@Override
+			public Adapter casePrevention(Prevention object)
+			{
+				return createPreventionAdapter();
+			}
+			@Override
 			public Adapter caseIdentifier(Identifier object)
 			{
 				return createIdentifierAdapter();
@@ -131,6 +138,11 @@ public class PcmIntegrationAdapterFactory extends AdapterFactoryImpl
 			public Adapter caseEntity(Entity object)
 			{
 				return createEntityAdapter();
+			}
+			@Override
+			public Adapter caseMitigationSpecification(MitigationSpecification object)
+			{
+				return createMitigationSpecificationAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object)
@@ -230,6 +242,21 @@ public class PcmIntegrationAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.Prevention <em>Prevention</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.Prevention
+	 * @generated
+	 */
+	public Adapter createPreventionAdapter()
+	{
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.identifier.Identifier <em>Identifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -300,6 +327,21 @@ public class PcmIntegrationAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createEntityAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.MitigationSpecification <em>Mitigation Specification</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.MitigationSpecification
+	 * @generated
+	 */
+	public Adapter createMitigationSpecificationAdapter()
 	{
 		return null;
 	}
