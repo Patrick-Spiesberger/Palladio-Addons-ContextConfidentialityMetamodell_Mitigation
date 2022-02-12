@@ -4,9 +4,10 @@ package org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmInteg
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigation;
+
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PcmIntegrationPackage;
-import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PreventLevel;
 
 import org.palladiosimulator.pcm.confidentiality.context.system.pcm.structure.MethodSpecification;
 
@@ -34,7 +35,7 @@ import org.palladiosimulator.pcm.resourceenvironment.ResourceContainer;
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.PCMElementImpl#getBasiccomponent <em>Basiccomponent</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.PCMElementImpl#getAssemblycontext <em>Assemblycontext</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.PCMElementImpl#getMethodspecification <em>Methodspecification</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.PCMElementImpl#getElementCanPreventAttackPath <em>Element Can Prevent Attack Path</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.PCMElementImpl#getMitigation <em>Mitigation</em>}</li>
  * </ul>
  *
  * @generated
@@ -187,9 +188,9 @@ public class PCMElementImpl extends EntityImpl implements PCMElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PreventLevel getElementCanPreventAttackPath()
+	public Mitigation getMitigation()
 	{
-		return (PreventLevel)eGet(PcmIntegrationPackage.Literals.PCM_ELEMENT__ELEMENT_CAN_PREVENT_ATTACK_PATH, true);
+		return (Mitigation)eGet(PcmIntegrationPackage.Literals.PCM_ELEMENT__MITIGATION, true);
 	}
 
 	/**
@@ -197,9 +198,9 @@ public class PCMElementImpl extends EntityImpl implements PCMElement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setElementCanPreventAttackPath(PreventLevel newElementCanPreventAttackPath)
+	public void setMitigation(Mitigation newMitigation)
 	{
-		eSet(PcmIntegrationPackage.Literals.PCM_ELEMENT__ELEMENT_CAN_PREVENT_ATTACK_PATH, newElementCanPreventAttackPath);
+		eSet(PcmIntegrationPackage.Literals.PCM_ELEMENT__MITIGATION, newMitigation);
 	}
 
 } //PCMElementImpl

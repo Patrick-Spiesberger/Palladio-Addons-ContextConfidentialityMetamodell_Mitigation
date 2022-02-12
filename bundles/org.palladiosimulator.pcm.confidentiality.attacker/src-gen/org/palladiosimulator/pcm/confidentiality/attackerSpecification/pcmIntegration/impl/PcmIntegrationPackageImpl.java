@@ -285,9 +285,9 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPCMElement_ElementCanPreventAttackPath()
+	public EReference getPCMElement_Mitigation()
 	{
-		return (EAttribute)pcmElementEClass.getEStructuralFeatures().get(6);
+		return (EReference)pcmElementEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -410,7 +410,7 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 		createEReference(pcmElementEClass, PCM_ELEMENT__BASICCOMPONENT);
 		createEReference(pcmElementEClass, PCM_ELEMENT__ASSEMBLYCONTEXT);
 		createEReference(pcmElementEClass, PCM_ELEMENT__METHODSPECIFICATION);
-		createEAttribute(pcmElementEClass, PCM_ELEMENT__ELEMENT_CAN_PREVENT_ATTACK_PATH);
+		createEReference(pcmElementEClass, PCM_ELEMENT__MITIGATION);
 
 		roleSystemIntegrationEClass = createEClass(ROLE_SYSTEM_INTEGRATION);
 		createEReference(roleSystemIntegrationEClass, ROLE_SYSTEM_INTEGRATION__ROLE);
@@ -484,7 +484,7 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 		initEReference(getPCMElement_Basiccomponent(), theRepositoryPackage.getRepositoryComponent(), null, "basiccomponent", null, 0, 1, PCMElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPCMElement_Assemblycontext(), theCompositionPackage.getAssemblyContext(), null, "assemblycontext", null, 0, 1, PCMElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPCMElement_Methodspecification(), theStructurePackage.getMethodSpecification(), null, "methodspecification", null, 0, 1, PCMElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPCMElement_ElementCanPreventAttackPath(), this.getPreventLevel(), "elementCanPreventAttackPath", "Never", 1, 1, PCMElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPCMElement_Mitigation(), theAttackerPackage.getMitigation(), null, "mitigation", null, 0, 1, PCMElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(roleSystemIntegrationEClass, RoleSystemIntegration.class, "RoleSystemIntegration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRoleSystemIntegration_Role(), theAttackSpecificationPackage.getRole(), null, "role", null, 1, 1, RoleSystemIntegration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

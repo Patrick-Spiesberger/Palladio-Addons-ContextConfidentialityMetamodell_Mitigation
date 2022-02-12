@@ -455,22 +455,22 @@ public interface AttackerPackage extends EPackage
 	int DATAMODEL_ATTACKER__METHOD = EntityPackage.ENTITY_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Encryption Level</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATAMODEL_ATTACKER__ENCRYPTION_LEVEL = EntityPackage.ENTITY_FEATURE_COUNT + 4;
-
-	/**
 	 * The feature id for the '<em><b>Required Decryption Key</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATAMODEL_ATTACKER__REQUIRED_DECRYPTION_KEY = EntityPackage.ENTITY_FEATURE_COUNT + 5;
+	int DATAMODEL_ATTACKER__REQUIRED_DECRYPTION_KEY = EntityPackage.ENTITY_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Mitigation</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATAMODEL_ATTACKER__MITIGATION = EntityPackage.ENTITY_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Datamodel Attacker</em>' class.
@@ -1031,17 +1031,6 @@ public interface AttackerPackage extends EPackage
 	EReference getDatamodelAttacker_Method();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker#getEncryptionLevel <em>Encryption Level</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Encryption Level</em>'.
-	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker#getEncryptionLevel()
-	 * @see #getDatamodelAttacker()
-	 * @generated
-	 */
-	EAttribute getDatamodelAttacker_EncryptionLevel();
-
-	/**
 	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker#getRequiredDecryptionKey <em>Required Decryption Key</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1051,6 +1040,17 @@ public interface AttackerPackage extends EPackage
 	 * @generated
 	 */
 	EAttribute getDatamodelAttacker_RequiredDecryptionKey();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker#getMitigation <em>Mitigation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Mitigation</em>'.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker#getMitigation()
+	 * @see #getDatamodelAttacker()
+	 * @generated
+	 */
+	EReference getDatamodelAttacker_Mitigation();
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.AssemblyContextDetail <em>Assembly Context Detail</em>}'.
@@ -1485,20 +1485,20 @@ public interface AttackerPackage extends EPackage
 		EReference DATAMODEL_ATTACKER__METHOD = eINSTANCE.getDatamodelAttacker_Method();
 
 		/**
-		 * The meta object literal for the '<em><b>Encryption Level</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DATAMODEL_ATTACKER__ENCRYPTION_LEVEL = eINSTANCE.getDatamodelAttacker_EncryptionLevel();
-
-		/**
 		 * The meta object literal for the '<em><b>Required Decryption Key</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute DATAMODEL_ATTACKER__REQUIRED_DECRYPTION_KEY = eINSTANCE.getDatamodelAttacker_RequiredDecryptionKey();
+
+		/**
+		 * The meta object literal for the '<em><b>Mitigation</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DATAMODEL_ATTACKER__MITIGATION = eINSTANCE.getDatamodelAttacker_Mitigation();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AssemblyContextDetailImpl <em>Assembly Context Detail</em>}' class.

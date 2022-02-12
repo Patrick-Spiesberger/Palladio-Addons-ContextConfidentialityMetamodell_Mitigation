@@ -65,8 +65,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute attacker.ecore#//DatamodelAttacker/referenceName"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference attacker.ecore#//DatamodelAttacker/source"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference attacker.ecore#//DatamodelAttacker/method"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute attacker.ecore#//DatamodelAttacker/encryptionLevel"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute attacker.ecore#//DatamodelAttacker/requiredDecryptionKey"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference attacker.ecore#//DatamodelAttacker/mitigation"/>
     </genClasses>
     <genClasses ecoreClass="attacker.ecore#//AssemblyContextDetail">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference attacker.ecore#//AssemblyContextDetail/compromisedComponents"/>
@@ -196,7 +196,8 @@
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference attacker.ecore#//pcmIntegration/PCMElement/assemblycontext"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference attacker.ecore#//pcmIntegration/PCMElement/methodspecification"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute attacker.ecore#//pcmIntegration/PCMElement/elementCanPreventAttackPath"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference attacker.ecore#//pcmIntegration/PCMElement/mitigation"/>
       </genClasses>
       <genClasses ecoreClass="attacker.ecore#//pcmIntegration/RoleSystemIntegration">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"

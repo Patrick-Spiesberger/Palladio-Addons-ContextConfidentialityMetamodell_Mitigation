@@ -199,13 +199,13 @@ public interface PcmIntegrationPackage extends EPackage
 	int PCM_ELEMENT__METHODSPECIFICATION = EntityPackage.ENTITY_FEATURE_COUNT + 5;
 
 	/**
-	 * The feature id for the '<em><b>Element Can Prevent Attack Path</b></em>' attribute.
+	 * The feature id for the '<em><b>Mitigation</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PCM_ELEMENT__ELEMENT_CAN_PREVENT_ATTACK_PATH = EntityPackage.ENTITY_FEATURE_COUNT + 6;
+	int PCM_ELEMENT__MITIGATION = EntityPackage.ENTITY_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>PCM Element</em>' class.
@@ -527,15 +527,15 @@ public interface PcmIntegrationPackage extends EPackage
 	EReference getPCMElement_Methodspecification();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement#getElementCanPreventAttackPath <em>Element Can Prevent Attack Path</em>}'.
+	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement#getMitigation <em>Mitigation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Element Can Prevent Attack Path</em>'.
-	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement#getElementCanPreventAttackPath()
+	 * @return the meta object for the reference '<em>Mitigation</em>'.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement#getMitigation()
 	 * @see #getPCMElement()
 	 * @generated
 	 */
-	EAttribute getPCMElement_ElementCanPreventAttackPath();
+	EReference getPCMElement_Mitigation();
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.RoleSystemIntegration <em>Role System Integration</em>}'.
@@ -720,12 +720,12 @@ public interface PcmIntegrationPackage extends EPackage
 		EReference PCM_ELEMENT__METHODSPECIFICATION = eINSTANCE.getPCMElement_Methodspecification();
 
 		/**
-		 * The meta object literal for the '<em><b>Element Can Prevent Attack Path</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Mitigation</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PCM_ELEMENT__ELEMENT_CAN_PREVENT_ATTACK_PATH = eINSTANCE.getPCMElement_ElementCanPreventAttackPath();
+		EReference PCM_ELEMENT__MITIGATION = eINSTANCE.getPCMElement_Mitigation();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.RoleSystemIntegrationImpl <em>Role System Integration</em>}' class.

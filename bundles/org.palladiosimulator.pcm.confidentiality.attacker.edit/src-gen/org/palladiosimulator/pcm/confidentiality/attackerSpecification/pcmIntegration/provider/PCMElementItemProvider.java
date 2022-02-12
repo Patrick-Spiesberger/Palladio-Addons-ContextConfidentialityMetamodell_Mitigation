@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement;
@@ -64,7 +63,7 @@ public class PCMElementItemProvider extends EntityItemProvider
 			addCompositecomponentPropertyDescriptor(object);
 			addBasiccomponentPropertyDescriptor(object);
 			addAssemblycontextPropertyDescriptor(object);
-			addElementCanPreventAttackPathPropertyDescriptor(object);
+			addMitigationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -185,24 +184,24 @@ public class PCMElementItemProvider extends EntityItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Element Can Prevent Attack Path feature.
+	 * This adds a property descriptor for the Mitigation feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addElementCanPreventAttackPathPropertyDescriptor(Object object)
+	protected void addMitigationPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_PCMElement_elementCanPreventAttackPath_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_PCMElement_elementCanPreventAttackPath_feature", "_UI_PCMElement_type"),
-				 PcmIntegrationPackage.Literals.PCM_ELEMENT__ELEMENT_CAN_PREVENT_ATTACK_PATH,
+				 getString("_UI_PCMElement_mitigation_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PCMElement_mitigation_feature", "_UI_PCMElement_type"),
+				 PcmIntegrationPackage.Literals.PCM_ELEMENT__MITIGATION,
 				 true,
 				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 true,
+				 null,
 				 null,
 				 null));
 	}
@@ -293,9 +292,6 @@ public class PCMElementItemProvider extends EntityItemProvider
 
 		switch (notification.getFeatureID(PCMElement.class))
 		{
-			case PcmIntegrationPackage.PCM_ELEMENT__ELEMENT_CAN_PREVENT_ATTACK_PATH:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
 			case PcmIntegrationPackage.PCM_ELEMENT__METHODSPECIFICATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;

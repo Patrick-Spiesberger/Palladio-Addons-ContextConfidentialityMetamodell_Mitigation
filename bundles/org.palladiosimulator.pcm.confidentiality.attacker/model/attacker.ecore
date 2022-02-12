@@ -61,10 +61,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="referenceName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EObject"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="method" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/OperationSignature"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="encryptionLevel" lowerBound="1"
-        eType="#//EncryptionLevel" defaultValueLiteral="None"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="requiredDecryptionKey"
         eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mitigation" eType="#//Mitigation"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AssemblyContextDetail" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="compromisedComponents"
@@ -214,8 +213,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="methodspecification"
           eType="ecore:EClass ../../org.palladiosimulator.pcm.confidentiality.context/model/context.ecore#//system/pcm/structure/MethodSpecification"
           containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="elementCanPreventAttackPath"
-          lowerBound="1" eType="#//pcmIntegration/PreventLevel" defaultValueLiteral="Never"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="mitigation" eType="#//Mitigation"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="RoleSystemIntegration" eSuperTypes="#//pcmIntegration/SystemIntegration">
       <eStructuralFeatures xsi:type="ecore:EReference" name="role" lowerBound="1"
