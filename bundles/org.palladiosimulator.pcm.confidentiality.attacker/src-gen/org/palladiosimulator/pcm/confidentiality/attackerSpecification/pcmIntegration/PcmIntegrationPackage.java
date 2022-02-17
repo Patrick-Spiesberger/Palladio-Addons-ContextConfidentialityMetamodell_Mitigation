@@ -2,9 +2,7 @@
  */
 package org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration;
 
-import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -374,13 +372,22 @@ public interface PcmIntegrationPackage extends EPackage
 	int PREVENTION = 5;
 
 	/**
-	 * The feature id for the '<em><b>Mitigation Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PREVENTION__MITIGATION_NAME = AttackerPackage.MITIGATION_SPECIFICATION__MITIGATION_NAME;
+	int PREVENTION__ID = AttackerPackage.MITIGATION_SPECIFICATION__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREVENTION__ENTITY_NAME = AttackerPackage.MITIGATION_SPECIFICATION__ENTITY_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Necessary Credentials</b></em>' reference list.
@@ -392,7 +399,7 @@ public interface PcmIntegrationPackage extends EPackage
 	int PREVENTION__NECESSARY_CREDENTIALS = AttackerPackage.MITIGATION_SPECIFICATION__NECESSARY_CREDENTIALS;
 
 	/**
-	 * The feature id for the '<em><b>Vulnerabilities</b></em>' containment reference.
+	 * The feature id for the '<em><b>Vulnerabilities</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -401,32 +408,13 @@ public interface PcmIntegrationPackage extends EPackage
 	int PREVENTION__VULNERABILITIES = AttackerPackage.MITIGATION_SPECIFICATION__VULNERABILITIES;
 
 	/**
-	 * The feature id for the '<em><b>Prevention Level</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREVENTION__PREVENTION_LEVEL = AttackerPackage.MITIGATION_SPECIFICATION_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Prevention</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PREVENTION_FEATURE_COUNT = AttackerPackage.MITIGATION_SPECIFICATION_FEATURE_COUNT + 1;
-
-	/**
-	 * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PreventLevel <em>Prevent Level</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PreventLevel
-	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.PcmIntegrationPackageImpl#getPreventLevel()
-	 * @generated
-	 */
-	int PREVENT_LEVEL = 6;
+	int PREVENTION_FEATURE_COUNT = AttackerPackage.MITIGATION_SPECIFICATION_FEATURE_COUNT + 0;
 
 
 	/**
@@ -600,27 +588,6 @@ public interface PcmIntegrationPackage extends EPackage
 	EClass getPrevention();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.Prevention#getPreventionLevel <em>Prevention Level</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Prevention Level</em>'.
-	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.Prevention#getPreventionLevel()
-	 * @see #getPrevention()
-	 * @generated
-	 */
-	EAttribute getPrevention_PreventionLevel();
-
-	/**
-	 * Returns the meta object for enum '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PreventLevel <em>Prevent Level</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Prevent Level</em>'.
-	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PreventLevel
-	 * @generated
-	 */
-	EEnum getPreventLevel();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -782,24 +749,6 @@ public interface PcmIntegrationPackage extends EPackage
 		 * @generated
 		 */
 		EClass PREVENTION = eINSTANCE.getPrevention();
-
-		/**
-		 * The meta object literal for the '<em><b>Prevention Level</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PREVENTION__PREVENTION_LEVEL = eINSTANCE.getPrevention_PreventionLevel();
-
-		/**
-		 * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PreventLevel <em>Prevent Level</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PreventLevel
-		 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.PcmIntegrationPackageImpl#getPreventLevel()
-		 * @generated
-		 */
-		EEnum PREVENT_LEVEL = eINSTANCE.getPreventLevel();
 
 	}
 

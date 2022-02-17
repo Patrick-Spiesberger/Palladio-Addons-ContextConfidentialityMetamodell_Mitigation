@@ -9,12 +9,8 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.Encryption;
 
 /**
@@ -49,32 +45,8 @@ public class EncryptionItemProvider extends MitigationSpecificationItemProvider
 		{
 			super.getPropertyDescriptors(object);
 
-			addEncryptionLevelPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Encryption Level feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addEncryptionLevelPropertyDescriptor(Object object)
-	{
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Encryption_encryptionLevel_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Encryption_encryptionLevel_feature", "_UI_Encryption_type"),
-				 AttackerPackage.Literals.ENCRYPTION__ENCRYPTION_LEVEL,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -109,7 +81,7 @@ public class EncryptionItemProvider extends MitigationSpecificationItemProvider
 	@Override
 	public String getText(Object object)
 	{
-		String label = ((Encryption)object).getMitigationName();
+		String label = ((Encryption)object).getId();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Encryption_type") :
 			getString("_UI_Encryption_type") + " " + label;
@@ -127,13 +99,6 @@ public class EncryptionItemProvider extends MitigationSpecificationItemProvider
 	public void notifyChanged(Notification notification)
 	{
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(Encryption.class))
-		{
-			case AttackerPackage.ENCRYPTION__ENCRYPTION_LEVEL:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 

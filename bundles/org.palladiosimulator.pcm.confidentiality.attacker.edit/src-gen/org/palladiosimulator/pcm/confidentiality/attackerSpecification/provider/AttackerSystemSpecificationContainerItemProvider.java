@@ -23,6 +23,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerFactory;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerSystemSpecificationContainer;
 
@@ -172,6 +173,11 @@ public class AttackerSystemSpecificationContainerItemProvider
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
 	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AttackerPackage.Literals.ATTACKER_SYSTEM_SPECIFICATION_CONTAINER__VULNERABILITIES,
+				 AttackerFactory.eINSTANCE.createMitigation()));
 
 		newChildDescriptors.add
 			(createChildParameter

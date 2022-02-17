@@ -10,9 +10,7 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
 
 import de.uka.ipd.sdq.units.UnitsPackage;
 
-import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
@@ -33,7 +31,6 @@ import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegr
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PcmIntegrationFactory;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PcmIntegrationPackage;
-import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PreventLevel;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.Prevention;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.RoleSystemIntegration;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.SystemIntegration;
@@ -100,13 +97,6 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * @generated
 	 */
 	private EClass preventionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum preventLevelEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -355,26 +345,6 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPrevention_PreventionLevel()
-	{
-		return (EAttribute)preventionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EEnum getPreventLevel()
-	{
-		return preventLevelEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public PcmIntegrationFactory getPcmIntegrationFactory()
 	{
 		return (PcmIntegrationFactory)getEFactoryInstance();
@@ -421,10 +391,6 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 		nonGlobalCommunicationEClass = createEClass(NON_GLOBAL_COMMUNICATION);
 
 		preventionEClass = createEClass(PREVENTION);
-		createEAttribute(preventionEClass, PREVENTION__PREVENTION_LEVEL);
-
-		// Create enums
-		preventLevelEEnum = createEEnum(PREVENT_LEVEL);
 	}
 
 	/**
@@ -495,13 +461,6 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 		initEClass(nonGlobalCommunicationEClass, NonGlobalCommunication.class, "NonGlobalCommunication", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(preventionEClass, Prevention.class, "Prevention", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPrevention_PreventionLevel(), this.getPreventLevel(), "preventionLevel", null, 0, 1, Prevention.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		// Initialize enums and add enum literals
-		initEEnum(preventLevelEEnum, PreventLevel.class, "PreventLevel");
-		addEEnumLiteral(preventLevelEEnum, PreventLevel.NEVER);
-		addEEnumLiteral(preventLevelEEnum, PreventLevel.SOMETIMES);
-		addEEnumLiteral(preventLevelEEnum, PreventLevel.ALWAYS);
 	}
 
 } //PcmIntegrationPackageImpl

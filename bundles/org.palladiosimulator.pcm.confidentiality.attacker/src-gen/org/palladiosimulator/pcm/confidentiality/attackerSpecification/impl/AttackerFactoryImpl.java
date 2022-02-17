@@ -74,8 +74,8 @@ public class AttackerFactoryImpl extends EFactoryImpl implements AttackerFactory
 			case AttackerPackage.ATTACKER_SYSTEM_SPECIFICATION_CONTAINER: return (EObject)createAttackerSystemSpecificationContainer();
 			case AttackerPackage.DATAMODEL_ATTACKER: return createDatamodelAttacker();
 			case AttackerPackage.ASSEMBLY_CONTEXT_DETAIL: return createAssemblyContextDetail();
-			case AttackerPackage.MITIGATION: return (EObject)createMitigation();
-			case AttackerPackage.ENCRYPTION: return (EObject)createEncryption();
+			case AttackerPackage.MITIGATION: return createMitigation();
+			case AttackerPackage.ENCRYPTION: return createEncryption();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -93,8 +93,6 @@ public class AttackerFactoryImpl extends EFactoryImpl implements AttackerFactory
 		{
 			case AttackerPackage.LIST_OPERATION_EFFORT:
 				return createListOperationEffortFromString(eDataType, initialValue);
-			case AttackerPackage.ENCRYPTION_LEVEL:
-				return createEncryptionLevelFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -112,8 +110,6 @@ public class AttackerFactoryImpl extends EFactoryImpl implements AttackerFactory
 		{
 			case AttackerPackage.LIST_OPERATION_EFFORT:
 				return convertListOperationEffortToString(eDataType, instanceValue);
-			case AttackerPackage.ENCRYPTION_LEVEL:
-				return convertEncryptionLevelToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -258,28 +254,6 @@ public class AttackerFactoryImpl extends EFactoryImpl implements AttackerFactory
 	 * @generated
 	 */
 	public String convertListOperationEffortToString(EDataType eDataType, Object instanceValue)
-	{
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EncryptionLevel createEncryptionLevelFromString(EDataType eDataType, String initialValue)
-	{
-		EncryptionLevel result = EncryptionLevel.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertEncryptionLevelToString(EDataType eDataType, Object instanceValue)
 	{
 		return instanceValue == null ? null : instanceValue.toString();
 	}

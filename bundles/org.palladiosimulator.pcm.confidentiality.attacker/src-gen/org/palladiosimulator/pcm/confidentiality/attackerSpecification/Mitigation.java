@@ -2,9 +2,9 @@
  */
 package org.palladiosimulator.pcm.confidentiality.attackerSpecification;
 
-import org.eclipse.emf.cdo.CDOObject;
-
 import org.eclipse.emf.common.util.EList;
+
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.SystemIntegration;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,10 +20,9 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage#getMitigation()
  * @model
- * @extends CDOObject
  * @generated
  */
-public interface Mitigation extends CDOObject
+public interface Mitigation extends SystemIntegration
 {
 	/**
 	 * Returns the value of the '<em><b>Mitigationspecification</b></em>' containment reference list.

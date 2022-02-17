@@ -6,11 +6,11 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.internal.cdo.CDOObjectImpl;
-
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigation;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.MitigationSpecification;
+
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.SystemIntegrationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +25,7 @@ import org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigatio
  *
  * @generated
  */
-public class MitigationImpl extends CDOObjectImpl implements Mitigation
+public class MitigationImpl extends SystemIntegrationImpl implements Mitigation
 {
 	/**
 	 * <!-- begin-user-doc -->
@@ -46,17 +46,6 @@ public class MitigationImpl extends CDOObjectImpl implements Mitigation
 	protected EClass eStaticClass()
 	{
 		return AttackerPackage.Literals.MITIGATION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected int eStaticFeatureCount()
-	{
-		return 0;
 	}
 
 	/**

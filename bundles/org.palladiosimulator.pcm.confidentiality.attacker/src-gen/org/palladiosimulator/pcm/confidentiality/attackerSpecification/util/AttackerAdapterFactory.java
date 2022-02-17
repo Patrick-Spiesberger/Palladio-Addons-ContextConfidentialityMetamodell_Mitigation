@@ -16,6 +16,8 @@ import org.palladiosimulator.pcm.PCMClass;
 
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.*;
 
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.SystemIntegration;
+
 import org.palladiosimulator.pcm.core.entity.Entity;
 import org.palladiosimulator.pcm.core.entity.NamedElement;
 
@@ -166,6 +168,11 @@ public class AttackerAdapterFactory extends AdapterFactoryImpl
 			public Adapter caseEntity(Entity object)
 			{
 				return createEntityAdapter();
+			}
+			@Override
+			public Adapter caseSystemIntegration(SystemIntegration object)
+			{
+				return createSystemIntegrationAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object)
@@ -440,6 +447,21 @@ public class AttackerAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createEntityAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.SystemIntegration <em>System Integration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.SystemIntegration
+	 * @generated
+	 */
+	public Adapter createSystemIntegrationAdapter()
 	{
 		return null;
 	}

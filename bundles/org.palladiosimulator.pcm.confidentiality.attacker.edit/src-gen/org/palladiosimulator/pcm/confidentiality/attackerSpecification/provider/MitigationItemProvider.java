@@ -15,13 +15,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IChildCreationExtender;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerFactory;
@@ -30,20 +24,15 @@ import org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigatio
 
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PcmIntegrationFactory;
 
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.provider.SystemIntegrationItemProvider;
+
 /**
  * This is the item provider adapter for a {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigation} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class MitigationItemProvider 
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource
+public class MitigationItemProvider extends SystemIntegrationItemProvider
 {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -162,7 +151,10 @@ public class MitigationItemProvider
 	@Override
 	public String getText(Object object)
 	{
-		return getString("_UI_Mitigation_type");
+		String label = ((Mitigation)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Mitigation_type") :
+			getString("_UI_Mitigation_type") + " " + label;
 	}
 
 

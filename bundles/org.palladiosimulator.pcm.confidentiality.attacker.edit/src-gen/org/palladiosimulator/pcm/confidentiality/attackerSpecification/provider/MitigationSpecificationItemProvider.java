@@ -9,25 +9,18 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IChildCreationExtender;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerFactory;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.MitigationSpecification;
+
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpecification.AttackSpecificationFactory;
+
+import org.palladiosimulator.pcm.core.entity.provider.EntityItemProvider;
 
 /**
  * This is the item provider adapter for a {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.MitigationSpecification} object.
@@ -35,14 +28,7 @@ import org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigatio
  * <!-- end-user-doc -->
  * @generated
  */
-public class MitigationSpecificationItemProvider 
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource
+public class MitigationSpecificationItemProvider extends EntityItemProvider
 {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -68,33 +54,9 @@ public class MitigationSpecificationItemProvider
 		{
 			super.getPropertyDescriptors(object);
 
-			addMitigationNamePropertyDescriptor(object);
 			addNecessaryCredentialsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Mitigation Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addMitigationNamePropertyDescriptor(Object object)
-	{
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_MitigationSpecification_mitigationName_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MitigationSpecification_mitigationName_feature", "_UI_MitigationSpecification_type"),
-				 AttackerPackage.Literals.MITIGATION_SPECIFICATION__MITIGATION_NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -185,7 +147,7 @@ public class MitigationSpecificationItemProvider
 	@Override
 	public String getText(Object object)
 	{
-		String label = ((MitigationSpecification)object).getMitigationName();
+		String label = ((MitigationSpecification)object).getId();
 		return label == null || label.length() == 0 ?
 			getString("_UI_MitigationSpecification_type") :
 			getString("_UI_MitigationSpecification_type") + " " + label;
@@ -206,9 +168,6 @@ public class MitigationSpecificationItemProvider
 
 		switch (notification.getFeatureID(MitigationSpecification.class))
 		{
-			case AttackerPackage.MITIGATION_SPECIFICATION__MITIGATION_NAME:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
 			case AttackerPackage.MITIGATION_SPECIFICATION__VULNERABILITIES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -231,19 +190,12 @@ public class MitigationSpecificationItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(AttackerPackage.Literals.MITIGATION_SPECIFICATION__VULNERABILITIES,
-				 AttackerFactory.eINSTANCE.createVulnerabilityContainer()));
-	}
+				 AttackSpecificationFactory.eINSTANCE.createCVEVulnerability()));
 
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator()
-	{
-		return ((IChildCreationExtender)adapterFactory).getResourceLocator();
+		newChildDescriptors.add
+			(createChildParameter
+				(AttackerPackage.Literals.MITIGATION_SPECIFICATION__VULNERABILITIES,
+				 AttackSpecificationFactory.eINSTANCE.createCWEVulnerability()));
 	}
 
 }

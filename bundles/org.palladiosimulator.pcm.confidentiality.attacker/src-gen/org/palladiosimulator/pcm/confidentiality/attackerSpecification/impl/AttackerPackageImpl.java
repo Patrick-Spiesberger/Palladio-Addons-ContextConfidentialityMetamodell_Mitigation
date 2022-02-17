@@ -34,7 +34,6 @@ import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerS
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.CategorySpecification;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.Encryption;
-import org.palladiosimulator.pcm.confidentiality.attackerSpecification.EncryptionLevel;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.ListOperationEffort;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigation;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.MitigationSpecification;
@@ -158,13 +157,6 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * @generated
 	 */
 	private EEnum listOperationEffortEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum encryptionLevelEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -654,19 +646,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMitigationSpecification_MitigationName()
-	{
-		return (EAttribute)mitigationSpecificationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getMitigationSpecification_NecessaryCredentials()
 	{
-		return (EReference)mitigationSpecificationEClass.getEStructuralFeatures().get(1);
+		return (EReference)mitigationSpecificationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -676,7 +658,7 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 */
 	public EReference getMitigationSpecification_Vulnerabilities()
 	{
-		return (EReference)mitigationSpecificationEClass.getEStructuralFeatures().get(2);
+		return (EReference)mitigationSpecificationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -694,29 +676,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getEncryption_EncryptionLevel()
-	{
-		return (EAttribute)encryptionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EEnum getListOperationEffort()
 	{
 		return listOperationEffortEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EEnum getEncryptionLevel()
-	{
-		return encryptionLevelEEnum;
 	}
 
 	/**
@@ -799,16 +761,13 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		createEReference(mitigationEClass, MITIGATION__MITIGATIONSPECIFICATION);
 
 		mitigationSpecificationEClass = createEClass(MITIGATION_SPECIFICATION);
-		createEAttribute(mitigationSpecificationEClass, MITIGATION_SPECIFICATION__MITIGATION_NAME);
 		createEReference(mitigationSpecificationEClass, MITIGATION_SPECIFICATION__NECESSARY_CREDENTIALS);
 		createEReference(mitigationSpecificationEClass, MITIGATION_SPECIFICATION__VULNERABILITIES);
 
 		encryptionEClass = createEClass(ENCRYPTION);
-		createEAttribute(encryptionEClass, ENCRYPTION__ENCRYPTION_LEVEL);
 
 		// Create enums
 		listOperationEffortEEnum = createEEnum(LIST_OPERATION_EFFORT);
-		encryptionLevelEEnum = createEEnum(ENCRYPTION_LEVEL);
 	}
 
 	/**
@@ -858,6 +817,8 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		attackerEClass.getESuperTypes().add(theEntityPackage.getEntity());
 		datamodelAttackerEClass.getESuperTypes().add(theEntityPackage.getEntity());
 		assemblyContextDetailEClass.getESuperTypes().add(theEntityPackage.getEntity());
+		mitigationEClass.getESuperTypes().add(thePcmIntegrationPackage.getSystemIntegration());
+		mitigationSpecificationEClass.getESuperTypes().add(theEntityPackage.getEntity());
 		encryptionEClass.getESuperTypes().add(this.getMitigationSpecification());
 
 		// Initialize classes and features; add operations and parameters
@@ -911,12 +872,10 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		initEReference(getMitigation_Mitigationspecification(), this.getMitigationSpecification(), null, "mitigationspecification", null, 0, -1, Mitigation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mitigationSpecificationEClass, MitigationSpecification.class, "MitigationSpecification", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMitigationSpecification_MitigationName(), theXMLTypePackage.getString(), "mitigationName", null, 0, 1, MitigationSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMitigationSpecification_NecessaryCredentials(), theSystemPackage.getUsageSpecification(), null, "necessaryCredentials", null, 0, -1, MitigationSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMitigationSpecification_Vulnerabilities(), this.getVulnerabilityContainer(), null, "vulnerabilities", null, 0, 1, MitigationSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMitigationSpecification_Vulnerabilities(), theAttackSpecificationPackage.getVulnerability(), null, "vulnerabilities", null, 0, -1, MitigationSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(encryptionEClass, Encryption.class, "Encryption", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEncryption_EncryptionLevel(), this.getEncryptionLevel(), "encryptionLevel", "None", 1, 1, Encryption.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(listOperationEffortEEnum, ListOperationEffort.class, "ListOperationEffort");
@@ -924,11 +883,6 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		addEEnumLiteral(listOperationEffortEEnum, ListOperationEffort.PART);
 		addEEnumLiteral(listOperationEffortEEnum, ListOperationEffort.ALL);
 		addEEnumLiteral(listOperationEffortEEnum, ListOperationEffort.NONE);
-
-		initEEnum(encryptionLevelEEnum, EncryptionLevel.class, "EncryptionLevel");
-		addEEnumLiteral(encryptionLevelEEnum, EncryptionLevel.NONE);
-		addEEnumLiteral(encryptionLevelEEnum, EncryptionLevel.LOW);
-		addEEnumLiteral(encryptionLevelEEnum, EncryptionLevel.HIGH);
 
 		// Create resource
 		createResource(eNS_URI);

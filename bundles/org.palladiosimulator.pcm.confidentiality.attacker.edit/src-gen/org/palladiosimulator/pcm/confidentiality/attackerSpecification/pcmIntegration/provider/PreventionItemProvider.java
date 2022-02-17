@@ -11,12 +11,8 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PcmIntegrationPackage;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.Prevention;
 
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.provider.AttackerEditPlugin;
@@ -54,32 +50,8 @@ public class PreventionItemProvider extends MitigationSpecificationItemProvider
 		{
 			super.getPropertyDescriptors(object);
 
-			addPreventionLevelPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Prevention Level feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPreventionLevelPropertyDescriptor(Object object)
-	{
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Prevention_preventionLevel_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Prevention_preventionLevel_feature", "_UI_Prevention_type"),
-				 PcmIntegrationPackage.Literals.PREVENTION__PREVENTION_LEVEL,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -114,7 +86,7 @@ public class PreventionItemProvider extends MitigationSpecificationItemProvider
 	@Override
 	public String getText(Object object)
 	{
-		String label = ((Prevention)object).getMitigationName();
+		String label = ((Prevention)object).getId();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Prevention_type") :
 			getString("_UI_Prevention_type") + " " + label;
@@ -132,13 +104,6 @@ public class PreventionItemProvider extends MitigationSpecificationItemProvider
 	public void notifyChanged(Notification notification)
 	{
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(Prevention.class))
-		{
-			case PcmIntegrationPackage.PREVENTION__PREVENTION_LEVEL:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 

@@ -14,6 +14,8 @@ import org.palladiosimulator.pcm.PCMClass;
 
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.*;
 
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.SystemIntegration;
+
 import org.palladiosimulator.pcm.core.entity.Entity;
 import org.palladiosimulator.pcm.core.entity.NamedElement;
 
@@ -162,6 +164,12 @@ public class AttackerSwitch<T> extends Switch<T>
 			{
 				Mitigation mitigation = (Mitigation)theEObject;
 				T result = caseMitigation(mitigation);
+				if (result == null) result = caseSystemIntegration(mitigation);
+				if (result == null) result = caseEntity(mitigation);
+				if (result == null) result = caseIdentifier(mitigation);
+				if (result == null) result = caseNamedElement(mitigation);
+				if (result == null) result = casePCMBaseClass(mitigation);
+				if (result == null) result = casePCMClass(mitigation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -169,6 +177,11 @@ public class AttackerSwitch<T> extends Switch<T>
 			{
 				MitigationSpecification mitigationSpecification = (MitigationSpecification)theEObject;
 				T result = caseMitigationSpecification(mitigationSpecification);
+				if (result == null) result = caseEntity(mitigationSpecification);
+				if (result == null) result = caseIdentifier(mitigationSpecification);
+				if (result == null) result = caseNamedElement(mitigationSpecification);
+				if (result == null) result = casePCMBaseClass(mitigationSpecification);
+				if (result == null) result = casePCMClass(mitigationSpecification);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -177,6 +190,11 @@ public class AttackerSwitch<T> extends Switch<T>
 				Encryption encryption = (Encryption)theEObject;
 				T result = caseEncryption(encryption);
 				if (result == null) result = caseMitigationSpecification(encryption);
+				if (result == null) result = caseEntity(encryption);
+				if (result == null) result = caseIdentifier(encryption);
+				if (result == null) result = caseNamedElement(encryption);
+				if (result == null) result = casePCMBaseClass(encryption);
+				if (result == null) result = casePCMClass(encryption);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -452,6 +470,22 @@ public class AttackerSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseEntity(Entity object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>System Integration</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>System Integration</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSystemIntegration(SystemIntegration object)
 	{
 		return null;
 	}

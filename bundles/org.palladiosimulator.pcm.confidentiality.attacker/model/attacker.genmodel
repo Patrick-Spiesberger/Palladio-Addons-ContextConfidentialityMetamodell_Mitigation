@@ -21,11 +21,6 @@
       <genEnumLiterals ecoreEnumLiteral="attacker.ecore#//ListOperationEffort/All"/>
       <genEnumLiterals ecoreEnumLiteral="attacker.ecore#//ListOperationEffort/None"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="attacker.ecore#//EncryptionLevel">
-      <genEnumLiterals ecoreEnumLiteral="attacker.ecore#//EncryptionLevel/None"/>
-      <genEnumLiterals ecoreEnumLiteral="attacker.ecore#//EncryptionLevel/Low"/>
-      <genEnumLiterals ecoreEnumLiteral="attacker.ecore#//EncryptionLevel/High"/>
-    </genEnums>
     <genClasses ecoreClass="attacker.ecore#//AttackerContainer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference attacker.ecore#//AttackerContainer/attacker"/>
     </genClasses>
@@ -76,13 +71,10 @@
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference attacker.ecore#//Mitigation/mitigationspecification"/>
     </genClasses>
     <genClasses ecoreClass="attacker.ecore#//MitigationSpecification">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute attacker.ecore#//MitigationSpecification/mitigationName"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference attacker.ecore#//MitigationSpecification/necessaryCredentials"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference attacker.ecore#//MitigationSpecification/vulnerabilities"/>
     </genClasses>
-    <genClasses ecoreClass="attacker.ecore#//Encryption">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute attacker.ecore#//Encryption/encryptionLevel"/>
-    </genClasses>
+    <genClasses ecoreClass="attacker.ecore#//Encryption"/>
     <nestedGenPackages prefix="AttackSpecification" basePackage="org.palladiosimulator.pcm.confidentiality.attackerSpecification"
         disposableProviderFactory="true" ecorePackage="attacker.ecore#//attackSpecification">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="attacker.ecore#//attackSpecification/AttackVector">
@@ -175,11 +167,6 @@
     </nestedGenPackages>
     <nestedGenPackages prefix="PcmIntegration" basePackage="org.palladiosimulator.pcm.confidentiality.attackerSpecification"
         disposableProviderFactory="true" ecorePackage="attacker.ecore#//pcmIntegration">
-      <genEnums typeSafeEnumCompatible="false" ecoreEnum="attacker.ecore#//pcmIntegration/PreventLevel">
-        <genEnumLiterals ecoreEnumLiteral="attacker.ecore#//pcmIntegration/PreventLevel/Never"/>
-        <genEnumLiterals ecoreEnumLiteral="attacker.ecore#//pcmIntegration/PreventLevel/Sometimes"/>
-        <genEnumLiterals ecoreEnumLiteral="attacker.ecore#//pcmIntegration/PreventLevel/Always"/>
-      </genEnums>
       <genClasses ecoreClass="attacker.ecore#//pcmIntegration/VulnerabilitySystemIntegration">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference attacker.ecore#//pcmIntegration/VulnerabilitySystemIntegration/vulnerability"/>
@@ -208,9 +195,7 @@
             ecoreFeature="ecore:EReference attacker.ecore#//pcmIntegration/SystemIntegration/pcmelement"/>
       </genClasses>
       <genClasses ecoreClass="attacker.ecore#//pcmIntegration/NonGlobalCommunication"/>
-      <genClasses ecoreClass="attacker.ecore#//pcmIntegration/Prevention">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute attacker.ecore#//pcmIntegration/Prevention/preventionLevel"/>
-      </genClasses>
+      <genClasses ecoreClass="attacker.ecore#//pcmIntegration/Prevention"/>
     </nestedGenPackages>
   </genPackages>
 </genmodel:GenModel>

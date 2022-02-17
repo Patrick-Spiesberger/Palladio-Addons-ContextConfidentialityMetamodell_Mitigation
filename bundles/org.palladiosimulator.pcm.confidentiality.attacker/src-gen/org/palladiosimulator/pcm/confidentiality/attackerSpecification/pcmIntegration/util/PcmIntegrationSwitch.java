@@ -150,6 +150,11 @@ public class PcmIntegrationSwitch<T> extends Switch<T>
 				Prevention prevention = (Prevention)theEObject;
 				T result = casePrevention(prevention);
 				if (result == null) result = caseMitigationSpecification(prevention);
+				if (result == null) result = caseEntity(prevention);
+				if (result == null) result = caseIdentifier(prevention);
+				if (result == null) result = caseNamedElement(prevention);
+				if (result == null) result = casePCMBaseClass(prevention);
+				if (result == null) result = casePCMClass(prevention);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

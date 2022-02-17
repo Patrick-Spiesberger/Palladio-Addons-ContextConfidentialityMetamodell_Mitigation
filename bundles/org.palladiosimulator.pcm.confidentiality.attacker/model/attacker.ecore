@@ -78,26 +78,18 @@
     <eLiterals name="All" value="2" literal="All"/>
     <eLiterals name="None" value="3" literal="None"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="EncryptionLevel">
-    <eLiterals name="None" literal="None"/>
-    <eLiterals name="Low" value="1"/>
-    <eLiterals name="High" value="2" literal="High"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Mitigation">
+  <eClassifiers xsi:type="ecore:EClass" name="Mitigation" eSuperTypes="#//pcmIntegration/SystemIntegration">
     <eStructuralFeatures xsi:type="ecore:EReference" name="mitigationspecification"
         upperBound="-1" eType="#//MitigationSpecification" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MitigationSpecification" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mitigationName" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MitigationSpecification" abstract="true"
+      eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="necessaryCredentials" upperBound="-1"
         eType="ecore:EClass ../../org.palladiosimulator.pcm.confidentiality.context/model/context.ecore#//system/UsageSpecification"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="vulnerabilities" eType="#//VulnerabilityContainer"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vulnerabilities" upperBound="-1"
+        eType="#//attackSpecification/Vulnerability" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Encryption" eSuperTypes="#//MitigationSpecification">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="encryptionLevel" lowerBound="1"
-        eType="#//EncryptionLevel" defaultValueLiteral="None"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Encryption" eSuperTypes="#//MitigationSpecification"/>
   <eSubpackages name="attackSpecification" nsURI="http://www.palladiosimulator.org/pcm/confidentiality/attacker/0.1/"
       nsPrefix="attack">
     <eClassifiers xsi:type="ecore:EClass" name="Attack" abstract="true" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
@@ -225,13 +217,6 @@
           eType="#//pcmIntegration/PCMElement" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="NonGlobalCommunication" eSuperTypes="#//pcmIntegration/SystemIntegration"/>
-    <eClassifiers xsi:type="ecore:EEnum" name="PreventLevel">
-      <eLiterals name="Never" literal="None"/>
-      <eLiterals name="Sometimes" value="1"/>
-      <eLiterals name="Always" value="2" literal="High"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Prevention" eSuperTypes="#//MitigationSpecification">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="preventionLevel" eType="#//pcmIntegration/PreventLevel"/>
-    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Prevention" eSuperTypes="#//MitigationSpecification"/>
   </eSubpackages>
 </ecore:EPackage>

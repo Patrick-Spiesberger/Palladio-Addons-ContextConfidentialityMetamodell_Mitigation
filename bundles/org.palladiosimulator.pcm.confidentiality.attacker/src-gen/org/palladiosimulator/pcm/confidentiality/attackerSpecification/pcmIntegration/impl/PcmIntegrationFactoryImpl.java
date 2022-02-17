@@ -3,7 +3,6 @@
 package org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -69,43 +68,9 @@ public class PcmIntegrationFactoryImpl extends EFactoryImpl implements PcmIntegr
 			case PcmIntegrationPackage.PCM_ELEMENT: return createPCMElement();
 			case PcmIntegrationPackage.ROLE_SYSTEM_INTEGRATION: return createRoleSystemIntegration();
 			case PcmIntegrationPackage.NON_GLOBAL_COMMUNICATION: return createNonGlobalCommunication();
-			case PcmIntegrationPackage.PREVENTION: return (EObject)createPrevention();
+			case PcmIntegrationPackage.PREVENTION: return createPrevention();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object createFromString(EDataType eDataType, String initialValue)
-	{
-		switch (eDataType.getClassifierID())
-		{
-			case PcmIntegrationPackage.PREVENT_LEVEL:
-				return createPreventLevelFromString(eDataType, initialValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String convertToString(EDataType eDataType, Object instanceValue)
-	{
-		switch (eDataType.getClassifierID())
-		{
-			case PcmIntegrationPackage.PREVENT_LEVEL:
-				return convertPreventLevelToString(eDataType, instanceValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -162,28 +127,6 @@ public class PcmIntegrationFactoryImpl extends EFactoryImpl implements PcmIntegr
 	{
 		PreventionImpl prevention = new PreventionImpl();
 		return prevention;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PreventLevel createPreventLevelFromString(EDataType eDataType, String initialValue)
-	{
-		PreventLevel result = PreventLevel.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertPreventLevelToString(EDataType eDataType, Object instanceValue)
-	{
-		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**
