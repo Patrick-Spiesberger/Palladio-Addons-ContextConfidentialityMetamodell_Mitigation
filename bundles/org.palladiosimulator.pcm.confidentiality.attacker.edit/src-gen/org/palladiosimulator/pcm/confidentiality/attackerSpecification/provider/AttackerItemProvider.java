@@ -62,7 +62,6 @@ public class AttackerItemProvider extends EntityItemProvider
 			addExploitContextProvidersPropertyDescriptor(object);
 			addContextSelectionListEffortPropertyDescriptor(object);
 			addContextSelectionMaxTimePropertyDescriptor(object);
-			addDataDecyptionKeyBagPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -252,29 +251,6 @@ public class AttackerItemProvider extends EntityItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Data Decyption Key Bag feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDataDecyptionKeyBagPropertyDescriptor(Object object)
-	{
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Attacker_dataDecyptionKeyBag_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Attacker_dataDecyptionKeyBag_feature", "_UI_Attacker_type"),
-				 AttackerPackage.Literals.ATTACKER__DATA_DECYPTION_KEY_BAG,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -363,7 +339,6 @@ public class AttackerItemProvider extends EntityItemProvider
 			case AttackerPackage.ATTACKER__EXPLOIT_CONTEXT_PROVIDERS:
 			case AttackerPackage.ATTACKER__CONTEXT_SELECTION_LIST_EFFORT:
 			case AttackerPackage.ATTACKER__CONTEXT_SELECTION_MAX_TIME:
-			case AttackerPackage.ATTACKER__DATA_DECYPTION_KEY_BAG:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case AttackerPackage.ATTACKER__COMPROMISED_COMPONENTS_DETAILS:

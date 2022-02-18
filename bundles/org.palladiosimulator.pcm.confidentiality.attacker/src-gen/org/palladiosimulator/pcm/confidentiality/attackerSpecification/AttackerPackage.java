@@ -190,22 +190,13 @@ public interface AttackerPackage extends EPackage
 	int ATTACKER__CONTEXT_SELECTION_MAX_TIME = EntityPackage.ENTITY_FEATURE_COUNT + 7;
 
 	/**
-	 * The feature id for the '<em><b>Data Decyption Key Bag</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ATTACKER__DATA_DECYPTION_KEY_BAG = EntityPackage.ENTITY_FEATURE_COUNT + 8;
-
-	/**
 	 * The number of structural features of the '<em>Attacker</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTACKER_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 9;
+	int ATTACKER_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 8;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerSpecificationImpl <em>Specification</em>}' class.
@@ -457,22 +448,13 @@ public interface AttackerPackage extends EPackage
 	int DATAMODEL_ATTACKER__METHOD = EntityPackage.ENTITY_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Required Decryption Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATAMODEL_ATTACKER__REQUIRED_DECRYPTION_KEY = EntityPackage.ENTITY_FEATURE_COUNT + 4;
-
-	/**
 	 * The feature id for the '<em><b>Mitigation</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATAMODEL_ATTACKER__MITIGATION = EntityPackage.ENTITY_FEATURE_COUNT + 5;
+	int DATAMODEL_ATTACKER__MITIGATION = EntityPackage.ENTITY_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Datamodel Attacker</em>' class.
@@ -481,7 +463,7 @@ public interface AttackerPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int DATAMODEL_ATTACKER_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 6;
+	int DATAMODEL_ATTACKER_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AssemblyContextDetailImpl <em>Assembly Context Detail</em>}' class.
@@ -521,22 +503,13 @@ public interface AttackerPackage extends EPackage
 	int ASSEMBLY_CONTEXT_DETAIL__COMPROMISED_COMPONENTS = EntityPackage.ENTITY_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Change Attack Vector To Local</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSEMBLY_CONTEXT_DETAIL__CHANGE_ATTACK_VECTOR_TO_LOCAL = EntityPackage.ENTITY_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Assembly Context Detail</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSEMBLY_CONTEXT_DETAIL_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 2;
+	int ASSEMBLY_CONTEXT_DETAIL_FEATURE_COUNT = EntityPackage.ENTITY_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.MitigationImpl <em>Mitigation</em>}' class.
@@ -834,17 +807,6 @@ public interface AttackerPackage extends EPackage
 	EAttribute getAttacker_ContextSelectionMaxTime();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getDataDecyptionKeyBag <em>Data Decyption Key Bag</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Data Decyption Key Bag</em>'.
-	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.Attacker#getDataDecyptionKeyBag()
-	 * @see #getAttacker()
-	 * @generated
-	 */
-	EAttribute getAttacker_DataDecyptionKeyBag();
-
-	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerSpecification <em>Specification</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1059,17 +1021,6 @@ public interface AttackerPackage extends EPackage
 	EReference getDatamodelAttacker_Method();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker#getRequiredDecryptionKey <em>Required Decryption Key</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Required Decryption Key</em>'.
-	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker#getRequiredDecryptionKey()
-	 * @see #getDatamodelAttacker()
-	 * @generated
-	 */
-	EAttribute getDatamodelAttacker_RequiredDecryptionKey();
-
-	/**
 	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker#getMitigation <em>Mitigation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1100,17 +1051,6 @@ public interface AttackerPackage extends EPackage
 	 * @generated
 	 */
 	EReference getAssemblyContextDetail_CompromisedComponents();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.AssemblyContextDetail#isChangeAttackVectorToLocal <em>Change Attack Vector To Local</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Change Attack Vector To Local</em>'.
-	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AssemblyContextDetail#isChangeAttackVectorToLocal()
-	 * @see #getAssemblyContextDetail()
-	 * @generated
-	 */
-	EAttribute getAssemblyContextDetail_ChangeAttackVectorToLocal();
 
 	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigation <em>Mitigation</em>}'.
@@ -1301,14 +1241,6 @@ public interface AttackerPackage extends EPackage
 		EAttribute ATTACKER__CONTEXT_SELECTION_MAX_TIME = eINSTANCE.getAttacker_ContextSelectionMaxTime();
 
 		/**
-		 * The meta object literal for the '<em><b>Data Decyption Key Bag</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ATTACKER__DATA_DECYPTION_KEY_BAG = eINSTANCE.getAttacker_DataDecyptionKeyBag();
-
-		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerSpecificationImpl <em>Specification</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1481,14 +1413,6 @@ public interface AttackerPackage extends EPackage
 		EReference DATAMODEL_ATTACKER__METHOD = eINSTANCE.getDatamodelAttacker_Method();
 
 		/**
-		 * The meta object literal for the '<em><b>Required Decryption Key</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DATAMODEL_ATTACKER__REQUIRED_DECRYPTION_KEY = eINSTANCE.getDatamodelAttacker_RequiredDecryptionKey();
-
-		/**
 		 * The meta object literal for the '<em><b>Mitigation</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1513,14 +1437,6 @@ public interface AttackerPackage extends EPackage
 		 * @generated
 		 */
 		EReference ASSEMBLY_CONTEXT_DETAIL__COMPROMISED_COMPONENTS = eINSTANCE.getAssemblyContextDetail_CompromisedComponents();
-
-		/**
-		 * The meta object literal for the '<em><b>Change Attack Vector To Local</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ASSEMBLY_CONTEXT_DETAIL__CHANGE_ATTACK_VECTOR_TO_LOCAL = eINSTANCE.getAssemblyContextDetail_ChangeAttackVectorToLocal();
 
 		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.MitigationImpl <em>Mitigation</em>}' class.

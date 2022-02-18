@@ -11,11 +11,9 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpecification.Attack;
-import org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpecification.AttackSpecificationPackage;
 
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.provider.AttackerEditPlugin;
 
@@ -53,32 +51,8 @@ public class AttackItemProvider extends EntityItemProvider
 		{
 			super.getPropertyDescriptors(object);
 
-			addCrackableEncryptedComponentsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Crackable Encrypted Components feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addCrackableEncryptedComponentsPropertyDescriptor(Object object)
-	{
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Attack_crackableEncryptedComponents_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Attack_crackableEncryptedComponents_feature", "_UI_Attack_type"),
-				 AttackSpecificationPackage.Literals.ATTACK__CRACKABLE_ENCRYPTED_COMPONENTS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**

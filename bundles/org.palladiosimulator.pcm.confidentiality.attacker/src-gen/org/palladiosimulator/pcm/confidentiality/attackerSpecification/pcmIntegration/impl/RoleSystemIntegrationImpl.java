@@ -18,6 +18,7 @@ import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegr
  * </p>
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.RoleSystemIntegrationImpl#getRole <em>Role</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.RoleSystemIntegrationImpl#isChangeAttackVectorToLocal <em>Change Attack Vector To Local</em>}</li>
  * </ul>
  *
  * @generated
@@ -63,6 +64,26 @@ public class RoleSystemIntegrationImpl extends SystemIntegrationImpl implements 
 	public void setRole(Role newRole)
 	{
 		eSet(PcmIntegrationPackage.Literals.ROLE_SYSTEM_INTEGRATION__ROLE, newRole);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isChangeAttackVectorToLocal()
+	{
+		return (Boolean)eGet(PcmIntegrationPackage.Literals.ROLE_SYSTEM_INTEGRATION__CHANGE_ATTACK_VECTOR_TO_LOCAL, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setChangeAttackVectorToLocal(boolean newChangeAttackVectorToLocal)
+	{
+		eSet(PcmIntegrationPackage.Literals.ROLE_SYSTEM_INTEGRATION__CHANGE_ATTACK_VECTOR_TO_LOCAL, newChangeAttackVectorToLocal);
 	}
 
 } //RoleSystemIntegrationImpl

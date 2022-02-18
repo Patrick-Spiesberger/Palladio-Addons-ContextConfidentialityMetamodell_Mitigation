@@ -26,7 +26,6 @@ import org.palladiosimulator.pcm.repository.OperationSignature;
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.DatamodelAttackerImpl#getReferenceName <em>Reference Name</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.DatamodelAttackerImpl#getSource <em>Source</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.DatamodelAttackerImpl#getMethod <em>Method</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.DatamodelAttackerImpl#getRequiredDecryptionKey <em>Required Decryption Key</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.DatamodelAttackerImpl#getMitigation <em>Mitigation</em>}</li>
  * </ul>
  *
@@ -133,26 +132,6 @@ public class DatamodelAttackerImpl extends EntityImpl implements DatamodelAttack
 	public void setMethod(OperationSignature newMethod)
 	{
 		eSet(AttackerPackage.Literals.DATAMODEL_ATTACKER__METHOD, newMethod);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getRequiredDecryptionKey()
-	{
-		return (String)eGet(AttackerPackage.Literals.DATAMODEL_ATTACKER__REQUIRED_DECRYPTION_KEY, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRequiredDecryptionKey(String newRequiredDecryptionKey)
-	{
-		eSet(AttackerPackage.Literals.DATAMODEL_ATTACKER__REQUIRED_DECRYPTION_KEY, newRequiredDecryptionKey);
 	}
 
 	/**

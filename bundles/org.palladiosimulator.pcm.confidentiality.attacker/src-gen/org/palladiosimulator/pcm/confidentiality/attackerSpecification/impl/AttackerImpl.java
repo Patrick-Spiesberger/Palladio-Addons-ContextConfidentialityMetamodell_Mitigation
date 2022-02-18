@@ -36,7 +36,6 @@ import org.palladiosimulator.pcm.resourceenvironment.ResourceContainer;
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerImpl#isExploitContextProviders <em>Exploit Context Providers</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerImpl#getContextSelectionListEffort <em>Context Selection List Effort</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerImpl#getContextSelectionMaxTime <em>Context Selection Max Time</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerImpl#getDataDecyptionKeyBag <em>Data Decyption Key Bag</em>}</li>
  * </ul>
  *
  * @generated
@@ -177,17 +176,6 @@ public class AttackerImpl extends EntityImpl implements Attacker
 	public void setContextSelectionMaxTime(int newContextSelectionMaxTime)
 	{
 		eSet(AttackerPackage.Literals.ATTACKER__CONTEXT_SELECTION_MAX_TIME, newContextSelectionMaxTime);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<String> getDataDecyptionKeyBag()
-	{
-		return (EList<String>)eGet(AttackerPackage.Literals.ATTACKER__DATA_DECYPTION_KEY_BAG, true);
 	}
 
 } //AttackerImpl

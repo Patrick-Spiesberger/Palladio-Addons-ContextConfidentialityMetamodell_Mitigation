@@ -11,8 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AssemblyContextDetail;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage;
@@ -52,7 +50,6 @@ public class AssemblyContextDetailItemProvider extends EntityItemProvider
 			super.getPropertyDescriptors(object);
 
 			addCompromisedComponentsPropertyDescriptor(object);
-			addChangeAttackVectorToLocalPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -76,29 +73,6 @@ public class AssemblyContextDetailItemProvider extends EntityItemProvider
 				 false,
 				 true,
 				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Change Attack Vector To Local feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addChangeAttackVectorToLocalPropertyDescriptor(Object object)
-	{
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_AssemblyContextDetail_changeAttackVectorToLocal_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_AssemblyContextDetail_changeAttackVectorToLocal_feature", "_UI_AssemblyContextDetail_type"),
-				 AttackerPackage.Literals.ASSEMBLY_CONTEXT_DETAIL__CHANGE_ATTACK_VECTOR_TO_LOCAL,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -153,13 +127,6 @@ public class AssemblyContextDetailItemProvider extends EntityItemProvider
 	public void notifyChanged(Notification notification)
 	{
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(AssemblyContextDetail.class))
-		{
-			case AttackerPackage.ASSEMBLY_CONTEXT_DETAIL__CHANGE_ATTACK_VECTOR_TO_LOCAL:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 

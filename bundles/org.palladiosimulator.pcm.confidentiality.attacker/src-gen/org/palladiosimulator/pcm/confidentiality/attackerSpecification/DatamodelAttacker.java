@@ -22,7 +22,6 @@ import org.palladiosimulator.pcm.repository.OperationSignature;
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker#getReferenceName <em>Reference Name</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker#getSource <em>Source</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker#getMethod <em>Method</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker#getRequiredDecryptionKey <em>Required Decryption Key</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker#getMitigation <em>Mitigation</em>}</li>
  * </ul>
  *
@@ -119,28 +118,6 @@ public interface DatamodelAttacker extends Entity
 	 * @generated
 	 */
 	void setMethod(OperationSignature value);
-
-	/**
-	 * Returns the value of the '<em><b>Required Decryption Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Required Decryption Key</em>' attribute.
-	 * @see #setRequiredDecryptionKey(String)
-	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage#getDatamodelAttacker_RequiredDecryptionKey()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-	 * @generated
-	 */
-	String getRequiredDecryptionKey();
-
-	/**
-	 * Sets the value of the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker#getRequiredDecryptionKey <em>Required Decryption Key</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Required Decryption Key</em>' attribute.
-	 * @see #getRequiredDecryptionKey()
-	 * @generated
-	 */
-	void setRequiredDecryptionKey(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Mitigation</b></em>' reference.

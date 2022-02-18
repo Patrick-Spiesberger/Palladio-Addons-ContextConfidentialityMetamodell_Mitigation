@@ -356,16 +356,6 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAttacker_DataDecyptionKeyBag()
-	{
-		return (EAttribute)attackerEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getAttackerSpecification()
 	{
 		return attackerSpecificationEClass;
@@ -566,19 +556,9 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDatamodelAttacker_RequiredDecryptionKey()
-	{
-		return (EAttribute)datamodelAttackerEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getDatamodelAttacker_Mitigation()
 	{
-		return (EReference)datamodelAttackerEClass.getEStructuralFeatures().get(5);
+		return (EReference)datamodelAttackerEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -599,16 +579,6 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	public EReference getAssemblyContextDetail_CompromisedComponents()
 	{
 		return (EReference)assemblyContextDetailEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getAssemblyContextDetail_ChangeAttackVectorToLocal()
-	{
-		return (EAttribute)assemblyContextDetailEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -723,7 +693,6 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		createEAttribute(attackerEClass, ATTACKER__EXPLOIT_CONTEXT_PROVIDERS);
 		createEAttribute(attackerEClass, ATTACKER__CONTEXT_SELECTION_LIST_EFFORT);
 		createEAttribute(attackerEClass, ATTACKER__CONTEXT_SELECTION_MAX_TIME);
-		createEAttribute(attackerEClass, ATTACKER__DATA_DECYPTION_KEY_BAG);
 
 		attackerSpecificationEClass = createEClass(ATTACKER_SPECIFICATION);
 		createEReference(attackerSpecificationEClass, ATTACKER_SPECIFICATION__ATTACKERS);
@@ -750,12 +719,10 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		createEAttribute(datamodelAttackerEClass, DATAMODEL_ATTACKER__REFERENCE_NAME);
 		createEReference(datamodelAttackerEClass, DATAMODEL_ATTACKER__SOURCE);
 		createEReference(datamodelAttackerEClass, DATAMODEL_ATTACKER__METHOD);
-		createEAttribute(datamodelAttackerEClass, DATAMODEL_ATTACKER__REQUIRED_DECRYPTION_KEY);
 		createEReference(datamodelAttackerEClass, DATAMODEL_ATTACKER__MITIGATION);
 
 		assemblyContextDetailEClass = createEClass(ASSEMBLY_CONTEXT_DETAIL);
 		createEReference(assemblyContextDetailEClass, ASSEMBLY_CONTEXT_DETAIL__COMPROMISED_COMPONENTS);
-		createEAttribute(assemblyContextDetailEClass, ASSEMBLY_CONTEXT_DETAIL__CHANGE_ATTACK_VECTOR_TO_LOCAL);
 
 		mitigationEClass = createEClass(MITIGATION);
 		createEReference(mitigationEClass, MITIGATION__MITIGATIONSPECIFICATION);
@@ -834,7 +801,6 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		initEAttribute(getAttacker_ExploitContextProviders(), ecorePackage.getEBoolean(), "exploitContextProviders", "true", 0, 1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAttacker_ContextSelectionListEffort(), this.getListOperationEffort(), "contextSelectionListEffort", null, 0, 1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAttacker_ContextSelectionMaxTime(), theXMLTypePackage.getInt(), "contextSelectionMaxTime", "3600", 0, 1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAttacker_DataDecyptionKeyBag(), theXMLTypePackage.getString(), "dataDecyptionKeyBag", null, 0, -1, Attacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attackerSpecificationEClass, AttackerSpecification.class, "AttackerSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAttackerSpecification_Attackers(), this.getAttackerContainer(), null, "attackers", null, 0, 1, AttackerSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -861,12 +827,10 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		initEAttribute(getDatamodelAttacker_ReferenceName(), ecorePackage.getEString(), "referenceName", null, 0, 1, DatamodelAttacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDatamodelAttacker_Source(), theEcorePackage.getEObject(), null, "source", null, 0, 1, DatamodelAttacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDatamodelAttacker_Method(), theRepositoryPackage.getOperationSignature(), null, "method", null, 0, 1, DatamodelAttacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDatamodelAttacker_RequiredDecryptionKey(), theXMLTypePackage.getString(), "requiredDecryptionKey", null, 0, 1, DatamodelAttacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDatamodelAttacker_Mitigation(), this.getMitigation(), null, "mitigation", null, 0, 1, DatamodelAttacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(assemblyContextDetailEClass, AssemblyContextDetail.class, "AssemblyContextDetail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAssemblyContextDetail_CompromisedComponents(), theCompositionPackage.getAssemblyContext(), null, "compromisedComponents", null, 0, -1, AssemblyContextDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAssemblyContextDetail_ChangeAttackVectorToLocal(), theXMLTypePackage.getBoolean(), "changeAttackVectorToLocal", "false", 0, 1, AssemblyContextDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mitigationEClass, Mitigation.class, "Mitigation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMitigation_Mitigationspecification(), this.getMitigationSpecification(), null, "mitigationspecification", null, 0, -1, Mitigation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

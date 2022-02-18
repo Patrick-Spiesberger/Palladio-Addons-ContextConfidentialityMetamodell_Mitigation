@@ -55,7 +55,6 @@ public class DatamodelAttackerItemProvider extends EntityItemProvider
 			addReferenceNamePropertyDescriptor(object);
 			addSourcePropertyDescriptor(object);
 			addMethodPropertyDescriptor(object);
-			addRequiredDecryptionKeyPropertyDescriptor(object);
 			addMitigationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -154,29 +153,6 @@ public class DatamodelAttackerItemProvider extends EntityItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Required Decryption Key feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRequiredDecryptionKeyPropertyDescriptor(Object object)
-	{
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_DatamodelAttacker_requiredDecryptionKey_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_DatamodelAttacker_requiredDecryptionKey_feature", "_UI_DatamodelAttacker_type"),
-				 AttackerPackage.Literals.DATAMODEL_ATTACKER__REQUIRED_DECRYPTION_KEY,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Mitigation feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -253,7 +229,6 @@ public class DatamodelAttackerItemProvider extends EntityItemProvider
 		switch (notification.getFeatureID(DatamodelAttacker.class))
 		{
 			case AttackerPackage.DATAMODEL_ATTACKER__REFERENCE_NAME:
-			case AttackerPackage.DATAMODEL_ATTACKER__REQUIRED_DECRYPTION_KEY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

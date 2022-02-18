@@ -10,12 +10,15 @@ import de.uka.ipd.sdq.stoex.StoexPackage;
 
 import de.uka.ipd.sdq.units.UnitsPackage;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 
 import org.palladiosimulator.pcm.PcmPackage;
 
@@ -155,6 +158,7 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 		ProbfunctionPackage.eINSTANCE.eClass();
 		StoexPackage.eINSTANCE.eClass();
 		UnitsPackage.eINSTANCE.eClass();
+		XMLTypePackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
 		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(AttackerPackage.eNS_URI);
@@ -305,6 +309,16 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getRoleSystemIntegration_ChangeAttackVectorToLocal()
+	{
+		return (EAttribute)roleSystemIntegrationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getSystemIntegration()
 	{
 		return systemIntegrationEClass;
@@ -384,6 +398,7 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 
 		roleSystemIntegrationEClass = createEClass(ROLE_SYSTEM_INTEGRATION);
 		createEReference(roleSystemIntegrationEClass, ROLE_SYSTEM_INTEGRATION__ROLE);
+		createEAttribute(roleSystemIntegrationEClass, ROLE_SYSTEM_INTEGRATION__CHANGE_ATTACK_VECTOR_TO_LOCAL);
 
 		systemIntegrationEClass = createEClass(SYSTEM_INTEGRATION);
 		createEReference(systemIntegrationEClass, SYSTEM_INTEGRATION__PCMELEMENT);
@@ -425,6 +440,7 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 		CompositionPackage theCompositionPackage = (CompositionPackage)EPackage.Registry.INSTANCE.getEPackage(CompositionPackage.eNS_URI);
 		StructurePackage theStructurePackage = (StructurePackage)EPackage.Registry.INSTANCE.getEPackage(StructurePackage.eNS_URI);
 		AttackerPackage theAttackerPackage = (AttackerPackage)EPackage.Registry.INSTANCE.getEPackage(AttackerPackage.eNS_URI);
+		XMLTypePackage theXMLTypePackage = (XMLTypePackage)EPackage.Registry.INSTANCE.getEPackage(XMLTypePackage.eNS_URI);
 
 		// Create type parameters
 
@@ -454,6 +470,7 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 
 		initEClass(roleSystemIntegrationEClass, RoleSystemIntegration.class, "RoleSystemIntegration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRoleSystemIntegration_Role(), theAttackSpecificationPackage.getRole(), null, "role", null, 1, 1, RoleSystemIntegration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRoleSystemIntegration_ChangeAttackVectorToLocal(), theXMLTypePackage.getBoolean(), "changeAttackVectorToLocal", "false", 0, 1, RoleSystemIntegration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(systemIntegrationEClass, SystemIntegration.class, "SystemIntegration", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSystemIntegration_Pcmelement(), this.getPCMElement(), null, "pcmelement", null, 1, 1, SystemIntegration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
