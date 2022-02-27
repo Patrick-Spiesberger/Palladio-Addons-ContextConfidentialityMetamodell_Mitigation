@@ -68,6 +68,15 @@ public interface PcmIntegrationFactory extends EFactory
 	Prevention createPrevention();
 
 	/**
+	 * Returns a new object of class '<em>Attack Vector Integration</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Attack Vector Integration</em>'.
+	 * @generated
+	 */
+	AttackVectorIntegration createAttackVectorIntegration();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

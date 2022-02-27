@@ -30,6 +30,7 @@ import org.palladiosimulator.pcm.confidentiality.attackerSpecification.attackSpe
 
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.AttackerPackageImpl;
 
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.AttackVectorIntegration;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.NonGlobalCommunication;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PCMElement;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PcmIntegrationFactory;
@@ -100,6 +101,13 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * @generated
 	 */
 	private EClass preventionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass attackVectorIntegrationEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -309,16 +317,6 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRoleSystemIntegration_ChangeAttackVectorToLocal()
-	{
-		return (EAttribute)roleSystemIntegrationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getSystemIntegration()
 	{
 		return systemIntegrationEClass;
@@ -352,6 +350,26 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 	public EClass getPrevention()
 	{
 		return preventionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAttackVectorIntegration()
+	{
+		return attackVectorIntegrationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAttackVectorIntegration_ChangeAttackVectorToLocal()
+	{
+		return (EAttribute)attackVectorIntegrationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -398,7 +416,6 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 
 		roleSystemIntegrationEClass = createEClass(ROLE_SYSTEM_INTEGRATION);
 		createEReference(roleSystemIntegrationEClass, ROLE_SYSTEM_INTEGRATION__ROLE);
-		createEAttribute(roleSystemIntegrationEClass, ROLE_SYSTEM_INTEGRATION__CHANGE_ATTACK_VECTOR_TO_LOCAL);
 
 		systemIntegrationEClass = createEClass(SYSTEM_INTEGRATION);
 		createEReference(systemIntegrationEClass, SYSTEM_INTEGRATION__PCMELEMENT);
@@ -406,6 +423,9 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 		nonGlobalCommunicationEClass = createEClass(NON_GLOBAL_COMMUNICATION);
 
 		preventionEClass = createEClass(PREVENTION);
+
+		attackVectorIntegrationEClass = createEClass(ATTACK_VECTOR_INTEGRATION);
+		createEAttribute(attackVectorIntegrationEClass, ATTACK_VECTOR_INTEGRATION__CHANGE_ATTACK_VECTOR_TO_LOCAL);
 	}
 
 	/**
@@ -454,6 +474,7 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 		systemIntegrationEClass.getESuperTypes().add(theEntityPackage.getEntity());
 		nonGlobalCommunicationEClass.getESuperTypes().add(this.getSystemIntegration());
 		preventionEClass.getESuperTypes().add(theAttackerPackage.getMitigationSpecification());
+		attackVectorIntegrationEClass.getESuperTypes().add(this.getSystemIntegration());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(vulnerabilitySystemIntegrationEClass, VulnerabilitySystemIntegration.class, "VulnerabilitySystemIntegration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -470,7 +491,6 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 
 		initEClass(roleSystemIntegrationEClass, RoleSystemIntegration.class, "RoleSystemIntegration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRoleSystemIntegration_Role(), theAttackSpecificationPackage.getRole(), null, "role", null, 1, 1, RoleSystemIntegration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRoleSystemIntegration_ChangeAttackVectorToLocal(), theXMLTypePackage.getBoolean(), "changeAttackVectorToLocal", "false", 0, 1, RoleSystemIntegration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(systemIntegrationEClass, SystemIntegration.class, "SystemIntegration", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSystemIntegration_Pcmelement(), this.getPCMElement(), null, "pcmelement", null, 1, 1, SystemIntegration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -478,6 +498,9 @@ public class PcmIntegrationPackageImpl extends EPackageImpl implements PcmIntegr
 		initEClass(nonGlobalCommunicationEClass, NonGlobalCommunication.class, "NonGlobalCommunication", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(preventionEClass, Prevention.class, "Prevention", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(attackVectorIntegrationEClass, AttackVectorIntegration.class, "AttackVectorIntegration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAttackVectorIntegration_ChangeAttackVectorToLocal(), theXMLTypePackage.getBoolean(), "changeAttackVectorToLocal", "false", 0, 1, AttackVectorIntegration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //PcmIntegrationPackageImpl

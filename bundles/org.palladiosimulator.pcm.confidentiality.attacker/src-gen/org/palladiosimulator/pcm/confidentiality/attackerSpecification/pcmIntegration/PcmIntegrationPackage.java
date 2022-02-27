@@ -308,22 +308,13 @@ public interface PcmIntegrationPackage extends EPackage
 	int ROLE_SYSTEM_INTEGRATION__ROLE = SYSTEM_INTEGRATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Change Attack Vector To Local</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROLE_SYSTEM_INTEGRATION__CHANGE_ATTACK_VECTOR_TO_LOCAL = SYSTEM_INTEGRATION_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Role System Integration</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROLE_SYSTEM_INTEGRATION_FEATURE_COUNT = SYSTEM_INTEGRATION_FEATURE_COUNT + 2;
+	int ROLE_SYSTEM_INTEGRATION_FEATURE_COUNT = SYSTEM_INTEGRATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.NonGlobalCommunicationImpl <em>Non Global Communication</em>}' class.
@@ -425,6 +416,61 @@ public interface PcmIntegrationPackage extends EPackage
 	 * @ordered
 	 */
 	int PREVENTION_FEATURE_COUNT = AttackerPackage.MITIGATION_SPECIFICATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.AttackVectorIntegrationImpl <em>Attack Vector Integration</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.AttackVectorIntegrationImpl
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.PcmIntegrationPackageImpl#getAttackVectorIntegration()
+	 * @generated
+	 */
+	int ATTACK_VECTOR_INTEGRATION = 6;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTACK_VECTOR_INTEGRATION__ID = SYSTEM_INTEGRATION__ID;
+
+	/**
+	 * The feature id for the '<em><b>Entity Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTACK_VECTOR_INTEGRATION__ENTITY_NAME = SYSTEM_INTEGRATION__ENTITY_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Pcmelement</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTACK_VECTOR_INTEGRATION__PCMELEMENT = SYSTEM_INTEGRATION__PCMELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Change Attack Vector To Local</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTACK_VECTOR_INTEGRATION__CHANGE_ATTACK_VECTOR_TO_LOCAL = SYSTEM_INTEGRATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Attack Vector Integration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTACK_VECTOR_INTEGRATION_FEATURE_COUNT = SYSTEM_INTEGRATION_FEATURE_COUNT + 1;
 
 
 	/**
@@ -557,17 +603,6 @@ public interface PcmIntegrationPackage extends EPackage
 	EReference getRoleSystemIntegration_Role();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.RoleSystemIntegration#isChangeAttackVectorToLocal <em>Change Attack Vector To Local</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Change Attack Vector To Local</em>'.
-	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.RoleSystemIntegration#isChangeAttackVectorToLocal()
-	 * @see #getRoleSystemIntegration()
-	 * @generated
-	 */
-	EAttribute getRoleSystemIntegration_ChangeAttackVectorToLocal();
-
-	/**
 	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.SystemIntegration <em>System Integration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -607,6 +642,27 @@ public interface PcmIntegrationPackage extends EPackage
 	 * @generated
 	 */
 	EClass getPrevention();
+
+	/**
+	 * Returns the meta object for class '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.AttackVectorIntegration <em>Attack Vector Integration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Attack Vector Integration</em>'.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.AttackVectorIntegration
+	 * @generated
+	 */
+	EClass getAttackVectorIntegration();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.AttackVectorIntegration#isChangeAttackVectorToLocal <em>Change Attack Vector To Local</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Change Attack Vector To Local</em>'.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.AttackVectorIntegration#isChangeAttackVectorToLocal()
+	 * @see #getAttackVectorIntegration()
+	 * @generated
+	 */
+	EAttribute getAttackVectorIntegration_ChangeAttackVectorToLocal();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -734,14 +790,6 @@ public interface PcmIntegrationPackage extends EPackage
 		EReference ROLE_SYSTEM_INTEGRATION__ROLE = eINSTANCE.getRoleSystemIntegration_Role();
 
 		/**
-		 * The meta object literal for the '<em><b>Change Attack Vector To Local</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ROLE_SYSTEM_INTEGRATION__CHANGE_ATTACK_VECTOR_TO_LOCAL = eINSTANCE.getRoleSystemIntegration_ChangeAttackVectorToLocal();
-
-		/**
 		 * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.SystemIntegrationImpl <em>System Integration</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -778,6 +826,24 @@ public interface PcmIntegrationPackage extends EPackage
 		 * @generated
 		 */
 		EClass PREVENTION = eINSTANCE.getPrevention();
+
+		/**
+		 * The meta object literal for the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.AttackVectorIntegrationImpl <em>Attack Vector Integration</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.AttackVectorIntegrationImpl
+		 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.impl.PcmIntegrationPackageImpl#getAttackVectorIntegration()
+		 * @generated
+		 */
+		EClass ATTACK_VECTOR_INTEGRATION = eINSTANCE.getAttackVectorIntegration();
+
+		/**
+		 * The meta object literal for the '<em><b>Change Attack Vector To Local</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATTACK_VECTOR_INTEGRATION__CHANGE_ATTACK_VECTOR_TO_LOCAL = eINSTANCE.getAttackVectorIntegration_ChangeAttackVectorToLocal();
 
 	}
 

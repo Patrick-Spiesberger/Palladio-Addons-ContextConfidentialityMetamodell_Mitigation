@@ -193,6 +193,11 @@ public class AttackerSystemSpecificationContainerItemProvider
 			(createChildParameter
 				(AttackerPackage.Literals.ATTACKER_SYSTEM_SPECIFICATION_CONTAINER__VULNERABILITIES,
 				 PcmIntegrationFactory.eINSTANCE.createNonGlobalCommunication()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AttackerPackage.Literals.ATTACKER_SYSTEM_SPECIFICATION_CONTAINER__VULNERABILITIES,
+				 PcmIntegrationFactory.eINSTANCE.createAttackVectorIntegration()));
 	}
 
 	/**

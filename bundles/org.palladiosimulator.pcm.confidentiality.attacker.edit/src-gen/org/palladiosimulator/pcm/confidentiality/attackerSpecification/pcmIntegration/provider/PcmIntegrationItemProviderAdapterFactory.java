@@ -199,6 +199,31 @@ public class PcmIntegrationItemProviderAdapterFactory extends PcmIntegrationAdap
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.AttackVectorIntegration} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AttackVectorIntegrationItemProvider attackVectorIntegrationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.AttackVectorIntegration}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAttackVectorIntegrationAdapter()
+	{
+		if (attackVectorIntegrationItemProvider == null)
+		{
+			attackVectorIntegrationItemProvider = new AttackVectorIntegrationItemProvider(this);
+		}
+
+		return attackVectorIntegrationItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -314,6 +339,7 @@ public class PcmIntegrationItemProviderAdapterFactory extends PcmIntegrationAdap
 		if (roleSystemIntegrationItemProvider != null) roleSystemIntegrationItemProvider.dispose();
 		if (nonGlobalCommunicationItemProvider != null) nonGlobalCommunicationItemProvider.dispose();
 		if (preventionItemProvider != null) preventionItemProvider.dispose();
+		if (attackVectorIntegrationItemProvider != null) attackVectorIntegrationItemProvider.dispose();
 	}
 
 }

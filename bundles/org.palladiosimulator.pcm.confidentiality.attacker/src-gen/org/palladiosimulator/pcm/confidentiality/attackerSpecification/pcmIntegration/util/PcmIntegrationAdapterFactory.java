@@ -115,6 +115,11 @@ public class PcmIntegrationAdapterFactory extends AdapterFactoryImpl
 				return createPreventionAdapter();
 			}
 			@Override
+			public Adapter caseAttackVectorIntegration(AttackVectorIntegration object)
+			{
+				return createAttackVectorIntegrationAdapter();
+			}
+			@Override
 			public Adapter caseIdentifier(Identifier object)
 			{
 				return createIdentifierAdapter();
@@ -252,6 +257,21 @@ public class PcmIntegrationAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createPreventionAdapter()
+	{
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.AttackVectorIntegration <em>Attack Vector Integration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.AttackVectorIntegration
+	 * @generated
+	 */
+	public Adapter createAttackVectorIntegrationAdapter()
 	{
 		return null;
 	}

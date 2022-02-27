@@ -11,17 +11,19 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.AttackVectorIntegration;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.PcmIntegrationPackage;
-import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.RoleSystemIntegration;
 
 /**
- * This is the item provider adapter for a {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.RoleSystemIntegration} object.
+ * This is the item provider adapter for a {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegration.AttackVectorIntegration} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class RoleSystemIntegrationItemProvider extends SystemIntegrationItemProvider
+public class AttackVectorIntegrationItemProvider extends SystemIntegrationItemProvider
 {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -29,7 +31,7 @@ public class RoleSystemIntegrationItemProvider extends SystemIntegrationItemProv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RoleSystemIntegrationItemProvider(AdapterFactory adapterFactory)
+	public AttackVectorIntegrationItemProvider(AdapterFactory adapterFactory)
 	{
 		super(adapterFactory);
 	}
@@ -47,36 +49,36 @@ public class RoleSystemIntegrationItemProvider extends SystemIntegrationItemProv
 		{
 			super.getPropertyDescriptors(object);
 
-			addRolePropertyDescriptor(object);
+			addChangeAttackVectorToLocalPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Role feature.
+	 * This adds a property descriptor for the Change Attack Vector To Local feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addRolePropertyDescriptor(Object object)
+	protected void addChangeAttackVectorToLocalPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_RoleSystemIntegration_role_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_RoleSystemIntegration_role_feature", "_UI_RoleSystemIntegration_type"),
-				 PcmIntegrationPackage.Literals.ROLE_SYSTEM_INTEGRATION__ROLE,
+				 getString("_UI_AttackVectorIntegration_changeAttackVectorToLocal_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AttackVectorIntegration_changeAttackVectorToLocal_feature", "_UI_AttackVectorIntegration_type"),
+				 PcmIntegrationPackage.Literals.ATTACK_VECTOR_INTEGRATION__CHANGE_ATTACK_VECTOR_TO_LOCAL,
 				 true,
 				 false,
-				 true,
-				 null,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
 
 	/**
-	 * This returns RoleSystemIntegration.gif.
+	 * This returns AttackVectorIntegration.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -84,7 +86,7 @@ public class RoleSystemIntegrationItemProvider extends SystemIntegrationItemProv
 	@Override
 	public Object getImage(Object object)
 	{
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/RoleSystemIntegration"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/AttackVectorIntegration"));
 	}
 
 	/**
@@ -107,10 +109,10 @@ public class RoleSystemIntegrationItemProvider extends SystemIntegrationItemProv
 	@Override
 	public String getText(Object object)
 	{
-		String label = ((RoleSystemIntegration)object).getId();
+		String label = ((AttackVectorIntegration)object).getId();
 		return label == null || label.length() == 0 ?
-			getString("_UI_RoleSystemIntegration_type") :
-			getString("_UI_RoleSystemIntegration_type") + " " + label;
+			getString("_UI_AttackVectorIntegration_type") :
+			getString("_UI_AttackVectorIntegration_type") + " " + label;
 	}
 
 
@@ -125,6 +127,13 @@ public class RoleSystemIntegrationItemProvider extends SystemIntegrationItemProv
 	public void notifyChanged(Notification notification)
 	{
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(AttackVectorIntegration.class))
+		{
+			case PcmIntegrationPackage.ATTACK_VECTOR_INTEGRATION__CHANGE_ATTACK_VECTOR_TO_LOCAL:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

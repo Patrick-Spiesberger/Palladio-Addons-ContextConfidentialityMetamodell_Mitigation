@@ -201,9 +201,6 @@
     <eClassifiers xsi:type="ecore:EClass" name="RoleSystemIntegration" eSuperTypes="#//pcmIntegration/SystemIntegration">
       <eStructuralFeatures xsi:type="ecore:EReference" name="role" lowerBound="1"
           eType="#//attackSpecification/Role"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeAttackVectorToLocal"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
-          defaultValueLiteral="false"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SystemIntegration" abstract="true"
         eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
@@ -212,5 +209,10 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="NonGlobalCommunication" eSuperTypes="#//pcmIntegration/SystemIntegration"/>
     <eClassifiers xsi:type="ecore:EClass" name="Prevention" eSuperTypes="#//MitigationSpecification"/>
+    <eClassifiers xsi:type="ecore:EClass" name="AttackVectorIntegration" eSuperTypes="#//pcmIntegration/SystemIntegration">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeAttackVectorToLocal"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+          defaultValueLiteral="false"/>
+    </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

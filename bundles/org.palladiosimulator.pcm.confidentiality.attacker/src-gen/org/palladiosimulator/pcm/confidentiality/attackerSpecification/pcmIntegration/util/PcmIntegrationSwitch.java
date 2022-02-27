@@ -158,6 +158,19 @@ public class PcmIntegrationSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case PcmIntegrationPackage.ATTACK_VECTOR_INTEGRATION:
+			{
+				AttackVectorIntegration attackVectorIntegration = (AttackVectorIntegration)theEObject;
+				T result = caseAttackVectorIntegration(attackVectorIntegration);
+				if (result == null) result = caseSystemIntegration(attackVectorIntegration);
+				if (result == null) result = caseEntity(attackVectorIntegration);
+				if (result == null) result = caseIdentifier(attackVectorIntegration);
+				if (result == null) result = caseNamedElement(attackVectorIntegration);
+				if (result == null) result = casePCMBaseClass(attackVectorIntegration);
+				if (result == null) result = casePCMClass(attackVectorIntegration);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -254,6 +267,22 @@ public class PcmIntegrationSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T casePrevention(Prevention object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Attack Vector Integration</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Attack Vector Integration</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAttackVectorIntegration(AttackVectorIntegration object)
 	{
 		return null;
 	}
