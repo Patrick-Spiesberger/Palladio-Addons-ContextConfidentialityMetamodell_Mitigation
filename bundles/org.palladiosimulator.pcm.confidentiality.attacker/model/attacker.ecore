@@ -35,8 +35,8 @@
         eType="#//CategorySpecification" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="systemintegration" eType="#//AttackerSystemSpecificationContainer"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="mitigation" eType="#//Mitigation"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mitigation" upperBound="-1"
+        eType="#//Mitigation" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttackContainer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="attack" upperBound="-1"
@@ -59,7 +59,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="referenceName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EObject"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="method" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//repository/OperationSignature"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="mitigation" eType="#//Mitigation"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AssemblyContextDetail" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="compromisedComponents"
@@ -74,6 +73,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Mitigation" eSuperTypes="#//pcmIntegration/SystemIntegration">
     <eStructuralFeatures xsi:type="ecore:EReference" name="mitigationspecification"
         upperBound="-1" eType="#//MitigationSpecification" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datamodelattacker" eType="#//DatamodelAttacker"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MitigationSpecification" abstract="true"
       eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">

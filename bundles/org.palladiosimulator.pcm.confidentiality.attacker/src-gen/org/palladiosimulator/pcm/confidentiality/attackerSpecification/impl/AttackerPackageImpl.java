@@ -556,16 +556,6 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDatamodelAttacker_Mitigation()
-	{
-		return (EReference)datamodelAttackerEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getAssemblyContextDetail()
 	{
 		return assemblyContextDetailEClass;
@@ -599,6 +589,16 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	public EReference getMitigation_Mitigationspecification()
 	{
 		return (EReference)mitigationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMitigation_Datamodelattacker()
+	{
+		return (EReference)mitigationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -719,13 +719,13 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		createEAttribute(datamodelAttackerEClass, DATAMODEL_ATTACKER__REFERENCE_NAME);
 		createEReference(datamodelAttackerEClass, DATAMODEL_ATTACKER__SOURCE);
 		createEReference(datamodelAttackerEClass, DATAMODEL_ATTACKER__METHOD);
-		createEReference(datamodelAttackerEClass, DATAMODEL_ATTACKER__MITIGATION);
 
 		assemblyContextDetailEClass = createEClass(ASSEMBLY_CONTEXT_DETAIL);
 		createEReference(assemblyContextDetailEClass, ASSEMBLY_CONTEXT_DETAIL__COMPROMISED_COMPONENTS);
 
 		mitigationEClass = createEClass(MITIGATION);
 		createEReference(mitigationEClass, MITIGATION__MITIGATIONSPECIFICATION);
+		createEReference(mitigationEClass, MITIGATION__DATAMODELATTACKER);
 
 		mitigationSpecificationEClass = createEClass(MITIGATION_SPECIFICATION);
 		createEReference(mitigationSpecificationEClass, MITIGATION_SPECIFICATION__NECESSARY_CREDENTIALS);
@@ -808,7 +808,7 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		initEReference(getAttackerSpecification_Vulnerabilites(), this.getVulnerabilityContainer(), null, "vulnerabilites", null, 0, 1, AttackerSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAttackerSpecification_Categoryspecification(), this.getCategorySpecification(), null, "categoryspecification", null, 0, 1, AttackerSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAttackerSpecification_Systemintegration(), this.getAttackerSystemSpecificationContainer(), null, "systemintegration", null, 0, 1, AttackerSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAttackerSpecification_Mitigation(), this.getMitigation(), null, "mitigation", null, 0, 1, AttackerSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAttackerSpecification_Mitigation(), this.getMitigation(), null, "mitigation", null, 0, -1, AttackerSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attackContainerEClass, AttackContainer.class, "AttackContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAttackContainer_Attack(), theAttackSpecificationPackage.getAttack(), null, "attack", null, 0, -1, AttackContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -827,13 +827,13 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		initEAttribute(getDatamodelAttacker_ReferenceName(), ecorePackage.getEString(), "referenceName", null, 0, 1, DatamodelAttacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDatamodelAttacker_Source(), theEcorePackage.getEObject(), null, "source", null, 0, 1, DatamodelAttacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDatamodelAttacker_Method(), theRepositoryPackage.getOperationSignature(), null, "method", null, 0, 1, DatamodelAttacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDatamodelAttacker_Mitigation(), this.getMitigation(), null, "mitigation", null, 0, 1, DatamodelAttacker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(assemblyContextDetailEClass, AssemblyContextDetail.class, "AssemblyContextDetail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAssemblyContextDetail_CompromisedComponents(), theCompositionPackage.getAssemblyContext(), null, "compromisedComponents", null, 0, -1, AssemblyContextDetail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mitigationEClass, Mitigation.class, "Mitigation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMitigation_Mitigationspecification(), this.getMitigationSpecification(), null, "mitigationspecification", null, 0, -1, Mitigation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMitigation_Datamodelattacker(), this.getDatamodelAttacker(), null, "datamodelattacker", null, 0, 1, Mitigation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mitigationSpecificationEClass, MitigationSpecification.class, "MitigationSpecification", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMitigationSpecification_NecessaryCredentials(), theSystemPackage.getUsageSpecification(), null, "necessaryCredentials", null, 0, -1, MitigationSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -22,7 +22,6 @@ import org.palladiosimulator.pcm.repository.OperationSignature;
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker#getReferenceName <em>Reference Name</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker#getSource <em>Source</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker#getMethod <em>Method</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker#getMitigation <em>Mitigation</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage#getDatamodelAttacker()
@@ -118,27 +117,5 @@ public interface DatamodelAttacker extends Entity
 	 * @generated
 	 */
 	void setMethod(OperationSignature value);
-
-	/**
-	 * Returns the value of the '<em><b>Mitigation</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Mitigation</em>' reference.
-	 * @see #setMitigation(Mitigation)
-	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage#getDatamodelAttacker_Mitigation()
-	 * @model
-	 * @generated
-	 */
-	Mitigation getMitigation();
-
-	/**
-	 * Sets the value of the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker#getMitigation <em>Mitigation</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Mitigation</em>' reference.
-	 * @see #getMitigation()
-	 * @generated
-	 */
-	void setMitigation(Mitigation value);
 
 } // DatamodelAttacker

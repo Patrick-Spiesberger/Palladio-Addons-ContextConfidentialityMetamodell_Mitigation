@@ -2,6 +2,8 @@
  */
 package org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
@@ -172,19 +174,10 @@ public class AttackerSpecificationImpl extends CDOObjectImpl implements Attacker
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Mitigation getMitigation()
+	@SuppressWarnings("unchecked")
+	public EList<Mitigation> getMitigation()
 	{
-		return (Mitigation)eGet(AttackerPackage.Literals.ATTACKER_SPECIFICATION__MITIGATION, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMitigation(Mitigation newMitigation)
-	{
-		eSet(AttackerPackage.Literals.ATTACKER_SPECIFICATION__MITIGATION, newMitigation);
+		return (EList<Mitigation>)eGet(AttackerPackage.Literals.ATTACKER_SPECIFICATION__MITIGATION, true);
 	}
 
 } //AttackerSpecificationImpl

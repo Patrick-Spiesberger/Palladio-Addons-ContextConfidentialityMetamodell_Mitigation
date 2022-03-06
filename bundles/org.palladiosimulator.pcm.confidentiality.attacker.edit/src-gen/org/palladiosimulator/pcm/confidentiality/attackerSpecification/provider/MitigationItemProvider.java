@@ -59,6 +59,7 @@ public class MitigationItemProvider extends SystemIntegrationItemProvider
 			super.getPropertyDescriptors(object);
 
 			addMitigationspecificationPropertyDescriptor(object);
+			addDatamodelattackerPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -78,6 +79,29 @@ public class MitigationItemProvider extends SystemIntegrationItemProvider
 				 getString("_UI_Mitigation_mitigationspecification_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Mitigation_mitigationspecification_feature", "_UI_Mitigation_type"),
 				 AttackerPackage.Literals.MITIGATION__MITIGATIONSPECIFICATION,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Datamodelattacker feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDatamodelattackerPropertyDescriptor(Object object)
+	{
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Mitigation_datamodelattacker_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Mitigation_datamodelattacker_feature", "_UI_Mitigation_type"),
+				 AttackerPackage.Literals.MITIGATION__DATAMODELATTACKER,
 				 true,
 				 false,
 				 true,

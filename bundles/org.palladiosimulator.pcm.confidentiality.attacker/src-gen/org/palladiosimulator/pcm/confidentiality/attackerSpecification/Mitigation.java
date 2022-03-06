@@ -16,6 +16,7 @@ import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegr
  * </p>
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigation#getMitigationspecification <em>Mitigationspecification</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigation#getDatamodelattacker <em>Datamodelattacker</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage#getMitigation()
@@ -35,5 +36,27 @@ public interface Mitigation extends SystemIntegration
 	 * @generated
 	 */
 	EList<MitigationSpecification> getMitigationspecification();
+
+	/**
+	 * Returns the value of the '<em><b>Datamodelattacker</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Datamodelattacker</em>' reference.
+	 * @see #setDatamodelattacker(DatamodelAttacker)
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage#getMitigation_Datamodelattacker()
+	 * @model
+	 * @generated
+	 */
+	DatamodelAttacker getDatamodelattacker();
+
+	/**
+	 * Sets the value of the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigation#getDatamodelattacker <em>Datamodelattacker</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Datamodelattacker</em>' reference.
+	 * @see #getDatamodelattacker()
+	 * @generated
+	 */
+	void setDatamodelattacker(DatamodelAttacker value);
 
 } // Mitigation

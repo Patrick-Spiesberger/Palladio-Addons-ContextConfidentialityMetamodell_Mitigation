@@ -7,7 +7,6 @@ import org.eclipse.emf.ecore.EObject;
 
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker;
-import org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigation;
 
 import org.palladiosimulator.pcm.core.entity.impl.EntityImpl;
 
@@ -26,7 +25,6 @@ import org.palladiosimulator.pcm.repository.OperationSignature;
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.DatamodelAttackerImpl#getReferenceName <em>Reference Name</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.DatamodelAttackerImpl#getSource <em>Source</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.DatamodelAttackerImpl#getMethod <em>Method</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.DatamodelAttackerImpl#getMitigation <em>Mitigation</em>}</li>
  * </ul>
  *
  * @generated
@@ -132,26 +130,6 @@ public class DatamodelAttackerImpl extends EntityImpl implements DatamodelAttack
 	public void setMethod(OperationSignature newMethod)
 	{
 		eSet(AttackerPackage.Literals.DATAMODEL_ATTACKER__METHOD, newMethod);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Mitigation getMitigation()
-	{
-		return (Mitigation)eGet(AttackerPackage.Literals.DATAMODEL_ATTACKER__MITIGATION, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMitigation(Mitigation newMitigation)
-	{
-		eSet(AttackerPackage.Literals.DATAMODEL_ATTACKER__MITIGATION, newMitigation);
 	}
 
 } //DatamodelAttackerImpl

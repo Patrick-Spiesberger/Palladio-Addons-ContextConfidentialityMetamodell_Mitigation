@@ -55,7 +55,6 @@ public class DatamodelAttackerItemProvider extends EntityItemProvider
 			addReferenceNamePropertyDescriptor(object);
 			addSourcePropertyDescriptor(object);
 			addMethodPropertyDescriptor(object);
-			addMitigationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -144,29 +143,6 @@ public class DatamodelAttackerItemProvider extends EntityItemProvider
 				 getString("_UI_DatamodelAttacker_method_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DatamodelAttacker_method_feature", "_UI_DatamodelAttacker_type"),
 				 AttackerPackage.Literals.DATAMODEL_ATTACKER__METHOD,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Mitigation feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addMitigationPropertyDescriptor(Object object)
-	{
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_DatamodelAttacker_mitigation_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_DatamodelAttacker_mitigation_feature", "_UI_DatamodelAttacker_type"),
-				 AttackerPackage.Literals.DATAMODEL_ATTACKER__MITIGATION,
 				 true,
 				 false,
 				 true,
