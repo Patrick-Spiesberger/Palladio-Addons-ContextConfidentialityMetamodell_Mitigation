@@ -26,13 +26,13 @@ import org.eclipse.emf.common.util.EList;
 public interface DatamodelContainer extends CDOObject
 {
 	/**
-	 * Returns the value of the '<em><b>Datamodelattacker</b></em>' reference list.
+	 * Returns the value of the '<em><b>Datamodelattacker</b></em>' containment reference list.
 	 * The list contents are of type {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Datamodelattacker</em>' reference list.
+	 * @return the value of the '<em>Datamodelattacker</em>' containment reference list.
 	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage#getDatamodelContainer_Datamodelattacker()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<DatamodelAttacker> getDatamodelattacker();

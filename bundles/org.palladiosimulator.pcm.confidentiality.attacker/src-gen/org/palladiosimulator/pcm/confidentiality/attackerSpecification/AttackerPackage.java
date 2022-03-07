@@ -687,7 +687,7 @@ public interface AttackerPackage extends EPackage
 	int DATAMODEL_CONTAINER = 12;
 
 	/**
-	 * The feature id for the '<em><b>Datamodelattacker</b></em>' reference list.
+	 * The feature id for the '<em><b>Datamodelattacker</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1154,10 +1154,10 @@ public interface AttackerPackage extends EPackage
 	EClass getDatamodelContainer();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelContainer#getDatamodelattacker <em>Datamodelattacker</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelContainer#getDatamodelattacker <em>Datamodelattacker</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Datamodelattacker</em>'.
+	 * @return the meta object for the containment reference list '<em>Datamodelattacker</em>'.
 	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelContainer#getDatamodelattacker()
 	 * @see #getDatamodelContainer()
 	 * @generated
@@ -1552,7 +1552,7 @@ public interface AttackerPackage extends EPackage
 		EClass DATAMODEL_CONTAINER = eINSTANCE.getDatamodelContainer();
 
 		/**
-		 * The meta object literal for the '<em><b>Datamodelattacker</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Datamodelattacker</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

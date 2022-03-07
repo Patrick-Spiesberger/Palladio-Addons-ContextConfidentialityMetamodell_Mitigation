@@ -86,7 +86,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Encryption" eSuperTypes="#//MitigationSpecification"/>
   <eClassifiers xsi:type="ecore:EClass" name="DatamodelContainer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="datamodelattacker" upperBound="-1"
-        eType="#//DatamodelAttacker"/>
+        eType="#//DatamodelAttacker" containment="true"/>
   </eClassifiers>
   <eSubpackages name="attackSpecification" nsURI="http://www.palladiosimulator.org/pcm/confidentiality/attacker/0.1/"
       nsPrefix="attack">

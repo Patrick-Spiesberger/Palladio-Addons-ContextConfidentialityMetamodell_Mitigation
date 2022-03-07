@@ -873,7 +873,7 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		initEClass(encryptionEClass, Encryption.class, "Encryption", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(datamodelContainerEClass, DatamodelContainer.class, "DatamodelContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDatamodelContainer_Datamodelattacker(), this.getDatamodelAttacker(), null, "datamodelattacker", null, 0, -1, DatamodelContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDatamodelContainer_Datamodelattacker(), this.getDatamodelAttacker(), null, "datamodelattacker", null, 0, -1, DatamodelContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(listOperationEffortEEnum, ListOperationEffort.class, "ListOperationEffort");
