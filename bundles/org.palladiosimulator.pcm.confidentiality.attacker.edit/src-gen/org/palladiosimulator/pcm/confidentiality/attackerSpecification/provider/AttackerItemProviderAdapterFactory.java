@@ -366,6 +366,31 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelContainer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DatamodelContainerItemProvider datamodelContainerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelContainer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDatamodelContainerAdapter()
+	{
+		if (datamodelContainerItemProvider == null)
+		{
+			datamodelContainerItemProvider = new DatamodelContainerItemProvider(this);
+		}
+
+		return datamodelContainerItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -517,6 +542,7 @@ public class AttackerItemProviderAdapterFactory extends AttackerAdapterFactory i
 		if (assemblyContextDetailItemProvider != null) assemblyContextDetailItemProvider.dispose();
 		if (mitigationItemProvider != null) mitigationItemProvider.dispose();
 		if (encryptionItemProvider != null) encryptionItemProvider.dispose();
+		if (datamodelContainerItemProvider != null) datamodelContainerItemProvider.dispose();
 	}
 
 }

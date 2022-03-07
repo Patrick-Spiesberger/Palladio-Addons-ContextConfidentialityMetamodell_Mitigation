@@ -7,7 +7,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage;
-import org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker;
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelContainer;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigation;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.MitigationSpecification;
 
@@ -22,7 +22,7 @@ import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegr
  * </p>
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.MitigationImpl#getMitigationspecification <em>Mitigationspecification</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.MitigationImpl#getDatamodelattacker <em>Datamodelattacker</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.impl.MitigationImpl#getDatamodelcontainer <em>Datamodelcontainer</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,9 +66,9 @@ public class MitigationImpl extends SystemIntegrationImpl implements Mitigation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DatamodelAttacker getDatamodelattacker()
+	public DatamodelContainer getDatamodelcontainer()
 	{
-		return (DatamodelAttacker)eGet(AttackerPackage.Literals.MITIGATION__DATAMODELATTACKER, true);
+		return (DatamodelContainer)eGet(AttackerPackage.Literals.MITIGATION__DATAMODELCONTAINER, true);
 	}
 
 	/**
@@ -76,9 +76,9 @@ public class MitigationImpl extends SystemIntegrationImpl implements Mitigation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDatamodelattacker(DatamodelAttacker newDatamodelattacker)
+	public void setDatamodelcontainer(DatamodelContainer newDatamodelcontainer)
 	{
-		eSet(AttackerPackage.Literals.MITIGATION__DATAMODELATTACKER, newDatamodelattacker);
+		eSet(AttackerPackage.Literals.MITIGATION__DATAMODELCONTAINER, newDatamodelcontainer);
 	}
 
 } //MitigationImpl

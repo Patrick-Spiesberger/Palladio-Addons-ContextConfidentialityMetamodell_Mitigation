@@ -198,6 +198,13 @@ public class AttackerSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case AttackerPackage.DATAMODEL_CONTAINER:
+			{
+				DatamodelContainer datamodelContainer = (DatamodelContainer)theEObject;
+				T result = caseDatamodelContainer(datamodelContainer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -390,6 +397,22 @@ public class AttackerSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseEncryption(Encryption object)
+	{
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Datamodel Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Datamodel Container</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDatamodelContainer(DatamodelContainer object)
 	{
 		return null;
 	}

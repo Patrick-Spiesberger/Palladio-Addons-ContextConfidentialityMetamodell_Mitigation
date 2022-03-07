@@ -59,7 +59,7 @@ public class MitigationItemProvider extends SystemIntegrationItemProvider
 			super.getPropertyDescriptors(object);
 
 			addMitigationspecificationPropertyDescriptor(object);
-			addDatamodelattackerPropertyDescriptor(object);
+			addDatamodelcontainerPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -88,20 +88,20 @@ public class MitigationItemProvider extends SystemIntegrationItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Datamodelattacker feature.
+	 * This adds a property descriptor for the Datamodelcontainer feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDatamodelattackerPropertyDescriptor(Object object)
+	protected void addDatamodelcontainerPropertyDescriptor(Object object)
 	{
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Mitigation_datamodelattacker_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Mitigation_datamodelattacker_feature", "_UI_Mitigation_type"),
-				 AttackerPackage.Literals.MITIGATION__DATAMODELATTACKER,
+				 getString("_UI_Mitigation_datamodelcontainer_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Mitigation_datamodelcontainer_feature", "_UI_Mitigation_type"),
+				 AttackerPackage.Literals.MITIGATION__DATAMODELCONTAINER,
 				 true,
 				 false,
 				 true,
@@ -125,6 +125,7 @@ public class MitigationItemProvider extends SystemIntegrationItemProvider
 		{
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(AttackerPackage.Literals.MITIGATION__MITIGATIONSPECIFICATION);
+			childrenFeatures.add(AttackerPackage.Literals.MITIGATION__DATAMODELCONTAINER);
 		}
 		return childrenFeatures;
 	}
@@ -197,6 +198,7 @@ public class MitigationItemProvider extends SystemIntegrationItemProvider
 		switch (notification.getFeatureID(Mitigation.class))
 		{
 			case AttackerPackage.MITIGATION__MITIGATIONSPECIFICATION:
+			case AttackerPackage.MITIGATION__DATAMODELCONTAINER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -224,6 +226,11 @@ public class MitigationItemProvider extends SystemIntegrationItemProvider
 			(createChildParameter
 				(AttackerPackage.Literals.MITIGATION__MITIGATIONSPECIFICATION,
 				 PcmIntegrationFactory.eINSTANCE.createPrevention()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AttackerPackage.Literals.MITIGATION__DATAMODELCONTAINER,
+				 AttackerFactory.eINSTANCE.createDatamodelContainer()));
 	}
 
 	/**

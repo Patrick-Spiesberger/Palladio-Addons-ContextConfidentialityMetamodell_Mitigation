@@ -33,6 +33,7 @@ import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerS
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerSystemSpecificationContainer;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.CategorySpecification;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelAttacker;
+import org.palladiosimulator.pcm.confidentiality.attackerSpecification.DatamodelContainer;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.Encryption;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.ListOperationEffort;
 import org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigation;
@@ -150,6 +151,13 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * @generated
 	 */
 	private EClass encryptionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass datamodelContainerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -596,7 +604,7 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMitigation_Datamodelattacker()
+	public EReference getMitigation_Datamodelcontainer()
 	{
 		return (EReference)mitigationEClass.getEStructuralFeatures().get(1);
 	}
@@ -639,6 +647,26 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 	public EClass getEncryption()
 	{
 		return encryptionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDatamodelContainer()
+	{
+		return datamodelContainerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDatamodelContainer_Datamodelattacker()
+	{
+		return (EReference)datamodelContainerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -725,13 +753,16 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 
 		mitigationEClass = createEClass(MITIGATION);
 		createEReference(mitigationEClass, MITIGATION__MITIGATIONSPECIFICATION);
-		createEReference(mitigationEClass, MITIGATION__DATAMODELATTACKER);
+		createEReference(mitigationEClass, MITIGATION__DATAMODELCONTAINER);
 
 		mitigationSpecificationEClass = createEClass(MITIGATION_SPECIFICATION);
 		createEReference(mitigationSpecificationEClass, MITIGATION_SPECIFICATION__NECESSARY_CREDENTIALS);
 		createEReference(mitigationSpecificationEClass, MITIGATION_SPECIFICATION__VULNERABILITIES);
 
 		encryptionEClass = createEClass(ENCRYPTION);
+
+		datamodelContainerEClass = createEClass(DATAMODEL_CONTAINER);
+		createEReference(datamodelContainerEClass, DATAMODEL_CONTAINER__DATAMODELATTACKER);
 
 		// Create enums
 		listOperationEffortEEnum = createEEnum(LIST_OPERATION_EFFORT);
@@ -808,7 +839,7 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 		initEReference(getAttackerSpecification_Vulnerabilites(), this.getVulnerabilityContainer(), null, "vulnerabilites", null, 0, 1, AttackerSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAttackerSpecification_Categoryspecification(), this.getCategorySpecification(), null, "categoryspecification", null, 0, 1, AttackerSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAttackerSpecification_Systemintegration(), this.getAttackerSystemSpecificationContainer(), null, "systemintegration", null, 0, 1, AttackerSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAttackerSpecification_Mitigation(), this.getMitigation(), null, "mitigation", null, 0, -1, AttackerSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAttackerSpecification_Mitigation(), this.getMitigation(), null, "mitigation", null, 0, 1, AttackerSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attackContainerEClass, AttackContainer.class, "AttackContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAttackContainer_Attack(), theAttackSpecificationPackage.getAttack(), null, "attack", null, 0, -1, AttackContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -833,13 +864,16 @@ public class AttackerPackageImpl extends EPackageImpl implements AttackerPackage
 
 		initEClass(mitigationEClass, Mitigation.class, "Mitigation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMitigation_Mitigationspecification(), this.getMitigationSpecification(), null, "mitigationspecification", null, 0, -1, Mitigation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMitigation_Datamodelattacker(), this.getDatamodelAttacker(), null, "datamodelattacker", null, 0, 1, Mitigation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMitigation_Datamodelcontainer(), this.getDatamodelContainer(), null, "datamodelcontainer", null, 0, 1, Mitigation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mitigationSpecificationEClass, MitigationSpecification.class, "MitigationSpecification", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMitigationSpecification_NecessaryCredentials(), theSystemPackage.getUsageSpecification(), null, "necessaryCredentials", null, 0, -1, MitigationSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMitigationSpecification_Vulnerabilities(), theAttackSpecificationPackage.getVulnerability(), null, "vulnerabilities", null, 0, -1, MitigationSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(encryptionEClass, Encryption.class, "Encryption", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(datamodelContainerEClass, DatamodelContainer.class, "DatamodelContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDatamodelContainer_Datamodelattacker(), this.getDatamodelAttacker(), null, "datamodelattacker", null, 0, -1, DatamodelContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(listOperationEffortEEnum, ListOperationEffort.class, "ListOperationEffort");

@@ -122,6 +122,15 @@ public interface AttackerFactory extends EFactory
 	Encryption createEncryption();
 
 	/**
+	 * Returns a new object of class '<em>Datamodel Container</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Datamodel Container</em>'.
+	 * @generated
+	 */
+	DatamodelContainer createDatamodelContainer();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

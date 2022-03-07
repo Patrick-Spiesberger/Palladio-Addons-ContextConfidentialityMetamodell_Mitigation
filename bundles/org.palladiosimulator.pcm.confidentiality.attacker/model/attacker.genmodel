@@ -65,13 +65,16 @@
     </genClasses>
     <genClasses ecoreClass="attacker.ecore#//Mitigation">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference attacker.ecore#//Mitigation/mitigationspecification"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference attacker.ecore#//Mitigation/datamodelattacker"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference attacker.ecore#//Mitigation/datamodelcontainer"/>
     </genClasses>
     <genClasses ecoreClass="attacker.ecore#//MitigationSpecification">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference attacker.ecore#//MitigationSpecification/necessaryCredentials"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference attacker.ecore#//MitigationSpecification/vulnerabilities"/>
     </genClasses>
     <genClasses ecoreClass="attacker.ecore#//Encryption"/>
+    <genClasses ecoreClass="attacker.ecore#//DatamodelContainer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference attacker.ecore#//DatamodelContainer/datamodelattacker"/>
+    </genClasses>
     <nestedGenPackages prefix="AttackSpecification" basePackage="org.palladiosimulator.pcm.confidentiality.attackerSpecification"
         disposableProviderFactory="true" ecorePackage="attacker.ecore#//attackSpecification">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="attacker.ecore#//attackSpecification/AttackVector">

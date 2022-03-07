@@ -76,6 +76,7 @@ public class AttackerFactoryImpl extends EFactoryImpl implements AttackerFactory
 			case AttackerPackage.ASSEMBLY_CONTEXT_DETAIL: return createAssemblyContextDetail();
 			case AttackerPackage.MITIGATION: return createMitigation();
 			case AttackerPackage.ENCRYPTION: return createEncryption();
+			case AttackerPackage.DATAMODEL_CONTAINER: return (EObject)createDatamodelContainer();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -234,6 +235,17 @@ public class AttackerFactoryImpl extends EFactoryImpl implements AttackerFactory
 	{
 		EncryptionImpl encryption = new EncryptionImpl();
 		return encryption;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DatamodelContainer createDatamodelContainer()
+	{
+		DatamodelContainerImpl datamodelContainer = new DatamodelContainerImpl();
+		return datamodelContainer;
 	}
 
 	/**

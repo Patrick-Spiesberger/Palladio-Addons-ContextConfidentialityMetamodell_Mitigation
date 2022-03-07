@@ -16,7 +16,7 @@ import org.palladiosimulator.pcm.confidentiality.attackerSpecification.pcmIntegr
  * </p>
  * <ul>
  *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigation#getMitigationspecification <em>Mitigationspecification</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigation#getDatamodelattacker <em>Datamodelattacker</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigation#getDatamodelcontainer <em>Datamodelcontainer</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage#getMitigation()
@@ -38,25 +38,25 @@ public interface Mitigation extends SystemIntegration
 	EList<MitigationSpecification> getMitigationspecification();
 
 	/**
-	 * Returns the value of the '<em><b>Datamodelattacker</b></em>' reference.
+	 * Returns the value of the '<em><b>Datamodelcontainer</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Datamodelattacker</em>' reference.
-	 * @see #setDatamodelattacker(DatamodelAttacker)
-	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage#getMitigation_Datamodelattacker()
-	 * @model
+	 * @return the value of the '<em>Datamodelcontainer</em>' containment reference.
+	 * @see #setDatamodelcontainer(DatamodelContainer)
+	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerPackage#getMitigation_Datamodelcontainer()
+	 * @model containment="true"
 	 * @generated
 	 */
-	DatamodelAttacker getDatamodelattacker();
+	DatamodelContainer getDatamodelcontainer();
 
 	/**
-	 * Sets the value of the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigation#getDatamodelattacker <em>Datamodelattacker</em>}' reference.
+	 * Sets the value of the '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.Mitigation#getDatamodelcontainer <em>Datamodelcontainer</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Datamodelattacker</em>' reference.
-	 * @see #getDatamodelattacker()
+	 * @param value the new value of the '<em>Datamodelcontainer</em>' containment reference.
+	 * @see #getDatamodelcontainer()
 	 * @generated
 	 */
-	void setDatamodelattacker(DatamodelAttacker value);
+	void setDatamodelcontainer(DatamodelContainer value);
 
 } // Mitigation

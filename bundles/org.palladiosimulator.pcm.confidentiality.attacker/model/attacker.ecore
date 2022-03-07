@@ -35,8 +35,8 @@
         eType="#//CategorySpecification" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="systemintegration" eType="#//AttackerSystemSpecificationContainer"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="mitigation" upperBound="-1"
-        eType="#//Mitigation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mitigation" eType="#//Mitigation"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttackContainer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="attack" upperBound="-1"
@@ -73,7 +73,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Mitigation" eSuperTypes="#//pcmIntegration/SystemIntegration">
     <eStructuralFeatures xsi:type="ecore:EReference" name="mitigationspecification"
         upperBound="-1" eType="#//MitigationSpecification" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="datamodelattacker" eType="#//DatamodelAttacker"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datamodelcontainer" eType="#//DatamodelContainer"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MitigationSpecification" abstract="true"
       eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
@@ -83,6 +84,10 @@
         eType="#//attackSpecification/Vulnerability" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Encryption" eSuperTypes="#//MitigationSpecification"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DatamodelContainer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datamodelattacker" upperBound="-1"
+        eType="#//DatamodelAttacker"/>
+  </eClassifiers>
   <eSubpackages name="attackSpecification" nsURI="http://www.palladiosimulator.org/pcm/confidentiality/attacker/0.1/"
       nsPrefix="attack">
     <eClassifiers xsi:type="ecore:EClass" name="Attack" abstract="true" eSuperTypes="platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
