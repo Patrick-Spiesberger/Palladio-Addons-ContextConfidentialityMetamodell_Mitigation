@@ -35,8 +35,8 @@
         eType="#//CategorySpecification" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="systemintegration" eType="#//AttackerSystemSpecificationContainer"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="mitigation" eType="#//Mitigation"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mitigation" upperBound="-1"
+        eType="#//Mitigation" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttackContainer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="attack" upperBound="-1"

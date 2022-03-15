@@ -254,7 +254,7 @@ public interface AttackerPackage extends EPackage
 	int ATTACKER_SPECIFICATION__SYSTEMINTEGRATION = 4;
 
 	/**
-	 * The feature id for the '<em><b>Mitigation</b></em>' containment reference.
+	 * The feature id for the '<em><b>Mitigation</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -900,10 +900,10 @@ public interface AttackerPackage extends EPackage
 	EReference getAttackerSpecification_Systemintegration();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerSpecification#getMitigation <em>Mitigation</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerSpecification#getMitigation <em>Mitigation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Mitigation</em>'.
+	 * @return the meta object for the containment reference list '<em>Mitigation</em>'.
 	 * @see org.palladiosimulator.pcm.confidentiality.attackerSpecification.AttackerSpecification#getMitigation()
 	 * @see #getAttackerSpecification()
 	 * @generated
@@ -1340,7 +1340,7 @@ public interface AttackerPackage extends EPackage
 		EReference ATTACKER_SPECIFICATION__SYSTEMINTEGRATION = eINSTANCE.getAttackerSpecification_Systemintegration();
 
 		/**
-		 * The meta object literal for the '<em><b>Mitigation</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Mitigation</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

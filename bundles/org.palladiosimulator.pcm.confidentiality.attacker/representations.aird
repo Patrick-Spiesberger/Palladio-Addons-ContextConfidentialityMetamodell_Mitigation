@@ -27,7 +27,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="model/attacker.ecore#//pcmIntegration"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_ym3L4HFIEeyIvc2unOtdYA" name="attackerSpecification class diagram" repPath="#_ym1WsHFIEeyIvc2unOtdYA" changeId="01a4e4b9-4694-47e8-8db3-7ad5bc709c2e">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_ym3L4HFIEeyIvc2unOtdYA" name="attackerSpecification class diagram" repPath="#_ym1WsHFIEeyIvc2unOtdYA" changeId="9c8aba18-334c-4dde-a2e5-82ab53a54d5b">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="model/attacker.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -2591,7 +2591,7 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_RChfZoqrEeyVKKiFxumQcA" name="[0..1] mitigation" sourceNode="_zCIyoHFIEeyIvc2unOtdYA" targetNode="_L2bN8IqrEeyVKKiFxumQcA">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_RChfZoqrEeyVKKiFxumQcA" name="[0..*] mitigation" sourceNode="_zCIyoHFIEeyIvc2unOtdYA" targetNode="_L2bN8IqrEeyVKKiFxumQcA">
       <target xmi:type="ecore:EReference" href="model/attacker.ecore#//AttackerSpecification/mitigation"/>
       <semanticElements xmi:type="ecore:EReference" href="model/attacker.ecore#//AttackerSpecification/mitigation"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Uz4RIIqrEeyVKKiFxumQcA" description="_zCrlMHFIEeyIvc2unOtdYA" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
